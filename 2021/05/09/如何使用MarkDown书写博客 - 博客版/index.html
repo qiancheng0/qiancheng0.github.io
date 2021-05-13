@@ -6,19 +6,86 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>Cool Q&#39;s Blog</title>
+  <title>如何使用MarkDown书写博客 | Cool Q&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Missing Semester Lecture 1linux系统简单命令操作  echo + 内容：重复一遍 date：输出当前时间  基本规则：空格代表命令的分割  echo $PATH 可查看所有环境路径，即每一个指令可能存放的所有路径  which + 指令可查看该指令的程序路径（如which echo）  pwd：将输出现在所在路径（present working directory）">
+  <meta name="description" content="如何使用MarkDown书写博客1. 引言到目前为止，计04班的设备采购工作已经完成，基础的博客网页（ www.thucs04.cn ）也已经搭建完成，班级博客将是以后班级形象展示的重要阵地。 那班级博客上都有什么呢？这就需要大家来贡献自己的力量，书写一些博文，然后经过Github进行上传，充实我们的班级博客。 为了方便博客的维护，以及减少书写HTML的麻烦，经主要技术人员研究决定，让大家使用Ma">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Cool Q&#39;s Blog">
-<meta property="og:url" content="http://example.com/2021/05/02/Missing%20Semester%20Lecture%201/index.html">
+<meta property="og:title" content="如何使用MarkDown书写博客">
+<meta property="og:url" content="http://example.com/2021/05/09/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8MarkDown%E4%B9%A6%E5%86%99%E5%8D%9A%E5%AE%A2%20-%20%E5%8D%9A%E5%AE%A2%E7%89%88/index.html">
 <meta property="og:site_name" content="Cool Q&#39;s Blog">
-<meta property="og:description" content="Missing Semester Lecture 1linux系统简单命令操作  echo + 内容：重复一遍 date：输出当前时间  基本规则：空格代表命令的分割  echo $PATH 可查看所有环境路径，即每一个指令可能存放的所有路径  which + 指令可查看该指令的程序路径（如which echo）  pwd：将输出现在所在路径（present working directory）">
+<meta property="og:description" content="如何使用MarkDown书写博客1. 引言到目前为止，计04班的设备采购工作已经完成，基础的博客网页（ www.thucs04.cn ）也已经搭建完成，班级博客将是以后班级形象展示的重要阵地。 那班级博客上都有什么呢？这就需要大家来贡献自己的力量，书写一些博文，然后经过Github进行上传，充实我们的班级博客。 为了方便博客的维护，以及减少书写HTML的麻烦，经主要技术人员研究决定，让大家使用Ma">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2021-05-02T13:28:15.769Z">
-<meta property="article:modified_time" content="2021-05-02T13:28:15.762Z">
+<meta property="og:image" content="https://i.loli.net/2021/05/09/8TfaBZdCFWbkAcD.png">
+<meta property="og:image" content="https://i.loli.net/2021/05/09/nCNAxTJZuqabl4V.png">
+<meta property="og:image" content="https://i.loli.net/2021/05/09/6ypgriUdthWH7Nq.png">
+<meta property="og:image" content="https://i.loli.net/2021/05/09/GqoRmiFEkDnfl3C.png">
+<meta property="og:image" content="https://i.loli.net/2021/05/09/y7QZD42mA1tHcKn.png">
+<meta property="og:image" content="https://i.loli.net/2021/05/09/vagwUxXlNIO49Dr.png">
+<meta property="og:image" content="https://i.loli.net/2021/05/09/HLy5mDAivb7jtRO.png">
+<meta property="og:image" content="https://i.loli.net/2021/05/09/wybZBPEjp1o5SVR.png">
+<meta property="og:image" content="https://i.loli.net/2021/05/09/gbEdm3RhncS5jMo.png">
+<meta property="og:image" content="https://i.loli.net/2021/05/09/16VqZWt7DSLgdOK.png">
+<meta property="og:image" content="https://i.loli.net/2021/05/09/m1juBy7MObsXo42.png">
+<meta property="og:image" content="https://i.loli.net/2021/05/09/GYwbNknClS9UKJa.png">
+<meta property="og:image" content="https://i.loli.net/2021/05/09/7HGn21NarhXBUAR.png">
+<meta property="og:image" content="https://i.loli.net/2021/05/09/ZB8YjtXrCwLFyzM.png">
+<meta property="og:image" content="https://i.loli.net/2021/05/09/bBwpkNqtL7fiuZD.png">
+<meta property="og:image" content="https://i.loli.net/2021/05/09/hawdrX9oUBEqJDT.png">
+<meta property="og:image" content="https://i.loli.net/2021/05/09/tz53jiuWyhDg7vc.png">
+<meta property="og:image" content="https://i.loli.net/2021/05/09/agUVmMuLK4dHntp.png">
+<meta property="og:image" content="https://i.loli.net/2021/05/09/wOu4AWe6a2ojULY.png">
+<meta property="og:image" content="https://i.loli.net/2021/05/09/vNkcCuhEUHWFqf2.png">
+<meta property="og:image" content="https://i.loli.net/2021/05/09/PHJcvCAizxfEugS.png">
+<meta property="og:image" content="https://i.loli.net/2021/05/09/XDMStH8uwE7PICR.png">
+<meta property="og:image" content="https://i.loli.net/2021/05/09/QbXC5w9UoaFre6p.png">
+<meta property="og:image" content="https://i.loli.net/2021/05/09/phgSi54vzPGD7b1.png">
+<meta property="og:image" content="https://i.loli.net/2021/05/09/ZuYolXvWhUJgK16.png">
+<meta property="og:image" content="https://i.loli.net/2021/05/09/O7DUpFEMuJseNmL.png">
+<meta property="og:image" content="https://i.loli.net/2021/05/09/uUrsjwNIqiR4Vap.png">
+<meta property="og:image" content="https://i.loli.net/2021/05/09/296sI1LpbTBRioa.png">
+<meta property="og:image" content="https://i.loli.net/2021/05/09/MvAgdCxeQEnoj3S.png">
+<meta property="og:image" content="https://i.loli.net/2021/05/09/PCbwsqE2VS8Hv1K.png">
+<meta property="og:image" content="https://i.loli.net/2021/05/09/UjuxBOtd8wKPim5.png">
+<meta property="og:image" content="https://i.loli.net/2021/05/09/3doiDKBtmanGelJ.png">
+<meta property="og:image" content="https://i.loli.net/2021/05/09/8TfaBZdCFWbkAcD.png">
+<meta property="og:image" content="https://i.loli.net/2021/05/09/nCNAxTJZuqabl4V.png">
+<meta property="og:image" content="https://i.loli.net/2021/05/09/6ypgriUdthWH7Nq.png">
+<meta property="og:image" content="https://i.loli.net/2021/05/09/GqoRmiFEkDnfl3C.png">
+<meta property="og:image" content="https://i.loli.net/2021/05/09/y7QZD42mA1tHcKn.png">
+<meta property="og:image" content="https://i.loli.net/2021/05/09/vagwUxXlNIO49Dr.png">
+<meta property="og:image" content="https://i.loli.net/2021/05/09/HLy5mDAivb7jtRO.png">
+<meta property="og:image" content="https://i.loli.net/2021/05/09/wybZBPEjp1o5SVR.png">
+<meta property="og:image" content="https://i.loli.net/2021/05/09/gbEdm3RhncS5jMo.png">
+<meta property="og:image" content="https://i.loli.net/2021/05/09/16VqZWt7DSLgdOK.png">
+<meta property="og:image" content="https://i.loli.net/2021/05/09/m1juBy7MObsXo42.png">
+<meta property="og:image" content="https://i.loli.net/2021/05/09/GYwbNknClS9UKJa.png">
+<meta property="og:image" content="https://i.loli.net/2021/05/09/7HGn21NarhXBUAR.png">
+<meta property="og:image" content="https://i.loli.net/2021/05/09/ZB8YjtXrCwLFyzM.png">
+<meta property="og:image" content="https://i.loli.net/2021/05/09/bBwpkNqtL7fiuZD.png">
+<meta property="og:image" content="https://i.loli.net/2021/05/09/hawdrX9oUBEqJDT.png">
+<meta property="og:image" content="https://i.loli.net/2021/05/09/tz53jiuWyhDg7vc.png">
+<meta property="og:image" content="https://i.loli.net/2021/05/09/agUVmMuLK4dHntp.png">
+<meta property="og:image" content="https://i.loli.net/2021/05/09/wOu4AWe6a2ojULY.png">
+<meta property="og:image" content="https://i.loli.net/2021/05/09/vNkcCuhEUHWFqf2.png">
+<meta property="og:image" content="https://i.loli.net/2021/05/09/PHJcvCAizxfEugS.png">
+<meta property="og:image" content="https://i.loli.net/2021/05/09/XDMStH8uwE7PICR.png">
+<meta property="og:image" content="https://i.loli.net/2021/05/09/QbXC5w9UoaFre6p.png">
+<meta property="og:image" content="https://i.loli.net/2021/05/09/phgSi54vzPGD7b1.png">
+<meta property="og:image" content="https://i.loli.net/2021/05/09/ZuYolXvWhUJgK16.png">
+<meta property="og:image" content="https://i.loli.net/2021/05/09/O7DUpFEMuJseNmL.png">
+<meta property="og:image" content="https://i.loli.net/2021/05/09/uUrsjwNIqiR4Vap.png">
+<meta property="og:image" content="https://i.loli.net/2021/05/09/296sI1LpbTBRioa.png">
+<meta property="og:image" content="https://i.loli.net/2021/05/09/MvAgdCxeQEnoj3S.png">
+<meta property="og:image" content="https://i.loli.net/2021/05/09/PCbwsqE2VS8Hv1K.png">
+<meta property="og:image" content="https://i.loli.net/2021/05/09/UjuxBOtd8wKPim5.png">
+<meta property="og:image" content="https://i.loli.net/2021/05/09/3doiDKBtmanGelJ.png">
+<meta property="article:published_time" content="2021-05-09T06:00:00.000Z">
+<meta property="article:modified_time" content="2021-05-13T09:03:43.512Z">
 <meta property="article:author" content="QC">
+<meta property="article:tag" content="introduction">
+<meta property="article:tag" content="教程">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://i.loli.net/2021/05/09/8TfaBZdCFWbkAcD.png">
   
     <link rel="alternative" href="/atom.xml" title="Cool Q&#39;s Blog" type="application/atom+xml">
   
@@ -146,81 +213,288 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-Missing Semester Lecture 1" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-如何使用MarkDown书写博客 - 博客版" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      如何使用MarkDown书写博客
+    </h1>
+  
+
+        
+        <a href="/2021/05/09/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8MarkDown%E4%B9%A6%E5%86%99%E5%8D%9A%E5%AE%A2%20-%20%E5%8D%9A%E5%AE%A2%E7%89%88/" class="archive-article-date">
+  	<time datetime="2021-05-09T06:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-05-09</time>
+</a>
+        
+      </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="Missing-Semester-Lecture-1"><a href="#Missing-Semester-Lecture-1" class="headerlink" title="Missing Semester Lecture 1"></a>Missing Semester Lecture 1</h2><p><strong>linux系统简单命令操作</strong></p>
+        <h2 id="如何使用MarkDown书写博客"><a href="#如何使用MarkDown书写博客" class="headerlink" title="如何使用MarkDown书写博客"></a>如何使用MarkDown书写博客</h2><h3 id="1-引言"><a href="#1-引言" class="headerlink" title="1. 引言"></a>1. 引言</h3><p>到目前为止，计04班的设备采购工作已经完成，基础的博客网页（ <a target="_blank" rel="noopener" href="http://www.thucs04.cn/">www.thucs04.cn</a> ）也已经搭建完成，班级博客将是以后班级形象展示的重要阵地。</p>
+<p>那班级博客上都有什么呢？这就需要大家来贡献自己的力量，书写一些博文，然后经过Github进行上传，充实我们的班级博客。</p>
+<p>为了方便博客的维护，以及减少书写HTML的麻烦，经主要技术人员研究决定，让大家使用MarkDown来书写博文，主题、内容不限。</p>
+<p>那么，什么是MarkDown呢？确切地来说，MarkDown是一种格式，就像是Word文档里可以调整字体的风格、字号，可以加粗文字等，Markdown也是用来进行这些操作的一种语言规范，例如本篇教程就是使用这种规范来书写的。但与Word不同的是，Markdown没有十分方便的GUI（图像界面），需要我们书写一些简单的代码来对这些文字进行格式的设定。</p>
+<h3 id="2-MarkDown的书写平台"><a href="#2-MarkDown的书写平台" class="headerlink" title="2. MarkDown的书写平台"></a>2. MarkDown的书写平台</h3><p>就像是我们写C++的代码会放在VScode 上一样，书写Markdown也有这样的平台，在这种平台上书写，可以方便地让我们看到代码的效果。</p>
+<p>下面推荐两种书写Markdown的平台</p>
 <ul>
-<li>echo + 内容：重复一遍</li>
-<li>date：输出当前时间</li>
-</ul>
-<p>基本规则：空格代表命令的分割</p>
-<ul>
-<li><p>echo $PATH 可查看所有环境路径，即每一个指令可能存放的所有路径</p>
+<li><p>VS code</p>
 </li>
-<li><p>which + 指令可查看该指令的程序路径（如which echo）</p>
-</li>
-<li><p>pwd：将输出现在所在路径（present working directory）</p>
-</li>
-<li><p>cd /—-：切换当前工作路径（change directory）</p>
-</li>
-<li><p>.. ：可回到上一级文件夹</p>
-</li>
-<li><p>ls：列出当前所有文件</p>
-</li>
-<li><p>cd <del>/—/—：</del>即代表 home/名字 这一目录，简略成这样写，相当于从头写路径，有时更方便</p>
-</li>
-<li><p>cd -：表示返回上一个所在的文件夹路径中，相当于返回（但不是返回上一级）</p>
-</li>
-<li><p>ls –help：可查看很多相关列出文件的方式与操作</p>
-<ul>
-<li>例如：ls -l 可以按行展开列出详细文件信息（longlisting format）</li>
-</ul>
-</li>
-<li><p>-l打开的文件详细信息中会出现十位字母：</p>
-<ul>
-<li>第一位d代表是文件夹</li>
-<li>之后9位代表权限，三位一组，共三组</li>
-<li>第一组代表自己的权限，第二组是群组的权限，第三组是所有人的权限</li>
-<li>r-read w-write x-execute</li>
-<li>注意：想要打开某文件夹，必须要对之前路径中的所有文件夹都有execute的权限</li>
-</ul>
-</li>
-<li><p>mv：move，可以修改文件名与路径，需要mv+两个路径</p>
-</li>
-<li><p>rm：只能remove文件</p>
-</li>
-<li><p>rmdir：只能remove空文件夹</p>
-</li>
-<li><p>mkdir：创建空文件夹</p>
-</li>
-<li><p>contrl+l：清屏</p>
-</li>
-<li><p>大于与小于号分别可作为输入流与输出流；其个数代表循环输入、输出的个数</p>
-<ul>
-<li>例如：echo hello &gt; hello.txt，那么后者文件中将写入hello</li>
-<li>cat &lt; hello.txt 将在terminal中输出hello</li>
-</ul>
-</li>
-<li><p>| ：(pipe) 以左侧的输出，作为右侧的输入</p>
-</li>
-<li><p>sudo (do as super user)：root一般拥有所有所有超级用户权限</p>
-</li>
-<li><p>sudo su：让shell以超级用户的身份运行指令，从而可以做很多修改等；su + 原用户名可以切换回来。</p>
-<ul>
-<li><p>例如，修改屏幕亮度：可以sudo su直接以root身份进行调节</p>
-<p>即sudo su; echo 500 &gt; brightness</p>
-</li>
-<li><p>或者可以 echo 500 |  sudo tee brightness; 其中tee意思为既能通过pipe将左侧输出传给右侧作为输入，也能将该输出打在电脑上</p>
+<li><p>typora</p>
 </li>
 </ul>
+<h4 id="2-1-VS-code-书写Markdown-方式"><a href="#2-1-VS-code-书写Markdown-方式" class="headerlink" title="2.1 VS code 书写Markdown 方式"></a>2.1 VS code 书写Markdown 方式</h4><ol>
+<li> 安装vscode，这就足够了，不需要在vscode中安装其他插件</li>
+<li>在vscode新建一个文件，后缀为 .md  例如：test1.md</li>
+<li>右键点击上方 test1.md的标签，选择打开预览，就可以在预览当中看到自己书写的MarkDown代码的效果。</li>
+<li>完成上述工作之后，你就可以在test1.md文件中<del>快乐地</del>书写博文和代码了（如何书写见下方语法教程）</li>
+</ol>
+<img src="https://i.loli.net/2021/05/09/8TfaBZdCFWbkAcD.png" alt="操作图示"  />
+
+<h4 id="2-2-typora书写Markdown-方式"><a href="#2-2-typora书写Markdown-方式" class="headerlink" title="2.2 typora书写Markdown 方式"></a>2.2 typora书写Markdown 方式</h4><ol>
+<li>安装typora，网址：<a target="_blank" rel="noopener" href="https://typora.io/">https://typora.io/</a>  ，往下翻，可以看到右上角Download选项，点击跳转到下载页面，根据电脑操作系统的版本下载对应的安装包</li>
+<li>安装typora（无需打开这个软件）</li>
+<li>在桌面（或其他位置）上新建一个文件，后缀为.md，以test.md为例</li>
+<li>打开这个文件（选择打开方式为typora），之后你就可以在test.md文件中<del>快乐地</del>书写博文和代码了</li>
+</ol>
+<img src="https://i.loli.net/2021/05/09/nCNAxTJZuqabl4V.png" alt="typora版.png"  />
+
+<h3 id="3-Markdown基本使用"><a href="#3-Markdown基本使用" class="headerlink" title="3. Markdown基本使用"></a>3. Markdown基本使用</h3><p><strong>在写博文时，你只需要正常地输入博客的内容，然后在需要的格式处加上MarkDown的语法即可</strong></p>
+<p>如下例（左侧为代码和文本，右侧为效果图）</p>
+<p><img src="https://i.loli.net/2021/05/09/6ypgriUdthWH7Nq.png" alt="书写演示.png"></p>
+<p>这里强烈推荐使用typora，它可以即时地看到效果，不需要打开预览图</p>
+<p>Markdown的具体语法可以在网上查到，推荐一个网站：<a target="_blank" rel="noopener" href="https://www.jianshu.com/p/191d1e21f7ed/">Markdown基本语法 - 简书 (jianshu.com)</a></p>
+<h3 id="4-Markdown的基本语法教程"><a href="#4-Markdown的基本语法教程" class="headerlink" title="4. Markdown的基本语法教程"></a>4. Markdown的基本语法教程</h3><ol>
+<li><p>n个#加上一个空格代表一个n级标题</p>
+<p><img src="https://i.loli.net/2021/05/09/GqoRmiFEkDnfl3C.png" alt="基本使用1.png"></p>
+<p><img src="https://i.loli.net/2021/05/09/y7QZD42mA1tHcKn.png" alt="基本使用2.png"></p>
 </li>
-<li><p>xdg-open：类似于查找，可以帮助你在正确的位置打开你想要的文件夹，更加快捷</p>
+<li><p>一对*括起来表示斜体；两对表示加粗；三对表示斜体加加粗</p>
+<p><img src="https://i.loli.net/2021/05/09/vagwUxXlNIO49Dr.png" alt="基本使用3.png"></p>
+<p><img src="https://i.loli.net/2021/05/09/HLy5mDAivb7jtRO.png" alt="基本使用4.png"></p>
+</li>
+<li><p>1、2、3、4等编号会自动延续，生成有序列表</p>
+<p><img src="https://i.loli.net/2021/05/09/wybZBPEjp1o5SVR.png" alt="基本使用5.png"></p>
+<p><img src="https://i.loli.net/2021/05/09/gbEdm3RhncS5jMo.png" alt="基本使用6.png"></p>
+</li>
+<li><p>三个或以上小短线 — 在单行输入将会作为分割线</p>
+<p><img src="https://i.loli.net/2021/05/09/16VqZWt7DSLgdOK.png" alt="基本使用7.png"></p>
+<p><img src="https://i.loli.net/2021/05/09/m1juBy7MObsXo42.png" alt="基本使用8.png"></p>
+</li>
+<li><p>+，-，*加上空格将会生成无序列表；其可进行分级；在无序列表中shift+tab可回退至无序表的上一级</p>
+<p><img src="https://i.loli.net/2021/05/09/GYwbNknClS9UKJa.png" alt="基本使用9.png"></p>
+<p><img src="https://i.loli.net/2021/05/09/7HGn21NarhXBUAR.png" alt="基本使用10.png"></p>
+</li>
+<li><p>用n个&gt;符号之后加空格可以表示n级引用，可无限嵌套</p>
+<p><img src="https://i.loli.net/2021/05/09/ZB8YjtXrCwLFyzM.png" alt="基本使用11.png"></p>
+<p><img src="https://i.loli.net/2021/05/09/bBwpkNqtL7fiuZD.png" alt="基本使用12.png"></p>
+</li>
+<li><p>连续输入三个`可调用代码块</p>
+<p><img src="https://i.loli.net/2021/05/09/hawdrX9oUBEqJDT.png" alt="基本使用13.png"></p>
+<p><img src="https://i.loli.net/2021/05/09/tz53jiuWyhDg7vc.png" alt="基本使用14.png"></p>
+</li>
+<li><p>两对~中内容表示加上删除线</p>
+<p><img src="https://i.loli.net/2021/05/09/agUVmMuLK4dHntp.png" alt="基本使用15.png"></p>
+<p><img src="https://i.loli.net/2021/05/09/wOu4AWe6a2ojULY.png" alt="基本使用16.png"></p>
+</li>
+<li><p>用短竖线 |内容|内容| 的方式可以创建表格，创建完后可自行调整大小</p>
+<p><img src="https://i.loli.net/2021/05/09/vNkcCuhEUHWFqf2.png" alt="基本使用17.png"></p>
+<p><img src="https://i.loli.net/2021/05/09/PHJcvCAizxfEugS.png" alt="基本使用18.png"></p>
+</li>
+<li><p>[内容]：(网址) 的形式可以实现参数式超链接，不加：也有其他方式</p>
+<p><img src="https://i.loli.net/2021/05/09/XDMStH8uwE7PICR.png" alt="基本使用19.png"></p>
+<p><img src="https://i.loli.net/2021/05/09/QbXC5w9UoaFre6p.png" alt="基本使用20.png"></p>
+<p><img src="https://i.loli.net/2021/05/09/phgSi54vzPGD7b1.png" alt="基本使用21.png"></p>
+<p><img src="https://i.loli.net/2021/05/09/ZuYolXvWhUJgK16.png" alt="基本使用22.png"></p>
+<p><img src="https://i.loli.net/2021/05/09/O7DUpFEMuJseNmL.png" alt="基本使用23.png"></p>
+<p><img src="https://i.loli.net/2021/05/09/uUrsjwNIqiR4Vap.png" alt="基本使用24.png"></p>
+</li>
+<li><p>用！[名字]（路径）的方式可以插入图片（或大部分情况下直接复制即可）</p>
+<p><img src="https://i.loli.net/2021/05/09/296sI1LpbTBRioa.png" alt="基本使用25.png"></p>
+</li>
+</ol>
+<h3 id="5-Markdown书写博客的其他要求"><a href="#5-Markdown书写博客的其他要求" class="headerlink" title="5. Markdown书写博客的其他要求"></a>5. Markdown书写博客的其他要求</h3><p>上面的教程已经教会了大家如何书写Markdown语言规范，而在书写博客时有一个额外的要求：在整篇文档的最上方添加Front-matter</p>
+<p>如何添加Front-matter？</p>
+<p>如图所示，只需在前面添加几行代码：</p>
+<p><img src="https://i.loli.net/2021/05/09/MvAgdCxeQEnoj3S.png" alt="title演示.png"></p>
+<p>如果是typora，输入前面的三个短横线后会自动识别，此时不需要书写最后三个短横线</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: 这是标题</span><br><span class="line">date: 2021/05/08 12:00:00</span><br><span class="line">author: </span><br><span class="line"><span class="bullet">-</span> 作者名称1（建议使用GitHub用户名）</span><br><span class="line"><span class="bullet">-</span> 作者名称2（建议使用GitHub用户名）</span><br><span class="line">categories: 这是分类</span><br><span class="line">tag:</span><br><span class="line"><span class="bullet">-</span> demo</span><br><span class="line"><span class="section">- test</span></span><br><span class="line"><span class="section">---</span></span><br></pre></td></tr></table></figure>
+
+<p>从三条短横线开始，到三条短横线结束，需要填写title、date、author、categories、tag</p>
+<ul>
+<li>title 填写博客的标题，可以中文可以英文</li>
+<li>date 填写博客的建立日期 格式为 YYYY/MM/DD hh:mm:ss</li>
+<li>author 填写作者名称</li>
+<li>categories 这一篇博客的分类，（为了方便管理，目前大家从这四个英文标题当中选填，首字母大写）<ul>
+<li>Introduction  (各类教程、简介)</li>
+<li>Diary （个人生活记录、推送）</li>
+<li>Note （课堂、讲座笔记）</li>
+<li>Discussion （有感而发的讨论）</li>
+</ul>
+</li>
+<li>tag 博客希望的标签，可以添加多个，但是每个短横线之后一定要有<strong>空格</strong></li>
+</ul>
+<p>注意： 每一个参数的冒号后一定要有<strong>空格</strong></p>
+<h3 id="6-关于博客图片的要求"><a href="#6-关于博客图片的要求" class="headerlink" title="6. 关于博客图片的要求"></a>6. 关于博客图片的要求</h3><p>大家在书写博客时可能会有要用到图片的地方，但与基础的图片语法不同的是，博客的图片需要经过处理：</p>
+<ol>
+<li><p>将所用图片储存在本地（你的电脑里）</p>
+</li>
+<li><p>打开网址 <a target="_blank" rel="noopener" href="http://www.sm.ms/">www.sm.ms</a></p>
+</li>
+<li><p>将图片拖入框内，选择upload</p>
+</li>
+<li><p>复制下方markdown的语句，粘贴到博客当中即可在博客中插入图片，此外不需要做任何操作</p>
+<p><img src="https://i.loli.net/2021/05/09/PCbwsqE2VS8Hv1K.png" alt="空图.png"></p>
+<p><img src="https://i.loli.net/2021/05/09/UjuxBOtd8wKPim5.png" alt="空图2.png"></p>
+<p><img src="https://i.loli.net/2021/05/09/3doiDKBtmanGelJ.png" alt="空图3.png"></p>
+</li>
+</ol>
+<h2 id=""><a href="#" class="headerlink" title="======="></a>=======</h2><p>title: 如何使用MarkDown书写博客<br>date: 2021/05/09 14:00:00<br>categories: Introduction<br>tags:</p>
+<ul>
+<li>introduction</li>
+<li>教程<br>author:</li>
+<li>WXY</li>
+<li>QC</li>
+</ul>
+<hr>
+<p>如何使用MarkDown书写博客</p>
+<span id="more"></span>
+
+<h2 id="如何使用MarkDown书写博客-1"><a href="#如何使用MarkDown书写博客-1" class="headerlink" title="如何使用MarkDown书写博客"></a>如何使用MarkDown书写博客</h2><h3 id="1-引言-1"><a href="#1-引言-1" class="headerlink" title="1. 引言"></a>1. 引言</h3><p>到目前为止，计04班的设备采购工作已经完成，基础的博客网页（ <a target="_blank" rel="noopener" href="http://www.thucs04.cn/">www.thucs04.cn</a> ）也已经搭建完成，班级博客将是以后班级形象展示的重要阵地。</p>
+<p>那班级博客上都有什么呢？这就需要大家来贡献自己的力量，书写一些博文，然后经过Github进行上传，充实我们的班级博客。</p>
+<p>为了方便博客的维护，以及减少书写HTML的麻烦，经主要技术人员研究决定，让大家使用MarkDown来书写博文，主题、内容不限。</p>
+<p>那么，什么是MarkDown呢？确切地来说，MarkDown是一种格式，就像是Word文档里可以调整字体的风格、字号，可以加粗文字等，Markdown也是用来进行这些操作的一种语言规范，例如本篇教程就是使用这种规范来书写的。但与Word不同的是，Markdown没有十分方便的GUI（图像界面），需要我们书写一些简单的代码来对这些文字进行格式的设定。</p>
+<h3 id="2-MarkDown的书写平台-1"><a href="#2-MarkDown的书写平台-1" class="headerlink" title="2. MarkDown的书写平台"></a>2. MarkDown的书写平台</h3><p>就像是我们写C++的代码会放在VScode 上一样，书写Markdown也有这样的平台，在这种平台上书写，可以方便地让我们看到代码的效果。</p>
+<p>下面推荐两种书写Markdown的平台</p>
+<ul>
+<li><p>VS code</p>
+</li>
+<li><p>typora</p>
 </li>
 </ul>
-<p>​                </p>
+<h4 id="2-1-VS-code-书写Markdown-方式-1"><a href="#2-1-VS-code-书写Markdown-方式-1" class="headerlink" title="2.1 VS code 书写Markdown 方式"></a>2.1 VS code 书写Markdown 方式</h4><ol>
+<li> 安装vscode，这就足够了，不需要在vscode中安装其他插件</li>
+<li>在vscode新建一个文件，后缀为 .md  例如：test1.md</li>
+<li>右键点击上方 test1.md的标签，选择打开预览，就可以在预览当中看到自己书写的MarkDown代码的效果。</li>
+<li>完成上述工作之后，你就可以在test1.md文件中<del>快乐地</del>书写博文和代码了（如何书写见下方语法教程）</li>
+</ol>
+<img src="https://i.loli.net/2021/05/09/8TfaBZdCFWbkAcD.png" alt="操作图示"  />
+
+<h4 id="2-2-typora书写Markdown-方式-1"><a href="#2-2-typora书写Markdown-方式-1" class="headerlink" title="2.2 typora书写Markdown 方式"></a>2.2 typora书写Markdown 方式</h4><ol>
+<li>安装typora，网址：<a target="_blank" rel="noopener" href="https://typora.io/">https://typora.io/</a>  ，往下翻，可以看到右上角Download选项，点击跳转到下载页面，根据电脑操作系统的版本下载对应的安装包</li>
+<li>安装typora（无需打开这个软件）</li>
+<li>在桌面（或其他位置）上新建一个文件，后缀为.md，以test.md为例</li>
+<li>打开这个文件（选择打开方式为typora），之后你就可以在test.md文件中<del>快乐地</del>书写博文和代码了</li>
+</ol>
+<img src="https://i.loli.net/2021/05/09/nCNAxTJZuqabl4V.png" alt="typora版.png"  />
+
+<h3 id="3-Markdown基本使用-1"><a href="#3-Markdown基本使用-1" class="headerlink" title="3. Markdown基本使用"></a>3. Markdown基本使用</h3><p><strong>在写博文时，你只需要正常地输入博客的内容，然后在需要的格式处加上MarkDown的语法即可</strong></p>
+<p>如下例（左侧为代码和文本，右侧为效果图）</p>
+<p><img src="https://i.loli.net/2021/05/09/6ypgriUdthWH7Nq.png" alt="书写演示.png"></p>
+<p>这里强烈推荐使用typora，它可以即时地看到效果，不需要打开预览图</p>
+<p>Markdown的具体语法可以在网上查到，推荐一个网站：<a target="_blank" rel="noopener" href="https://www.jianshu.com/p/191d1e21f7ed/">Markdown基本语法 - 简书 (jianshu.com)</a></p>
+<h3 id="4-Markdown的基本语法教程-1"><a href="#4-Markdown的基本语法教程-1" class="headerlink" title="4. Markdown的基本语法教程"></a>4. Markdown的基本语法教程</h3><ol>
+<li><p>n个#加上一个空格代表一个n级标题</p>
+<p><img src="https://i.loli.net/2021/05/09/GqoRmiFEkDnfl3C.png" alt="基本使用1.png"></p>
+<p><img src="https://i.loli.net/2021/05/09/y7QZD42mA1tHcKn.png" alt="基本使用2.png"></p>
+</li>
+<li><p>一对*括起来表示斜体；两对表示加粗；三对表示斜体加加粗</p>
+<p><img src="https://i.loli.net/2021/05/09/vagwUxXlNIO49Dr.png" alt="基本使用3.png"></p>
+<p><img src="https://i.loli.net/2021/05/09/HLy5mDAivb7jtRO.png" alt="基本使用4.png"></p>
+</li>
+<li><p>1、2、3、4等编号会自动延续，生成有序列表</p>
+<p><img src="https://i.loli.net/2021/05/09/wybZBPEjp1o5SVR.png" alt="基本使用5.png"></p>
+<p><img src="https://i.loli.net/2021/05/09/gbEdm3RhncS5jMo.png" alt="基本使用6.png"></p>
+</li>
+<li><p>三个或以上小短线 — 在单行输入将会作为分割线</p>
+<p><img src="https://i.loli.net/2021/05/09/16VqZWt7DSLgdOK.png" alt="基本使用7.png"></p>
+<p><img src="https://i.loli.net/2021/05/09/m1juBy7MObsXo42.png" alt="基本使用8.png"></p>
+</li>
+<li><p>+，-，*加上空格将会生成无序列表；其可进行分级；在无序列表中shift+tab可回退至无序表的上一级</p>
+<p><img src="https://i.loli.net/2021/05/09/GYwbNknClS9UKJa.png" alt="基本使用9.png"></p>
+<p><img src="https://i.loli.net/2021/05/09/7HGn21NarhXBUAR.png" alt="基本使用10.png"></p>
+</li>
+<li><p>用n个&gt;符号之后加空格可以表示n级引用，可无限嵌套</p>
+<p><img src="https://i.loli.net/2021/05/09/ZB8YjtXrCwLFyzM.png" alt="基本使用11.png"></p>
+<p><img src="https://i.loli.net/2021/05/09/bBwpkNqtL7fiuZD.png" alt="基本使用12.png"></p>
+</li>
+<li><p>连续输入三个`可调用代码块</p>
+<p><img src="https://i.loli.net/2021/05/09/hawdrX9oUBEqJDT.png" alt="基本使用13.png"></p>
+<p><img src="https://i.loli.net/2021/05/09/tz53jiuWyhDg7vc.png" alt="基本使用14.png"></p>
+</li>
+<li><p>两对~中内容表示加上删除线</p>
+<p><img src="https://i.loli.net/2021/05/09/agUVmMuLK4dHntp.png" alt="基本使用15.png"></p>
+<p><img src="https://i.loli.net/2021/05/09/wOu4AWe6a2ojULY.png" alt="基本使用16.png"></p>
+</li>
+<li><p>用短竖线 |内容|内容| 的方式可以创建表格，创建完后可自行调整大小</p>
+<p><img src="https://i.loli.net/2021/05/09/vNkcCuhEUHWFqf2.png" alt="基本使用17.png"></p>
+<p><img src="https://i.loli.net/2021/05/09/PHJcvCAizxfEugS.png" alt="基本使用18.png"></p>
+</li>
+<li><p>[内容]：(网址) 的形式可以实现参数式超链接，不加：也有其他方式</p>
+<p><img src="https://i.loli.net/2021/05/09/XDMStH8uwE7PICR.png" alt="基本使用19.png"></p>
+<p><img src="https://i.loli.net/2021/05/09/QbXC5w9UoaFre6p.png" alt="基本使用20.png"></p>
+<p><img src="https://i.loli.net/2021/05/09/phgSi54vzPGD7b1.png" alt="基本使用21.png"></p>
+<p><img src="https://i.loli.net/2021/05/09/ZuYolXvWhUJgK16.png" alt="基本使用22.png"></p>
+<p><img src="https://i.loli.net/2021/05/09/O7DUpFEMuJseNmL.png" alt="基本使用23.png"></p>
+<p><img src="https://i.loli.net/2021/05/09/uUrsjwNIqiR4Vap.png" alt="基本使用24.png"></p>
+</li>
+<li><p>用！[名字]（路径）的方式可以插入图片（或大部分情况下直接复制即可）</p>
+<p><img src="https://i.loli.net/2021/05/09/296sI1LpbTBRioa.png" alt="基本使用25.png"></p>
+</li>
+</ol>
+<h3 id="5-Markdown书写博客的其他要求-1"><a href="#5-Markdown书写博客的其他要求-1" class="headerlink" title="5. Markdown书写博客的其他要求"></a>5. Markdown书写博客的其他要求</h3><p>上面的教程已经教会了大家如何书写Markdown语言规范，而在书写博客时有一个额外的要求：在整篇文档的最上方添加Front-matter</p>
+<p>如何添加Front-matter？</p>
+<p>如图所示，只需在前面添加几行代码：</p>
+<p><img src="https://i.loli.net/2021/05/09/MvAgdCxeQEnoj3S.png" alt="title演示.png"></p>
+<p>如果是typora，输入前面的三个短横线后会自动识别，此时不需要书写最后三个短横线</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: 这是标题</span><br><span class="line">date: 2021/05/08 12:00:00</span><br><span class="line">author: </span><br><span class="line"><span class="bullet">-</span> 作者名称1（建议使用GitHub用户名）</span><br><span class="line"><span class="bullet">-</span> 作者名称2（建议使用GitHub用户名）</span><br><span class="line">categories: 这是分类</span><br><span class="line">tag:</span><br><span class="line"><span class="bullet">-</span> demo</span><br><span class="line"><span class="section">- test</span></span><br><span class="line"><span class="section">---</span></span><br></pre></td></tr></table></figure>
+
+<p>从三条短横线开始，到三条短横线结束，需要填写title、date、author、categories、tag</p>
+<ul>
+<li>title 填写博客的标题，可以中文可以英文</li>
+<li>date 填写博客的建立日期 格式为 YYYY/MM/DD hh:mm:ss</li>
+<li>author 填写作者名称</li>
+<li>categories 这一篇博客的分类，（为了方便管理，目前大家从这四个英文标题当中选填，首字母大写）<ul>
+<li>Introduction  (各类教程、简介)</li>
+<li>Diary （个人生活记录、推送）</li>
+<li>Note （课堂、讲座笔记）</li>
+<li>Discussion （有感而发的讨论）</li>
+</ul>
+</li>
+<li>tag 博客希望的标签，可以添加多个，但是每个短横线之后一定要有<strong>空格</strong></li>
+</ul>
+<p>注意： 每一个参数的冒号后一定要有<strong>空格</strong></p>
+<h3 id="6-关于博客图片的要求-1"><a href="#6-关于博客图片的要求-1" class="headerlink" title="6. 关于博客图片的要求"></a>6. 关于博客图片的要求</h3><p>大家在书写博客时可能会有要用到图片的地方，但与基础的图片语法不同的是，博客的图片需要经过处理：</p>
+<ol>
+<li><p>将所用图片储存在本地（你的电脑里）</p>
+</li>
+<li><p>打开网址 <a target="_blank" rel="noopener" href="http://www.sm.ms/">www.sm.ms</a></p>
+</li>
+<li><p>将图片拖入框内，选择upload</p>
+</li>
+<li><p>复制下方markdown的语句，粘贴到博客当中即可在博客中插入图片，此外不需要做任何操作</p>
+<p><img src="https://i.loli.net/2021/05/09/PCbwsqE2VS8Hv1K.png" alt="空图.png"></p>
+<p><img src="https://i.loli.net/2021/05/09/UjuxBOtd8wKPim5.png" alt="空图2.png"></p>
+<p><img src="https://i.loli.net/2021/05/09/3doiDKBtmanGelJ.png" alt="空图3.png"></p>
+</li>
+</ol>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>a81e3dcec386f8ed8e866c8a67830062cb2ef870</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
 
       
 
@@ -250,7 +524,33 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">introduction</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">教程</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/Introduction//" class="article-tag-list-link color3">Introduction</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
 
       
 
@@ -300,7 +600,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2021/05/02/Missing%20Semester%20Lecture%201/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2021/05/09/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8MarkDown%E4%B9%A6%E5%86%99%E5%8D%9A%E5%AE%A2%20-%20%E5%8D%9A%E5%AE%A2%E7%89%88/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -314,11 +614,11 @@
   
 <nav id="article-nav">
   
-    <a href="/2021/05/13/hello-world/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2021/05/13/Missing%20Semester%20Lecture%201/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          Hello World
+          Missing semester Lecture 1
         
       </div>
     </a>
@@ -451,6 +751,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">tag1</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">introduction</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">教程</a>
               </li>
             
             <div class="clearfix"></div>
