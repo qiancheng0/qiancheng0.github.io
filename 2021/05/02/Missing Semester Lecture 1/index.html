@@ -6,13 +6,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>Archives | Cool Q&#39;s Blog</title>
+  <title>Cool Q&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
+  <meta name="description" content="Missing Semester Lecture 1linux系统简单命令操作  echo + 内容：重复一遍 date：输出当前时间  基本规则：空格代表命令的分割  echo $PATH 可查看所有环境路径，即每一个指令可能存放的所有路径  which + 指令可查看该指令的程序路径（如which echo）  pwd：将输出现在所在路径（present working directory）">
+<meta property="og:type" content="article">
 <meta property="og:title" content="Cool Q&#39;s Blog">
-<meta property="og:url" content="http://example.com/archives/index.html">
+<meta property="og:url" content="http://example.com/2021/05/02/Missing%20Semester%20Lecture%201/index.html">
 <meta property="og:site_name" content="Cool Q&#39;s Blog">
+<meta property="og:description" content="Missing Semester Lecture 1linux系统简单命令操作  echo + 内容：重复一遍 date：输出当前时间  基本规则：空格代表命令的分割  echo $PATH 可查看所有环境路径，即每一个指令可能存放的所有路径  which + 指令可查看该指令的程序路径（如which echo）  pwd：将输出现在所在路径（present working directory）">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2021-05-02T13:28:15.769Z">
+<meta property="article:modified_time" content="2021-05-02T13:28:15.762Z">
 <meta property="article:author" content="QC">
 <meta name="twitter:card" content="summary">
   
@@ -142,141 +146,214 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-Missing Semester Lecture 1" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="Missing-Semester-Lecture-1"><a href="#Missing-Semester-Lecture-1" class="headerlink" title="Missing Semester Lecture 1"></a>Missing Semester Lecture 1</h2><p><strong>linux系统简单命令操作</strong></p>
+<ul>
+<li>echo + 内容：重复一遍</li>
+<li>date：输出当前时间</li>
+</ul>
+<p>基本规则：空格代表命令的分割</p>
+<ul>
+<li><p>echo $PATH 可查看所有环境路径，即每一个指令可能存放的所有路径</p>
+</li>
+<li><p>which + 指令可查看该指令的程序路径（如which echo）</p>
+</li>
+<li><p>pwd：将输出现在所在路径（present working directory）</p>
+</li>
+<li><p>cd /—-：切换当前工作路径（change directory）</p>
+</li>
+<li><p>.. ：可回到上一级文件夹</p>
+</li>
+<li><p>ls：列出当前所有文件</p>
+</li>
+<li><p>cd <del>/—/—：</del>即代表 home/名字 这一目录，简略成这样写，相当于从头写路径，有时更方便</p>
+</li>
+<li><p>cd -：表示返回上一个所在的文件夹路径中，相当于返回（但不是返回上一级）</p>
+</li>
+<li><p>ls –help：可查看很多相关列出文件的方式与操作</p>
+<ul>
+<li>例如：ls -l 可以按行展开列出详细文件信息（longlisting format）</li>
+</ul>
+</li>
+<li><p>-l打开的文件详细信息中会出现十位字母：</p>
+<ul>
+<li>第一位d代表是文件夹</li>
+<li>之后9位代表权限，三位一组，共三组</li>
+<li>第一组代表自己的权限，第二组是群组的权限，第三组是所有人的权限</li>
+<li>r-read w-write x-execute</li>
+<li>注意：想要打开某文件夹，必须要对之前路径中的所有文件夹都有execute的权限</li>
+</ul>
+</li>
+<li><p>mv：move，可以修改文件名与路径，需要mv+两个路径</p>
+</li>
+<li><p>rm：只能remove文件</p>
+</li>
+<li><p>rmdir：只能remove空文件夹</p>
+</li>
+<li><p>mkdir：创建空文件夹</p>
+</li>
+<li><p>contrl+l：清屏</p>
+</li>
+<li><p>大于与小于号分别可作为输入流与输出流；其个数代表循环输入、输出的个数</p>
+<ul>
+<li>例如：echo hello &gt; hello.txt，那么后者文件中将写入hello</li>
+<li>cat &lt; hello.txt 将在terminal中输出hello</li>
+</ul>
+</li>
+<li><p>| ：(pipe) 以左侧的输出，作为右侧的输入</p>
+</li>
+<li><p>sudo (do as super user)：root一般拥有所有所有超级用户权限</p>
+</li>
+<li><p>sudo su：让shell以超级用户的身份运行指令，从而可以做很多修改等；su + 原用户名可以切换回来。</p>
+<ul>
+<li><p>例如，修改屏幕亮度：可以sudo su直接以root身份进行调节</p>
+<p>即sudo su; echo 500 &gt; brightness</p>
+</li>
+<li><p>或者可以 echo 500 |  sudo tee brightness; 其中tee意思为既能通过pipe将左侧输出传给右侧作为输入，也能将该输出打在电脑上</p>
+</li>
+</ul>
+</li>
+<li><p>xdg-open：类似于查找，可以帮助你在正确的位置打开你想要的文件夹，更加快捷</p>
+</li>
+</ul>
+<p>​                </p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>干饭人，干饭魂！<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2021" class="archive-year">2021</a>
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/05/13/my-first-blog/" class="archive-article-date">
-  	<time datetime="2021-05-12T17:38:56.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-05-13</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/05/13/my-first-blog/">my-first-blog</a>
-    </h1>
-  
+      </div>
+    </span>
+  </div>
+</div>
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">my first blog</a>
-        		</li>
-      		
-		</ul>
-	</div>
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2021/05/02/Missing%20Semester%20Lecture%201/" alt="微信分享二维码">
+    </div>
+</div>
 
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/默认分类//" class="article-tag-list-link color5">默认分类</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/05/13/hello-world/" class="archive-article-date">
-  	<time datetime="2021-05-12T16:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-05-13</time>
-</a>
+<nav id="article-nav">
+  
+    <a href="/2021/05/13/hello-world/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          Hello World
+        
+      </div>
+    </a>
+  
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2021/05/13/hello-world/">Hello World</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">tag1</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/默认分类//" class="article-tag-list-link color5">默认分类</a>
-        		</li>
-      		
-		</ul>
-	</div>
+        
+        
+    </div>
+</aside>
 
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2021/05/02/Missing%20Semester%20Lecture%201/" class="archive-article-date">
-  	<time datetime="2021-05-02T13:28:15.769Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-05-02</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
   
-    </div></section>
   
 
-    
+  
+
+  
+
+  
 
 
           </div>
@@ -299,8 +376,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
