@@ -17,8 +17,8 @@ Education
 
 Academic
 ======
-* GPA: 3.89 / 4.00.
-* Selected Courses of A & A+: Linear Algebra, Introduction to Complex Analysis, Foundation of Object-Oriented Programming, Software Engineering, Introduction to Artificial Intelligence, Artificial Neural Networks, Fundamentals of Computer Graphics, A General Introduction to Economics, Writing and Communication.
+* **GPA**: 3.89 / 4.00.
+* Selected Courses of **A & A+**: Linear Algebra, Introduction to Complex Analysis, Foundation of Object-Oriented Programming, Software Engineering, Introduction to Artificial Intelligence, Artificial Neural Networks, Fundamentals of Computer Graphics, A General Introduction to Economics, Writing and Communication.
 * A member of THUNLP (THU Natural Language Processing Group), advised by Associate Professor Zhiyuan Liu.
 
 Research Interests
@@ -40,26 +40,26 @@ Publications
 
 Research Experience
 ======
-* Mar 2022 – Jul 2022: Exploring Mode Connectivity for Pre-trained Language Models
+* Mar 2022 – Jul 2022: **Exploring Mode Connectivity for Pre-trained Language Models**
   * Directed by Associate Professor Zhiyuan Liu, THUNLP.
   * Analyzed the geometric connections of different minima in loss landscape through the lens of mode connectivity, which measures whether two minima can be connected with a low loss path.
   * Explored how various hyperparameters and training data affect PLMs’ mode connectivity; Discovered the role of pre-training in facilitating mode connectivity and pulling task boundaries closer; Investigated into how PLMs task knowledge change along the connected path quantitatively.
   * Co-first author. Accepted by EMNLP 2022 main conference.
   * Project established in THU Student Research Training Program.
 
-* Aug 2022 – Jan 2023: Recyclable Tuning for Continual Pretraining		 		           
+* Aug 2022 – Jan 2023: **Recyclable Tuning for Continual Pretraining**	 		           
   * Directed by Associate Professor Zhiyuan Liu, THUNLP.
   * Formulated the task of compatible tuning as PLM continually acquire fresh knowledge from emerging data, and explored how to make earlier adapted weights compatible with subsequent upgraded PLMs.
   * Explored the parametric connections among continually pre-trained models; Proposed CLoP, which enables compatible tuning in a data-efficient and training efficient way; Experimented on various NLP tasks and demonstrated the superiority of CLoP; Construct the first benchmark regarding to the field of compatible tuning.
   * Co-first author. Applying for an invention patent. Related paper in submission.
   * Project selected to THU Undergraduate Academic Advancement program and won ￥30K support.
 
-* Mar 2022 – Jun 2022: THUPat: A Convenient Campus Helper						        
+* Mar 2022 – Jun 2022: **THUPat: A Convenient Campus Helper**					        
   * Directed by Associate Researcher Chun Yu, Theory and Practice of Human Computer Interaction course project.
   * Proposed “pat” for the first time as the medium in human-phone interaction. Built an open source android software THUPat that can help with various kinds of campus events via simply patting the phone.
   * Collaborator. Software released in THU and benefited the campus community.
 
-* Jul 2022 – Aug 2022: Quantum Automata: Capability and Efficiency 					         
+* Jul 2022 – Aug 2022: **Quantum Automata: Capability and Efficiency**		         
   * Directed by Professor Zhengfeng Ji and Professor Mingsheng Ying, Topics in Quantum Computing course project.
   * Defined the efficiency of quantum automata from 3 different perspectives with respect to acceptance probability, space and time; Proposed an algorithm that can effectively optimize quantum automata’s acceptance probability, applying the knowledge from neural network.
   * First author. Course thesis won high recognition.
