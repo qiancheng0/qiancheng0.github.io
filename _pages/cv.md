@@ -13,7 +13,7 @@ Download [CV](http://zejiang-unsw.github.io/files/CV_ChengQian.pdf)
 
 Education
 ======
-* B.Eng. in Environmental Engineering, Hohai University, Nanjing, China, 2012
+* B.Eng. in Computer Science and , Hohai University, Nanjing, China, 2012
 * M.Sc. in Hydro-Informatics and Water Management, Partnership of five European Universities, 2015
 * Ph.D. in Water Resources Engineering, University of New South Wales, Sydney, Australia, 2021
 

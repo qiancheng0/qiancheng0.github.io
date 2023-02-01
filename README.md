@@ -3,7 +3,6 @@ This is Cheng Qian's personal [homepage](https://qiancheng0.github.io/).
 
 ## A short introduction
 I am currently a undergraduate student studying at Tsinghua University, majoring in Computer Science and Technology. I am a member of THUNLP, advised by Prof. Zhiyuan Liu. I have broad interests in natural language processing, with a focus on pre-trained language models, & data efficient tuning, and their applications.
-
 PROFILE:
 * Highly self-motivated researcher. 
 * Strong interpersonal skills with a good sense of teamwork.
@@ -12,7 +11,8 @@ PROFILE:
 
 
 ## Publications
-Yujia Qin*, Cheng Qian*, Jing Yi*, Weize Chen, Yankai Lin, Xu Han, Zhiyuan Liu, Maosong Sun, Jie Zhou. Exploring Mode Connectivity for Pretrained Language Models. EMNLP 2022.
+Yujia Qin*, Cheng Qian*, Jing Yi*, Weize Chen, Yankai Lin, Xu Han, Zhiyuan Liu, Maosong Sun and Jie Zhou. Exploring Mode Connectivity for Pre-trained Language Models. EMNLP 2022. 
+[paper](https://arxiv.org/pdf/2210.14102.pdf) / [code](https://github.com/thunlp/Mode-Connectivity-PLM)
 
 ## For more information
 More info about me can be found in [CV](https://qiancheng0.github.io/cv/).
