@@ -32,9 +32,9 @@ Publications
 ======
 (*indicates equal contribution)
 
-* Yujia Qin*, Cheng Qian*, Yankai Lin, Xu Han, Zhiyuan Liu, Maosong Sun and Jie Zhou. Recyclable Tuning for Continual Pre-training. *submitted to ACL 2023, under review*. 
+* Yujia Qin\*, **Cheng Qian**\*, Yankai Lin, Xu Han, Zhiyuan Liu, Maosong Sun and Jie Zhou. Recyclable Tuning for Continual Pre-training. *submitted to ACL 2023, under review*. 
 
-* Yujia Qin*, Cheng Qian*, Jing Yi*, Weize Chen, Yankai Lin, Xu Han, Zhiyuan Liu, Maosong Sun and Jie Zhou. Exploring Mode Connectivity for Pre-trained Language Models. EMNLP 2022. ([Paper](https://arxiv.org/pdf/2210.14102.pdf) / [Code](https://github.com/thunlp/Mode-Connectivity-PLM))
+* Yujia Qin\*, **Cheng Qian**\*, Jing Yi\*, Weize Chen, Yankai Lin, Xu Han, Zhiyuan Liu, Maosong Sun and Jie Zhou. Exploring Mode Connectivity for Pre-trained Language Models. EMNLP 2022. ([Paper](https://arxiv.org/pdf/2210.14102.pdf) / [Code](https://github.com/thunlp/Mode-Connectivity-PLM))
 
 
 
@@ -70,13 +70,13 @@ Publications
   <ul>{% for post in site.publications %}
     {% include archive-single-cv.html %}
   {% endfor %}</ul>
- 
+
 Talks
 ======
   <ul>{% for post in site.talks %}
     {% include archive-single-talk-cv.html %}
   {% endfor %}</ul>
-  
+
 Teaching
 ======
   <ul>{% for post in site.teaching %}

@@ -12,8 +12,11 @@ PROFILE:
 
 
 ## Publications
-Yujia Qin*, Cheng Qian*, Jing Yi*, Weize Chen, Yankai Lin, Xu Han, Zhiyuan Liu, Maosong Sun and Jie Zhou. Exploring Mode Connectivity for Pre-trained Language Models. EMNLP 2022. 
-[paper](https://arxiv.org/pdf/2210.14102.pdf) / [code](https://github.com/thunlp/Mode-Connectivity-PLM)
+(*indicates equal contribution)
+
+Yujia Qin\*, **Cheng Qian**\*, Yankai Lin, Xu Han, Zhiyuan Liu, Maosong Sun and Jie Zhou. Recyclable Tuning for Continual Pre-training. *submitted to ACL 2023, under review*. 
+
+Yujia Qin\*, **Cheng Qian**\*, Jing Yi\*, Weize Chen, Yankai Lin, Xu Han, Zhiyuan Liu, Maosong Sun and Jie Zhou. Exploring Mode Connectivity for Pre-trained Language Models. *EMNLP 2022*. ([Paper](https://arxiv.org/pdf/2210.14102.pdf) / [Code](https://github.com/thunlp/Mode-Connectivity-PLM))
 
 ## For more information
 More info about me can be found in [CV](https://qiancheng0.github.io/cv/).
