@@ -5,11 +5,11 @@ collection: projects
 date: 2023-01-20
 ---
 
-## Recyclable Tuning for Continual Pre-training, NLP Lab Project
+## Recyclable Tuning for Continual Pre-training, THUNLP Lab Project
 Background:
 
-* Continual pre-training is the paradigm where pre-trained language models (PLMs) continually acquire fresh knowledge from growing data and gradually get upgraded. Before an upgraded PLM is released, we may have tuned the original PLM for various tasks and stored the adapted weights.
-* However, when tuning the upgraded PLM, these outdated adapted weights will typically be ignored and discarded, causing a potential waste of resources.
+* Continual pre-training is the paradigm where pre-trained language models (PLMs) continually acquire fresh knowledge from growing data and gradually get upgraded. Before an upgraded PLM is released, we may have tuned the original PLM for various tasks and stored the adapted weights.
+* However, when tuning the upgraded PLM, these outdated adapted weights will typically be ignored and discarded, causing a potential waste of resources.
 
 
 Pilot Studies:

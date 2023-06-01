@@ -79,9 +79,7 @@ Research Experience
   * Defined the efficiency of quantum automata from 3 different perspectives with respect to acceptance probability, space and time; Proposed an algorithm that can effectively optimize quantum automata’s acceptance probability, applying the knowledge from neural network.
   * First author. Course thesis won high recognition.
 
-<-- !
-
-Publications
+<!-- Publications
 ======
 
   <ul>{% for post in site.publications %}
@@ -98,8 +96,7 @@ Teaching
 ======
   <ul>{% for post in site.teaching %}
     {% include archive-single-cv.html %}
-  {% endfor %}</ul>
--->
+  {% endfor %}</ul> -->
 
 Awards
 ======

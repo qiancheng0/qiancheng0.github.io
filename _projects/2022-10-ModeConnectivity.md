@@ -1,11 +1,11 @@
 ---
 title: "Exploring Mode Connectivity for Pre-trained Language Models"
-excerpt: "EMNLP 2022 Poster of this Paper <br/><img src='/images/QC/connectivity_poster.png'>"
+excerpt: "EMNLP 2022 Poster of the paper <br/><img src='/images/QC/connectivity_poster.png'>"
 collection: projects
 date: 2022-10-25
 ---
 
-## Exploring Mode Connectiviy of Pre-trained Language Models, NLP Lab Project
+## Exploring Mode Connectiviy of Pre-trained Language Models, THUNLP Lab Project
 Background:
 
 * Pre-trained Language Models (PLMs) provide a generic initialization, from which high-performance minima could be found. However, little is known about the relationships of various minima reached under different conditions.

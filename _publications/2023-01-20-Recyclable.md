@@ -6,14 +6,7 @@ excerpt: 'The paper explores the feasibility of reusing outdated adapted weights
 date: 2023-01-20
 venue: 'ACL'
 paperurl: 'https://arxiv.org/pdf/2305.08702.pdf'
-citation: '@misc{qin2023recyclable,
-      title={Recyclable Tuning for Continual Pre-training}, 
-      author={Yujia Qin and Cheng Qian and Xu Han and Yankai Lin and Huadong Wang and Ruobing Xie and Zhiyuan Liu and Maosong Sun and Jie Zhou},
-      year={2023},
-      eprint={2305.08702},
-      archivePrefix={arXiv},
-      primaryClass={cs.CL}
-}'
+citation: 'Qin, Y., Qian, C., Han, X., Lin, Y., Wang, H., Xie, R., Liu, Z., Sun, M., & Zhou, J. (2023). Recyclable Tuning for Continual Pre-training. ArXiv. /abs/2305.08702'
 ---
 
 Continual pre-training is the paradigm where pre-trained language models (PLMs) continually acquire fresh knowledge from growing data and gradually get upgraded. Before an upgraded PLM is released, we may have tuned the original PLM for various tasks and stored the adapted weights. However, when tuning the upgraded PLM, these outdated adapted weights will typically be ignored and discarded, causing a potential waste of resources. We bring this issue to the forefront and contend that proper algorithms for recycling outdated adapted weights should be developed. To this end, we formulate the task of recyclable tuning for continual pre-training. In pilot studies, we find that after continual pre-training, the upgraded PLM remains compatible with the outdated adapted weights to some extent. Motivated by this finding, we analyze the connection between continually pre-trained PLMs from two novel aspects, i.e., mode connectivity, and functional similarity. Based on the corresponding findings, we propose both an initialization-based method and a distillation-based method for our task. We demonstrate their feasibility in improving the convergence and performance for tuning the upgraded PLM. We also show that both methods can be combined to achieve better performance. The source codes are publicly available at [this https URL](https://github.com/thunlp/RecyclableTuning).
