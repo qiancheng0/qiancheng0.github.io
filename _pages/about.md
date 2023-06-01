@@ -11,11 +11,11 @@ redirect_from:
 This is Cheng Qian's personal homepage. <!--Please also refer to my [homepage@Tsinghua](https://www....).--> 
 
 ## A short introduction
-I am a undergraduate student studying at Tsinghua University, majoring in Computer Science and Technology. I am a member of THUNLP, advised by Prof. Zhiyuan Liu. I have broad interests in natural language processing, with a focus on pre-trained language models, parameter & data efficient tuning, and their applications.
+I am an undergraduate student studying at Tsinghua University, majoring in Computer Science and Technology. I am a member of [THUNLP](http://nlp.csai.tsinghua.edu.cn/), advised by [Prof. Zhiyuan Liu](http://nlp.csai.tsinghua.edu.cn/~lzy/). My research interests primarily lie in the field of natural language processing, with a particular focus on pre-trained language models, parameter and data-efficient tuning, tool learning and tool creation of large language models.
 
-My latest research focused on the tool creation ability of large language models ([paper](https://arxiv.org/pdf/2305.14318.pdf)). Previously I have worked on how outdated wight coulg be recycled for during the lifelong pre-training of language models (ACL 2023 [paper](https://arxiv.org/pdf/2305.08702.pdf)), and explored the mode connectivity of models’ various minima (EMNLP 2022 [paper](https://arxiv.org/pdf/2210.14102.pdf)). I have also participated in the survey paper on tool learning with foundation models ([paper](https://arxiv.org/pdf/2304.08354.pdf)).
+In my latest research, I have been investigating the tool creation ability of large language models, as outlined in our [paper](https://arxiv.org/pdf/2305.14318.pdf). Previously, I have also explored the concept of recycling outdated weights during the lifelong pre-training of language models, which was published in ACL 2023 findings ([paper](https://arxiv.org/pdf/2305.08702.pdf)). Additionally, I have contributed to research on the mode connectivity of models' various minima, which was presented at EMNLP 2022 ([paper](https://arxiv.org/pdf/2210.14102.pdf)). Moreover, I participated in a survey paper on tool learning with foundation models, which can be found [here](https://arxiv.org/pdf/2304.08354.pdf).
 
-I am currently looking for a PhD position in NLP, starting from Fall 2024. Please feel free to contact me if you are interested in my research.
+Looking forward, I am seeking a Ph.D. position in NLP, starting from Fall 2024. If you are interested in my research or would like to explore potential collaborations, please feel free to reach out to me.
 
 <b>Research Highlights:</b>
 * Comprehensive analysis of mode connectivity in pre-trained language models.
