@@ -45,10 +45,17 @@ Research Experience
 ======
 
 * Mar 2023 - Jun 2023: **CREATOR: Disentangling Abstract and Concrete Reasonings of Large Language Models through Tool Creation**
-  * 
+
+  * Directed by Associate Professor Zhiyuan Liu, THUNLP, and Professor Heng Ji, UIUC Blender Lab.
+
+  * Investigated into the Large Language Model's ability to create useful tools to solve the queries, and devised the CREATOR framework, which leverages the model's tool creation ability through four stages: creation, decision, execution and rectification.
+  * Disentangled the model's abstract and concrete reasoning abilities and raised the models performance under MATH and TabMWP benchmarks. Released the Creation Challenge dataset which aims to test the model's tool creation ability. Proved the effectiveness and generalization ability of our method.
+  * First author. Paper submitted to EMNLP 2023, under review.
 
 * Jan 2023 - Apr 2023: **Tool Learning with Foundational Models**
-  * Explored the Large Language Models' (LLM) ability to utilize external tools in various scenarios, and formulated a general tool learning framework, in which the foundational model understands human instructions,  
+  * Explored the Large Language Model's ability to utilize external tools in various scenarios, and formulated a general tool learning framework, in which the foundational model understands human instructions,  adjusts its tool-using plan through reasoning, and effectively conquer the target tasks.
+  * Contributed to part of the survey paper writing, conducted experiments and case studies under various scenarios including online shopping, cooking assistant, weather inquiry, and search engine.
+  * Contributor to the paper. Nature Machine Intelligence under review.
 
 * Aug 2022 – Jan 2023: **Recyclable Tuning for Continual Pretraining**	 		           
   * Directed by Associate Professor Zhiyuan Liu, THUNLP.
