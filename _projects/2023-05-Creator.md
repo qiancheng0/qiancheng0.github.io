@@ -1,8 +1,8 @@
 ---
 title: "CREATOR: Disentangling Abstract and Concrete Reasonings of Large Language Models through Tool Creation"
-excerpt: "Submitted to EMNLP 2023, under review <br/><img src='/images/QC/Creator.pdf'>"
+excerpt: "Submitted to EMNLP 2023, under review <br/><img src='/images/QC/Creator.png'>"
 collection: projects
-date: 2023-04-17
+date: 2023-05-23
 ---
 
 ## CREATOR: Disentangling Abstract and Concrete Reasonings of Large Language Models through Tool Creation, THUNLP Lab Survey Paper
