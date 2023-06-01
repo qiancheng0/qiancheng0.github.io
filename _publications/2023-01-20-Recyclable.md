@@ -2,15 +2,17 @@
 title: "Recyclable Tuning for Continual Pre-training"
 collection: publications
 permalink: /publication/2023-01-20-Recyclable
-excerpt: 'The paper analytically and empirically investigates the mode connectivity of pre-trained language models'
+excerpt: 'The paper explores the feasibility of reusing outdated adapted weights for continual pre-training'
 date: 2023-01-20
 venue: 'ACL'
 paperurl: 'https://arxiv.org/pdf/2305.08702.pdf'
-# citation: '@article{qin2023recyclable,
-  title={Recyclable Tuning for Continual Pre-training},
-  author={Qin, Yujia and Qian, Cheng and Han, Xu and Lin, Yankai and Wang, Huadong and Xie, Ruobing and Liu, Zhiyuan and Sun, Maosong and Zhou, Jie},
-  journal={arXiv preprint arXiv:2305.08702},
-  year={2023}
+citation: '@misc{qin2023recyclable,
+      title={Recyclable Tuning for Continual Pre-training}, 
+      author={Yujia Qin and Cheng Qian and Xu Han and Yankai Lin and Huadong Wang and Ruobing Xie and Zhiyuan Liu and Maosong Sun and Jie Zhou},
+      year={2023},
+      eprint={2305.08702},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL}
 }'
 ---
 
