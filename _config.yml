@@ -191,7 +191,7 @@ collections:
     output: false
     permalink: /:collection/:path/
   people:
-    output: false
+    output: true
     permalink: /:collection/:path/
 # Defaults
 defaults:
@@ -258,14 +258,14 @@ defaults:
   #     share: true
   #     comment: true
   # _people
-  # - scope:
-  #     path: ""
-  #     type: people
-  #   values:
-  #     layout: single
-  #     author_profile: true
-  #     share: true
-  #     comment: true
+  - scope:
+      path: ""
+      type: people
+    values:
+      layout: single
+      author_profile: true
+      share: true
+      comment: true
 # Sass/SCSS
 sass:
   sass_dir: _sass
