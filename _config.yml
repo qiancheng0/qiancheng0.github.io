@@ -190,7 +190,7 @@ collections:
   software:
     output: false
     permalink: /:collection/:path/
-  people:
+  friends:
     output: true
     permalink: /:collection/:path/
 # Defaults
@@ -257,10 +257,10 @@ defaults:
   #     author_profile: true
   #     share: true
   #     comment: true
-  # _people
+  # _friends
   - scope:
       path: ""
-      type: people
+      type: friends
     values:
       layout: single
       author_profile: true
