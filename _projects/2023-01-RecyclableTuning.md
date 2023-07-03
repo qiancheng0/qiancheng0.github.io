@@ -1,6 +1,6 @@
 ---
 title: "Recyclable Tuning for Continual Pre-training"
-excerpt: "ACL 2023 Findings, main figure <br/><img src='/images/QC/recyclable_tuning.png'>"
+excerpt: "ACL 2023 Findings, main figure <br/><img src='/images/poster/recyclable_tuning.png'>"
 collection: projects
 date: 2023-01-20
 ---

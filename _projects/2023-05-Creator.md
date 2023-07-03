@@ -1,6 +1,6 @@
 ---
 title: "CREATOR: Disentangling Abstract and Concrete Reasonings of Large Language Models through Tool Creation"
-excerpt: "Submitted to EMNLP 2023, under review <br/><img src='/images/QC/Creator.png'>"
+excerpt: "Submitted to EMNLP 2023, under review <br/><img src='/images/poster/Creator.png'>"
 collection: projects
 date: 2023-05-23
 ---

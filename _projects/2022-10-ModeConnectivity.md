@@ -1,6 +1,6 @@
 ---
 title: "Exploring Mode Connectivity for Pre-trained Language Models"
-excerpt: "EMNLP 2022 Poster of the paper <br/><img src='/images/QC/connectivity_poster.png'>"
+excerpt: "EMNLP 2022 Poster of the paper <br/><img src='/images/poster/connectivity_poster.png'>"
 collection: projects
 date: 2022-10-25
 ---

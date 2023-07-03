@@ -1,6 +1,6 @@
 ---
 title: "Tool Learning with Foundation Models"
-excerpt: "Submitted to Nature Machine Intelligence, under review <br/><img src='/images/QC/tool_learning.png'>"
+excerpt: "Submitted to Nature Machine Intelligence, under review <br/><img src='/images/poster/tool_learning.png'>"
 collection: projects
 date: 2023-04-17
 ---
