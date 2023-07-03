@@ -176,7 +176,7 @@ kramdown:
 # Collections
 collections:
   teaching:
-    output: true
+    output: false
     permalink: /:collection/:path/
   publications:
     output: true
@@ -185,13 +185,13 @@ collections:
     output: true
     permalink: /:collection/:path/
   talks:
-    output: true
+    output: false
     permalink: /:collection/:path/
   software:
-    output: true
+    output: false
     permalink: /:collection/:path/
   people:
-    output: true
+    output: false
     permalink: /:collection/:path/
 # Defaults
 defaults:
