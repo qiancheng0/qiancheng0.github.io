@@ -7,4 +7,3 @@ collection: friends
 ---
 
 <img src="/images/avatars/vv.jpg" alt="Avatar" class="avatar"/>
-
