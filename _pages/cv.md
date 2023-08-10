@@ -41,13 +41,13 @@ Publications
 
 * Yujia Qin\*, **Cheng Qian**\*, Jing Yi\*, Weize Chen, Yankai Lin, Xu Han, Zhiyuan Liu, Maosong Sun and Jie Zhou. Exploring Mode Connectivity for Pre-trained Language Models. EMNLP 2022. ([Paper](https://arxiv.org/pdf/2210.14102.pdf) / [Code](https://github.com/thunlp/Mode-Connectivity-PLM))
 
+* **Cheng Qian**, Chenyan Xiong, Zhenghao Liu, Zhiyuan Liu. Paper about toolkit creation and open-source model adaptation, under review.
+
 Research Experience
 ======
 
 * Mar 2023 - Jun 2023: **CREATOR: Disentangling Abstract and Concrete Reasonings of Large Language Models through Tool Creation**
-
-  * Directed by Associate Professor Zhiyuan Liu, THUNLP, and Professor Heng Ji, UIUC Blender Lab.
-
+  * Directed by Professor Heng Ji, UIUC Blender Lab, and Associate Professor Zhiyuan Liu, THUNLP.
   * Investigated into the Large Language Model's ability to create useful tools to solve the queries, and devised the CREATOR framework, which leverages the model's tool creation ability through four stages: creation, decision, execution and rectification.
   * Disentangled the model's abstract and concrete reasoning abilities and raised the models performance under MATH and TabMWP benchmarks. Released the Creation Challenge dataset which aims to test the model's tool creation ability. Proved the effectiveness and generalization ability of our method.
   * First author. Paper submitted to EMNLP 2023, under review.
@@ -70,14 +70,21 @@ Research Experience
   * Explored how various hyperparameters and training data affect PLMs’ mode connectivity; Discovered the role of pre-training in facilitating mode connectivity and pulling task boundaries closer; Investigated into how PLMs task knowledge change along the connected path quantitatively.
   * Co-first author. Accepted by EMNLP 2022 main conference.
   * Project established in THU Student Research Training Program.
+
 * Mar 2022 – Jun 2022: **THUPat: A Convenient Campus Helper**					        
   * Directed by Associate Researcher Chun Yu, Theory and Practice of Human Computer Interaction course project.
   * Proposed “pat” for the first time as the medium in human-phone interaction. Built an open source android software THUPat that can help with various kinds of campus events via simply patting the phone.
   * Collaborator. Software released in THU and benefited the campus community.
+
 * Jul 2022 – Aug 2022: **Quantum Automata: Capability and Efficiency**		         
   * Directed by Professor Zhengfeng Ji and Professor Mingsheng Ying, Topics in Quantum Computing course project.
   * Defined the efficiency of quantum automata from 3 different perspectives with respect to acceptance probability, space and time; Proposed an algorithm that can effectively optimize quantum automata’s acceptance probability, applying the knowledge from neural network.
   * First author. Course thesis won high recognition.
+
+* Mar 2023 - Jun 2023: **(Paper about toolkit creation and open-source model adaptation)**
+  * Directed by Associate Professor Chenyan Xiong, CMU LTI, Associate Professor Zhenghao Liu, Zhenghao Liu, Northeastern University, and Associate Professor Zhiyuan Liu, THUNLP.
+  * Investigated how the LLM's tool using ability can be transferred to smaller, open-sourced models to help solve various tasks and raise performance.
+  * Paper submitted, under review.
 
 <!-- Publications
 ======
