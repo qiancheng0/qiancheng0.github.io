@@ -17,7 +17,7 @@ Education
 
 Academic
 ======
-* **GPA**: 3.89 / 4.00.
+* **GPA**: 3.90 / 4.00.
 * Selected Courses of **A & A+**: Linear Algebra, Introduction to Complex Analysis, Foundation of Object-Oriented Programming, Software Engineering, Introduction to Artificial Intelligence, Artificial Neural Networks, Fundamentals of Computer Graphics, A General Introduction to Economics, Writing and Communication.
 * A member of THUNLP (THU Natural Language Processing Group), advised by Associate Professor Zhiyuan Liu.
 
@@ -26,7 +26,7 @@ Research Interests
 * Natural language processing, pre-trained language models.
 * Data efficient tuning and training efficient tuning (tuning with limited resources).
 * Life long pre-training and continual learning in NLP.
-* interpretability of the language model, and its alignment to human instructions.
+* Interpretability of the language model, and its alignment to human instructions.
 * Tool learning and tool creation of large language models.
 
 Publications
