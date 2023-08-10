@@ -82,7 +82,7 @@ Research Experience
   * First author. Course thesis won high recognition.
 
 * Mar 2023 - Jun 2023: **(Paper about toolkit creation and open-source model adaptation)**
-  * Directed by Associate Professor Chenyan Xiong, CMU LTI, Associate Professor Zhenghao Liu, Zhenghao Liu, Northeastern University, and Associate Professor Zhiyuan Liu, THUNLP.
+  * Directed by Associate Professor Chenyan Xiong, CMU LTI, Associate Professor Zhenghao Liu, Northeastern University, and Associate Professor Zhiyuan Liu, THUNLP.
   * Investigated how the LLM's tool using ability can be transferred to smaller, open-sourced models to help solve various tasks and raise performance.
   * Paper submitted, under review.
 
