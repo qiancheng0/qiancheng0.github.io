@@ -8,26 +8,32 @@ redirect_from:
   - /about.html
 ---
 
-This is Cheng Qian's personal homepage. <!--Please also refer to my [homepage@Tsinghua](https://www....).--> 
+This is Cheng Qian's personal homepage.
 
 ## A short introduction
-I am an undergraduate student studying at Tsinghua University, majoring in Computer Science and Technology. I am a member of [THUNLP](http://nlp.csai.tsinghua.edu.cn/), advised by [Prof. Zhiyuan Liu](http://nlp.csai.tsinghua.edu.cn/~lzy/). My research interests primarily lie in the field of natural language processing, with a particular focus on pre-trained language models, parameter and data-efficient tuning, tool learning and tool creation of large language models.
+I am an undergraduate student studying at Tsinghua University, majoring in Computer Science and Technology. I am a member of [THUNLP](http://nlp.csai.tsinghua.edu.cn/), advised by [Zhiyuan Liu](http://nlp.csai.tsinghua.edu.cn/~lzy/). My research interests primarily lie in the field of natural language processing, with a particular focus on pre-trained language models, parameter and data-efficient tuning, tool learning and tool creation of large language models.
 
-In my latest research, I have been investigating the tool creation ability of large language models, as outlined in our [paper](https://arxiv.org/pdf/2305.14318.pdf). Previously, I have also explored the concept of recycling outdated weights during the lifelong pre-training of language models, which was published in ACL 2023 findings ([paper](https://arxiv.org/pdf/2305.08702.pdf)). Additionally, I have contributed to research on the mode connectivity of models' various minima, which was presented at EMNLP 2022 ([paper](https://arxiv.org/pdf/2210.14102.pdf)). Moreover, I participated in a survey paper on tool learning with foundation models, which can be found [here](https://arxiv.org/pdf/2304.08354.pdf).
+In 2023 summer, I worked with [Sherry Wu](https://www.cs.cmu.edu/~sherryw/) on the impacts of external knowledge (e.g. from tools, retrieval, etc.) to parametric knowledge in our newest  [paper](http://qiancheng0.github.io/files/Impact_of_EKD_on_PKG.pdf). In my previous research, I have been investigating the tool creation ability of large language models ([paper](https://arxiv.org/pdf/2305.14318.pdf)), and how the ability to tool-use could be adapted to open-source models ([paper](http://qiancheng0.github.io/files/Tune_on_Tool.pdf)). I have also participated in a survey paper on tool learning with foundation models, which can be found [here](https://arxiv.org/pdf/2304.08354.pdf).
 
-Looking forward, I am seeking a Ph.D. position in NLP, starting from Fall 2024. If you are interested in my research or would like to explore potential collaborations, please feel free to reach out to me.
+Previously, I have also explored the concept of recycling outdated weights during the lifelong pre-training of language models, which was published in ACL 2023 findings ([paper](https://arxiv.org/pdf/2305.08702.pdf)). Additionally, I have contributed to research on the mode connectivity of models' various minima, which was presented at EMNLP 2022 ([paper](https://arxiv.org/pdf/2210.14102.pdf)).
 
-<b>Research Highlights:</b>
-* Comprehensive analysis of mode connectivity in pre-trained language models.
-* Extensive use of data-efficient tuning methods to improve the model performance.
-* Form the task of compatible tuning and propose methods to recycle outdated weights.
+Looking forward, I am seeking a Ph.D. position in NLP, starting from Fall 2024. If you are interested in my research or would like to collaborate, please feel free to reach out to me.
+
+<b>Recent Research Highlights:</b>
+
 * Explore the foundational model's ability of using external tools under various scenarios.
-* Propose the CREATOR framework to disentangle the model's abstract and concrete reasoning abilities.
+* Propose CREATOR to help automatic tool-creation.
+* Adapt tool-using ability to open-source LLaMA models.
+* Investigate the impact of external knowledge (e.g. from tools, retrieval, etc.) brought to LLMs.
 
-## Publications
+## Papers
 (*indicates equal contribution)
 
+**Cheng Qian**, Xinran Zhao, Sherry Tongshuang Wu. Exploring the Impacts of External Knowledge Distractors to Parametric Knowledge Graphs. ([Paper](https://arxiv.org/pdf/2305.14318.pdf) / [Code](https://github.com/qiancheng0/EKD_Impacts_PKG))
+
 **Cheng Qian**, Chi Han, Yi R. Fung, Yujia Qin, Zhiyuan Liu, Heng Ji. CREATOR: Disentangling Abstract and Concrete Reasonings of Large Language Models through Tool Creation. ([Paper](https://arxiv.org/pdf/2305.14318.pdf))
+
+**Cheng Qian**, Chenyan Xiong, Zhenghao Liu, Zhiyuan Liu. Toolink: Linking Toolkit Creation and Using through Chain-of-Solving on Open-Source Model. ([Paper](http://qiancheng0.github.io/files/Tune_on_Tool))
 
 Yujia Qin, Shengding Hu, Yankai Lin, Weize Chen, Ning Ding, Ganqu Cui, Zheni Zeng, Yufei Huang, Chaojun Xiao, Chi Han, Yi Ren Fung, Yusheng Su, Huadong Wang, **Cheng Qian**, Runchu Tian, Kunlun Zhu, Shihao Liang, Xingyu Shen, Bokai Xu, Zhen Zhang, Yining Ye, Bowen Li, Ziwei Tang, Jing Yi, Yuzhang Zhu, Zhenning Dai, Lan Yan, Xin Cong, Yaxi Lu, Weilin Zhao, Yuxiang Huang, Junxi Yan, Xu Han, Xian Sun, Dahai Li, Jason Phang, Cheng Yang, Tongshuang Wu, Heng Ji, Zhiyuan Liu, Maosong Sun. Tool Learning with Foundation Models. Submitted to Nature Machine Intelligence, under review. ([Paper](https://arxiv.org/pdf/2304.08354.pdf) / [Code](https://github.com/OpenBMB/BMTools))
 
