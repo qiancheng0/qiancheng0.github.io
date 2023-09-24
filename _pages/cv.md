@@ -41,13 +41,17 @@ Publications
 
 * Yujia Qin, Shengding Hu, Yankai Lin, Weize Chen, Ning Ding, Ganqu Cui, Zheni Zeng, Yufei Huang, Chaojun Xiao, Chi Han, Yi Ren Fung, Yusheng Su, Huadong Wang, **Cheng Qian**, Runchu Tian, Kunlun Zhu, Shihao Liang, Xingyu Shen, Bokai Xu, Zhen Zhang, Yining Ye, Bowen Li, Ziwei Tang, Jing Yi, Yuzhang Zhu, Zhenning Dai, Lan Yan, Xin Cong, Yaxi Lu, Weilin Zhao, Yuxiang Huang, Junxi Yan, Xu Han, Xian Sun, Dahai Li, Jason Phang, Cheng Yang, Tongshuang Wu, Heng Ji, Zhiyuan Liu, Maosong Sun. Tool Learning with Foundation Models. Submitted to Nature Machine Intelligence, under review. ([Paper](https://arxiv.org/pdf/2304.08354.pdf) / [Code](https://github.com/OpenBMB/BMTools))
 
-* Yujia Qin\*, **Cheng Qian**\*, Yankai Lin, Xu Han, Zhiyuan Liu, Maosong Sun and Jie Zhou. Recyclable Tuning for Continual Pre-training. ACL 2023 findings. ([Paper](https://arxiv.org/pdf/2305.08702.pdf) / [Code](https://github.com/thunlp/RecyclableTuning))
+* **Cheng Qian**\*, Yujia Qin\*, Yankai Lin, Xu Han, Zhiyuan Liu, Maosong Sun and Jie Zhou. Recyclable Tuning for Continual Pre-training. ACL 2023 findings. ([Paper](https://arxiv.org/pdf/2305.08702.pdf) / [Code](https://github.com/thunlp/RecyclableTuning))
 
-* Yujia Qin\*, **Cheng Qian**\*, Jing Yi\*, Weize Chen, Yankai Lin, Xu Han, Zhiyuan Liu, Maosong Sun and Jie Zhou. Exploring Mode Connectivity for Pre-trained Language Models. EMNLP 2022. ([Paper](https://arxiv.org/pdf/2210.14102.pdf) / [Code](https://github.com/thunlp/Mode-Connectivity-PLM))
+* **Cheng Qian**\*, Yujia Qin\*, Jing Yi\*, Weize Chen, Yankai Lin, Xu Han, Zhiyuan Liu, Maosong Sun and Jie Zhou. Exploring Mode Connectivity for Pre-trained Language Models. EMNLP 2022. ([Paper](https://arxiv.org/pdf/2210.14102.pdf) / [Code](https://github.com/thunlp/Mode-Connectivity-PLM))
 
 Research Experience
 ======
-
+* Jul 2023 - Sep 2023: **Exploring the Impacts of External and Internal Knowledge Conflicts Jul 2023 – Sep 2023**
+  * Directed by Prof. Sherry Tongshuang Wu, CMU HCII & LTI.
+  * Investigated systematically how the Large Language Models (LLMs) respond to knowledge conflicts; Proposed parametric knowledge graph to model LLM’s internal knowledge and distractors to introduce external knowledge;
+  * Discovered LLMs generally experience confidence boost when encountering external knowledge; Revealed LLMs tend to deviate from parametric knowledge particularly when presented direct conflicts or confounding changes of information within detailed contexts.
+  * First author. Submitted to ACL 2024, under review.
 * Mar 2023 - Jun 2023: **CREATOR: Disentangling Abstract and Concrete Reasonings of Large Language Models through Tool Creation**
   * Directed by Professor Heng Ji, UIUC Blender Lab, and Associate Professor Zhiyuan Liu, THUNLP.
   * Investigated into the Large Language Model's ability to create useful tools to solve the queries, and devised the CREATOR framework, which leverages the model's tool creation ability through four stages: creation, decision, execution and rectification.
@@ -104,7 +108,7 @@ Skills & Expertise
 * Programming Skills: Python, C/C++.
 * Rich experience in state-of-the-art deep learning techniques.
 
-Service and leadership
+Service & Leadership
 ======
 * Serve as COLING 2022 reviewer.
 
