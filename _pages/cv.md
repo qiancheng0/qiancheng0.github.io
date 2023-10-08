@@ -101,7 +101,7 @@ Mandarin(Native), English(Fluent)
 * TOEFL  115/120 (Reading 30, Listening 30, Speaking 26, Writing 29).
 * GRE  Verbal Reasoning 162/170, Quantitative Reasoning 170/170, Analytical Writing 4/6.
 
-Skills & Expertise 
+Skills & Expertise
 ======
 * Highly self-motivated researcher. 
 * Strong interpersonal skills with a good sense of teamwork.
@@ -111,4 +111,3 @@ Skills & Expertise
 Service & Leadership
 ======
 * Serve as COLING 2022 reviewer.
-
