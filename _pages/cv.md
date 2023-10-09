@@ -37,7 +37,7 @@ Publications
 
 * **Cheng Qian**, Chi Han, Yi R. Fung, Yujia Qin, Zhiyuan Liu, Heng Ji. CREATOR: Disentangling Abstract and Concrete Reasonings of Large Language Models through Tool Creation. ([Paper](https://arxiv.org/pdf/2305.14318.pdf) / [Code](https://github.com/qiancheng0/CREATOR))
 
-* **Cheng Qian**, Chenyan Xiong, Zhenghao Liu, Zhiyuan Liu. Toolink: Linking Toolkit Creation and Using through Chain-of-Solving on Open-Source Model. ([Paper](http://qiancheng0.github.io/files/Tune_on_Tool.pdf) / [Code](https://github.com/qiancheng0/Toolink))
+* **Cheng Qian**, Chenyan Xiong, Zhenghao Liu, Zhiyuan Liu. Toolink: Linking Toolkit Creation and Using through Chain-of-Solving on Open-Source Model. ([Paper](https://arxiv.org/abs/2310.05155) / [Code](https://github.com/qiancheng0/Toolink))
 
 * Yujia Qin, Shengding Hu, Yankai Lin, Weize Chen, Ning Ding, Ganqu Cui, Zheni Zeng, Yufei Huang, Chaojun Xiao, Chi Han, Yi Ren Fung, Yusheng Su, Huadong Wang, **Cheng Qian**, Runchu Tian, Kunlun Zhu, Shihao Liang, Xingyu Shen, Bokai Xu, Zhen Zhang, Yining Ye, Bowen Li, Ziwei Tang, Jing Yi, Yuzhang Zhu, Zhenning Dai, Lan Yan, Xin Cong, Yaxi Lu, Weilin Zhao, Yuxiang Huang, Junxi Yan, Xu Han, Xian Sun, Dahai Li, Jason Phang, Cheng Yang, Tongshuang Wu, Heng Ji, Zhiyuan Liu, Maosong Sun. Tool Learning with Foundation Models. Submitted to Nature Machine Intelligence, under review. ([Paper](https://arxiv.org/pdf/2304.08354.pdf) / [Code](https://github.com/OpenBMB/BMTools))
 
