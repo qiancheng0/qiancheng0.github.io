@@ -4,7 +4,7 @@ collection: publications
 permalink: /publication/2023-01-20-Recyclable
 excerpt: 'The paper explores the feasibility of reusing outdated adapted weights for continual pre-training'
 date: 2023-01-20
-venue: 'ACL'
+venue: 'ACL 2023 Findings'
 paperurl: 'https://arxiv.org/pdf/2305.08702.pdf'
 citation: 'Qin, Y., Qian, C., Han, X., Lin, Y., Wang, H., Xie, R., Liu, Z., Sun, M., & Zhou, J. (2023). Recyclable Tuning for Continual Pre-training. ArXiv. /abs/2305.08702'
 ---

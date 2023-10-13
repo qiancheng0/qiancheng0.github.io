@@ -1,11 +1,11 @@
 ---
-title: "CREATOR: Disentangling Abstract and Concrete Reasonings of Large Language Models through Tool Creation"
+title: "CREATOR: Tool Creation for Disentangling Abstract and Concrete Reasonings of Large Language Models"
 excerpt: "Submitted to EMNLP 2023, under review <br/><img src='/images/poster/Creator.png'>"
 collection: projects
 date: 2023-05-23
 ---
 
-## CREATOR: Disentangling Abstract and Concrete Reasonings of Large Language Models through Tool Creation, THUNLP Lab Survey Paper
+## CREATOR: Tool Creation for Disentangling Abstract and Concrete Reasonings of Large Language Models
 Background:
 
 * Large Language Models (LLMs) have demonstrated significant progress in utilizing external APIs as tools for various tasks.

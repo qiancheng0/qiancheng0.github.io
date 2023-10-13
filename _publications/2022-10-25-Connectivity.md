@@ -4,7 +4,7 @@ collection: publications
 permalink: /publication/2022-10-25-Connectivity
 excerpt: 'The paper analytically and empirically investigates the mode connectivity of pre-trained language models'
 date: 2022-10-25
-venue: 'EMNLP'
+venue: 'EMNLP 2022 Main'
 paperurl: 'https://arxiv.org/pdf/2210.14102.pdf'
 citation: 'Qin, Y., Qian, C., Yi, J., Chen, W., Lin, Y., Han, X., Liu, Z., Sun, M., & Zhou, J. (2022). Exploring Mode Connectivity for Pre-trained Language Models. ArXiv. /abs/2210.14102'
 ---

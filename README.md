@@ -14,7 +14,7 @@ PROFILE:
 ## Publications
 (*indicates equal contribution)
 
-**Cheng Qian**, Chi Han, Yi R. Fung, Yujia Qin, Zhiyuan Liu, Heng Ji. CREATOR: Disentangling Abstract and Concrete Reasonings of Large Language Models through Tool Creation. ([Paper](https://arxiv.org/pdf/2305.14318.pdf))
+**Cheng Qian**, Chi Han, Yi R. Fung, Yujia Qin, Zhiyuan Liu, Heng Ji. CREATOR: Tool Creation for Disentangling Abstract and Concrete Reasonings of Large Language Models. ([Paper](https://arxiv.org/pdf/2305.14318.pdf))
 
 Yujia Qin, Shengding Hu, Yankai Lin, Weize Chen, Ning Ding, Ganqu Cui, Zheni Zeng, Yufei Huang, Chaojun Xiao, Chi Han, Yi Ren Fung, Yusheng Su, Huadong Wang, **Cheng Qian**, Runchu Tian, Kunlun Zhu, Shihao Liang, Xingyu Shen, Bokai Xu, Zhen Zhang, Yining Ye, Bowen Li, Ziwei Tang, Jing Yi, Yuzhang Zhu, Zhenning Dai, Lan Yan, Xin Cong, Yaxi Lu, Weilin Zhao, Yuxiang Huang, Junxi Yan, Xu Han, Xian Sun, Dahai Li, Jason Phang, Cheng Yang, Tongshuang Wu, Heng Ji, Zhiyuan Liu, Maosong Sun. Tool Learning with Foundation Models. Submitted to Nature Machine Intelligence, under review. ([Paper](https://arxiv.org/pdf/2304.08354.pdf) / [Code](https://github.com/OpenBMB/BMTools))
 
