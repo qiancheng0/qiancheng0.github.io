@@ -13,20 +13,21 @@ Download [CV](http://qiancheng0.github.io/files/CV_ChengQian.pdf)
 
 Education
 ======
-* B.Eng. in Computer Science and Technology, Tsinghua University, Beijing, China, 2020-2024 (expected)
+* Ph.D. in Computer Science, University of Illinois at Urbana-Champaign, Urbana, IL, USA, 2024-2028 (expected).
+* B.Eng. in Computer Science and Technology, Tsinghua University, Beijing, China, 2020-2024
 
 Academic
 ======
-* **GPA**: 3.90 / 4.00.
-* Selected Courses of **A & A+**: Linear Algebra, Discrete Mathematics, Foundation of Object-Oriented Programming, Software Engineering, Computer Architecture, Introduction to Artificial Intelligence, Artificial Neural Networks, Writing and Communication.
-* A member of THUNLP (THU Natural Language Processing Group), advised by Prof. Zhiyuan Liu.
+* **Undergrad GPA**: Undergrad 3.90 / 4.00.
+* Undergrad Selected Courses of **A & A+**: Linear Algebra, Discrete Mathematics, Foundation of Object-Oriented Programming, Software Engineering, Computer Architecture, Introduction to Artificial Intelligence, Artificial Neural Networks, Writing and Communication.
+* Ph.D.: A member of Blender Lab, advised by Prof. Heng Ji.
+* B.Eng.: A member of THUNLP, advised by Prof. Zhiyuan Liu.
 
 Research Interests
 ======
-* Tool learning and tool creation of LLM.
+* Tool learning and tool creation.
 * LLM-driven AI agent, embodied AI.
-* Instruction tuning and prompt tuning of LLM.
-* Pre-training and parameter-efficient tuning of LLM.
+* Agent for Science.
 
 
 Publications
