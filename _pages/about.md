@@ -56,4 +56,4 @@ Yujia Qin, Shengding Hu, Yankai Lin, Weize Chen, Ning Ding, Ganqu Cui, Zheni Zen
 **Cheng Qian**\*, Yujia Qin\*, Jing Yi\*, Weize Chen, Yankai Lin, Xu Han, Zhiyuan Liu, Maosong Sun and Jie Zhou. Exploring Mode Connectivity for Pre-trained Language Models. EMNLP 2022. ([Paper](https://arxiv.org/pdf/2210.14102) / [Code](https://github.com/thunlp/Mode-Connectivity-PLM))
 
 ## For more information
-More info about Cheng Qian can be found here! ([downloaded CV](http://qiancheng0.github.io/files/CV_ChengQian.pdf)).
+More info about Cheng Qian can be found here! ([downloaded CV](http://qiancheng0.github.io/files/CV_ChengQian_new.pdf)).
