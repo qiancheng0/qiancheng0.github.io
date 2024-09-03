@@ -27,6 +27,9 @@ Looking forward, I am seeking a Ph.D. position in NLP, starting from Fall 2024. 
 * Investigate the impact of external knowledge (e.g. from tools, retrieval, etc.) brought to LLMs.
 
 ## Latest News
+* 2024.9: Starting a new PhD life at UIUC! Excited to work with Prof. Heng Ji!
+* 2024.8: I am currently @ ACL 2024 to present the paper Tell Me More! Greetings to everyone~
+* 2024.6: New paper Toolink presented at NAACL!
 * 2023.10: The code for CREATOR is publicly released! Check from the repository [here](https://github.com/qiancheng0/CREATOR)!
 * 2023.9: The latest paper about knowledge conflic is release on ArXiv [here](https://arxiv.org/pdf/2309.08594v1.pdf)! Many thanks to Sherry Wu and Xinran Zhao. It has been a wonderful summer at CMU!
 * 2023.7: @ ACL 2023 in Toronto! My first time participate a conference offline!
