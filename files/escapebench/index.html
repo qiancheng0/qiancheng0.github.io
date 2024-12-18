@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="EscapeBench">
+  <meta name="keywords" content="Agent Creativity, Benchmark Evaluation">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>EscapeBench: Pushing Language Models to Think Outside the Box</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">EscapeBench: Pushing Language Models to Think Outside the Box</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+                <a href="https://qiancheng0.github.io">Cheng Qian</a><sup>1</sup>,</span>
+            <span class="author-block">
+                <a hhref="https://www.linkedin.com/in/peixuanhan/">Peixuan Han</a><sup>1</sup>,</span>
+            <span class="author-block">
+                <a href="https://github.com/LOGIC-10">Qinyu Luo</a><sup>2</sup>,</span>
+            <span class="author-block">
+                <a href="https://hbx-hbx.github.io">Bingxiang He</a><sup></sup>,</span>
+            <span class="author-block">
+                <a href="https://xiusic.github.io">Xiusi Chen</a><sup>1</sup>,</span>
+            <span class="author-block">
+                <a href="https://celestinezyj.github.io">Yuji Zhang</a><sup>1</sup>,</span>
+            <span class="author-block">
+                <a href="https://www.linkedin.com/in/hongyi-du-506365267/">Hongyi Du</a><sup>1</sup>,</span>
+            <span class="author-block">
+                <a href="https://www.linkedin.com/in/jiarui-yao-a07281286/">Jiarui Yao</a><sup>1</sup>,</span>
+            <span class="author-block">
+                <a href="https://www.linkedin.com/in/xiaocheng-yang-1a68aa20b/">Xiaocheng Yang</a><sup>1</sup>,</span>
+            <span class="author-block">
+                <a href="https://zhangdenghui.site">Denghui Zhang</a><sup>1</sup>,</span>
+            <span class="author-block">
+                <a href="https://yunzhuli.github.io">Yunzhu Li</a><sup>3,4</sup>,</span>
+            <span class="author-block">
+                <a href="https://blender.cs.illinois.edu/hengji/research.html">Heng Ji</a><sup>1</sup></span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>University of Illinois Urbana-Champaign,</span>
+            <span class="author-block"><sup>2</sup>Johns Hopkins University,</span>
+            <span class="author-block"><sup>3</sup>Stevens Institute of Technology,</span>
+            <span class="author-block"><sup>4</sup>Columbia University</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="https://arxiv.org/pdf/"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <!-- Video Link. -->
+              <!-- <span class="link-block">
+                <a href="https://www.youtube.com/watch?v=MrKrnHhk8IA"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+              </span> -->
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/qiancheng0/EscapeBench"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+              <!-- Dataset Link. -->
+              <span class="link-block">
+                <a href="https://github.com/qiancheng0/EscapeBench/tree/main/data"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="far fa-images"></i>
+                  </span>
+                  <span>Data</span>
+                  </a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- <section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <video id="teaser" autoplay muted loop playsinline height="100%">
+        <source src="./static/videos/teaser.mp4"
+                type="video/mp4">
+      </video>
+      <h2 class="subtitle has-text-centered">
+        <span class="dnerf">Nerfies</span> turns selfie videos from your phone into
+        free-viewpoint
+        portraits.
+      </h2>
+    </div>
+  </div>
+</section> -->
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Language model agents excel in long-session planning and reasoning, but existing benchmarks primarily focus on goal-oriented tasks with explicit objectives, neglecting creative adaptation in unfamiliar environments. To address this, we introduce <b>EscapeBench</b>—a benchmark suite of room escape game environments designed to challenge agents with creative reasoning, unconventional tool use, and iterative problem-solving to uncover implicit goals.
+          </p>
+          <p>
+            Our results show that current LM models, despite employing working memory and Chain-of-Thought reasoning, achieve only 15% average progress without hints, highlighting their limitations in creativity. To bridge this gap, we propose <b>EscapeAgent</b>, a framework designed to enhance creative reasoning through <i>Foresight</i> (innovative tool use) and <i>Reflection</i> (identifying unsolved tasks). Experiments show that EscapeAgent can execute action chains over 1,000 steps while maintaining logical coherence. It navigates and completes games with up to 40\% fewer steps and hints, performs robustly across varying difficulty levels, and achieves higher action success rates with more efficient and innovative puzzle-solving strategies.
+          </p>
+        </div>
+        <figure>
+            <img src="assets/introduction.png" alt="Agent Creativity Introduction" class="main:intro" style="width: 60%;"/>
+            <figcaption class="has-text-centered">
+              <b>Figure 1:</b> An agent with creative thinking should adapt its observation (e.g. hard texture of wood stick) into a novel tool-use strategy (e.g. prying objects open).
+            </figcaption>
+          </figure>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+
+    <!-- Paper video. -->
+    <!-- <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Video</h2>
+        <div class="publication-video">
+          <iframe src="https://www.youtube.com/embed/MrKrnHhk8IA?rel=0&amp;showinfo=0"
+                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div> -->
+    <!--/ Paper video. -->
+  </div>
+</section>
+
+
+<section class="section">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column is-full-width">
+          <h2 class="title is-3">Highlight of EscapeBench</h2>
+          <p>          
+            ✨<b>Creative Tool Use:</b> The tools at hand might be repurposed for creative use in order to solve the puzzle. These innovative ways of tool use are uncommon in the LM agent's existing parametric knowledge, requiring it to reason creatively and adapt its observation into customized scenarios.
+          </p>    
+          <br>
+          <p>
+            ✨<b>Uncertain Goal Pathways:</b> While the final goal of each game is escaping from the room, the pathways to achieving it cannot be explicitly foreseen. An agent cannot devise precise, long-range plans initially and must rely on trial and error to discover viable strategies.
+          </p>        
+          <br>  
+          <p>
+            ✨<b>Super-Long Reasoning Chain:</b> Each scenario requires even an omniscient agent to perform over 100 steps, with at least 40 bottleneck actions required to achieve the goal. A human player may take up to an hour to complete one game.
+          </p>
+          </div>
+    </div>
+</section>
+
+
+
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@article{park2021nerfies,
+  author    = {Park, Keunhong and Sinha, Utkarsh and Barron, Jonathan T. and Bouaziz, Sofien and Goldman, Dan B and Seitz, Steven M. and Martin-Brualla, Ricardo},
+  title     = {Nerfies: Deformable Neural Radiance Fields},
+  journal   = {ICCV},
+  year      = {2021},
+}</code></pre>
+  </div>
+</section>
+
+
+<footer class="footer">
+    <div class="container">
+    
+    <div class="content has-text-centered">
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content">
+            <p>
+              This website's template is borrowed from <a
+                href="https://github.com/nerfies/nerfies.github.io">nerfies</a>. We thank the authors for open-sourcing their code.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
