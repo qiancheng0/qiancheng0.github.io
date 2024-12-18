@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="EscapeBench">
+  <meta name="keywords" content="Agent Creativity, Benchmark Evaluation">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>EscapeBench: Pushing Language Models to Think Outside the Box</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title"><img src="assets/idea.png", style="width: 5%;">  EscapeBench: Pushing Language Models to Think Outside the Box</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+                <a href="https://qiancheng0.github.io">Cheng Qian</a><sup>1</sup>,</span>
+            <span class="author-block">
+                <a hhref="https://www.linkedin.com/in/peixuanhan/">Peixuan Han</a><sup>1</sup>,</span>
+            <span class="author-block">
+                <a href="https://github.com/LOGIC-10">Qinyu Luo</a><sup>2</sup>,</span>
+            <span class="author-block">
+                <a href="https://hbx-hbx.github.io">Bingxiang He</a><sup></sup>,</span>
+            <span class="author-block">
+                <a href="https://xiusic.github.io">Xiusi Chen</a><sup>1</sup>,</span>
+            <span class="author-block">
+                <a href="https://celestinezyj.github.io">Yuji Zhang</a><sup>1</sup>,</span>
+            <span class="author-block">
+                <a href="https://www.linkedin.com/in/hongyi-du-506365267/">Hongyi Du</a><sup>1</sup>,</span>
+            <span class="author-block">
+                <a href="https://www.linkedin.com/in/jiarui-yao-a07281286/">Jiarui Yao</a><sup>1</sup>,</span>
+            <span class="author-block">
+                <a href="https://www.linkedin.com/in/xiaocheng-yang-1a68aa20b/">Xiaocheng Yang</a><sup>1</sup>,</span>
+            <span class="author-block">
+                <a href="https://zhangdenghui.site">Denghui Zhang</a><sup>1,3</sup>,</span>
+            <span class="author-block">
+                <a href="https://yunzhuli.github.io">Yunzhu Li</a><sup>4</sup>,</span>
+            <span class="author-block">
+                <a href="https://blender.cs.illinois.edu/hengji/research.html">Heng Ji</a><sup>1</sup></span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>University of Illinois Urbana-Champaign,</span>
+            <span class="author-block"><sup>2</sup>Johns Hopkins University,</span>
+            <span class="author-block"><sup>3</sup>Stevens Institute of Technology,</span>
+            <span class="author-block"><sup>4</sup>Columbia University</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="https://arxiv.org/pdf/"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <!-- Video Link. -->
+              <!-- <span class="link-block">
+                <a href="https://www.youtube.com/watch?v=MrKrnHhk8IA"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+              </span> -->
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/qiancheng0/EscapeBench"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+              <!-- Dataset Link. -->
+              <span class="link-block">
+                <a href="https://github.com/qiancheng0/EscapeBench/tree/main/data"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="far fa-images"></i>
+                  </span>
+                  <span>Data</span>
+                  </a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- <section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <video id="teaser" autoplay muted loop playsinline height="100%">
+        <source src="./static/videos/teaser.mp4"
+                type="video/mp4">
+      </video>
+      <h2 class="subtitle has-text-centered">
+        <span class="dnerf">Nerfies</span> turns selfie videos from your phone into
+        free-viewpoint
+        portraits.
+      </h2>
+    </div>
+  </div>
+</section> -->
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Language model agents excel in long-session planning and reasoning, but existing benchmarks primarily focus on goal-oriented tasks with explicit objectives, neglecting creative adaptation in unfamiliar environments. To address this, we introduce <b>EscapeBench</b>—a benchmark suite of room escape game environments designed to challenge agents with creative reasoning, unconventional tool use, and iterative problem-solving to uncover implicit goals.
+          </p>
+          <p>
+            Our results show that current LM models, despite employing working memory and Chain-of-Thought reasoning, achieve only 15% average progress without hints, highlighting their limitations in creativity. To bridge this gap, we propose <b>EscapeAgent</b>, a framework designed to enhance creative reasoning through <i>Foresight</i> (innovative tool use) and <i>Reflection</i> (identifying unsolved tasks). Experiments show that EscapeAgent can execute action chains over 1,000 steps while maintaining logical coherence. It navigates and completes games with up to 40\% fewer steps and hints, performs robustly across varying difficulty levels, and achieves higher action success rates with more efficient and innovative puzzle-solving strategies.
+          </p>
+        </div>
+        <figure>
+          <img src="assets/introduction.png" alt="Agent Creativity Introduction" class="main:intro" style="width: 60%;"/>
+          <figcaption class="has-text-centered">
+            <b>Figure 1:</b> An agent with creative thinking should adapt its observation (e.g. hard texture of wood stick) into a novel tool-use strategy (e.g. prying objects open).
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+
+    <!-- Paper video. -->
+    <!-- <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Video</h2>
+        <div class="publication-video">
+          <iframe src="https://www.youtube.com/embed/MrKrnHhk8IA?rel=0&amp;showinfo=0"
+                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div> -->
+    <!--/ Paper video. -->
+  </div>
+</section>
+
+
+<section class="section">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column is-full-width">
+          <h2 class="title is-3">🌟 Highlight of EscapeBench</h2>
+          <div class="content has-text-justified">
+          <p>          
+            ✨<b>Creative Tool Use:</b> The tools at hand might be repurposed for creative use in order to solve the puzzle. These innovative ways of tool use are uncommon in the LM agent's existing parametric knowledge, requiring it to reason creatively and adapt its observation into customized scenarios.
+          </p>    
+          <p>
+            ✨<b>Uncertain Goal Pathways:</b> While the final goal of each game is escaping from the room, the pathways to achieving it cannot be explicitly foreseen. An agent cannot devise precise, long-range plans initially and must rely on trial and error to discover viable strategies.
+          </p>
+          <p>
+            ✨<b>Super-Long Reasoning Chain:</b> Each scenario requires even an omniscient agent to perform over 100 steps, with at least 40 bottleneck actions required to achieve the goal. A human player may take up to an hour to complete one game.
+          </p>
+          <figure>
+            <img src="assets/engine_action.png" alt="Engine Action" class="codesearchnet" style="width: 100%;"/>
+            <figcaption class="has-text-centered">
+              <b>Figure 2:</b> An illustration of <span style="color:#D29B03;">Scenes</span>, <span style="color:#03894A;">Tools</span>, and <span style="color:#70309F;">Items</span> in the game and their relations with agent action space. Tools can be collected for “Apply” and “Craft”, while items require “Input”, “Click” or “Apply” of tools to trigger effects.
+            </figcaption>
+          </figure>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">🏗️ EscapeBench Construction</h2>
+        <div class="content has-text-justified">
+        <p>          
+          Most agent benchmarks focus on explicit, goal-oriented tasks grounded in commonsense knowledge, where agents can chart clear pathways to achieve goals using analytical and practical intelligence, but they often overlook creative intelligence. This raises our core research question: <b>How to build an environment that benchmarks an agent's creative intelligence?</b> Given that tool use is central to agent functionality, we propose room escape game scenarios, which naturally require creative tool use to solve complex puzzles, as an ideal environment for this evaluation.
+        </p>    
+        <p>
+          <b>Game Engine</b>: The game engine aims to simulate the room escape environment that <i>receives agent actions</i> and <i>makes corresponding environment feedback</i> as agent action's reward. Specifically, our game engine involves three key components:<br>
+          • <b>🌌 <span style="color:#D29B03;">Scenes</span>:</b> The container of tools and items, connected with each other forming a graph structure that constitutes the whole game scenario.<br>
+          • <b>📦 <span style="color:#70309F;">Items</span>:</b> Objects that are intractable in each scene. Tools, inputs, and other interactions may be applied to trigger its state change or other effects.<br>
+          • <b>🔧 <span style="color:#03894A;">Tools</span>:</b> Objects that could be collected in each scene, usually applied to other items to take effect or to other tools to craft new ones.
+        </p>
+        <p>
+          <b>Action Space</b>: The model agent could take five different actions. While the action space is well-defined, the parameter space—regarding the scenes, items, or tools involved in these actions—is high-dimensional, thus allowing for dynamic interactions:<br>
+            • <i>🏃 Move (Scene):</i>  Move to an adjacent scene.<br>
+            • <i>🖲️ Click (Item):</i>  Click to simply interact with an item in the scene.<br>
+            • <i>🔧 Apply (Tool, Item):</i>  Apply a tool in the bag to an item in the scene.<br>
+            • <i>⌨️ Input (<i>str</i>, Item):</i>  Input an arbitrary string to an item in the scene.<br>
+            • <i>🛠️ Craft (Tool, Tool):</i>  Use two tools in the bag to craft a new one.<br>
+        </p>
+        <figure>
+          <img src="assets/game_statistic.png" alt="Game Statistics" class="codesearchnet" style="width: 45%;"/>
+          <figcaption class="has-text-centered">
+            <b>Figure 3:</b> Statistics of total <span style="color:#D29B03;">Scenes</span>, <span style="color:#03894A;">Tools</span>, and <span style="color:#70309F;">Items</span> across all games.
+          </figcaption>
+        </figure>
+        <p>
+          <b>Statistics</b>: We present <b>EscapeBench</b> which features <b>36 game settings across three difficulty levels</b>. All scenes, items, and tools are manually annotated to ensure high quality. These scenarios emphasize creative tool use and crafting strategies, challenging agents throughout the game, making EscapeBench a robust environment for testing creativity. We show in preliminary case study below that current models struggle to solve these creative reasoning cases, indicating the need for a more creative agent. 
+        </p>
+        <figure>
+          <img src="assets/preliminary_cases.png" alt="Preliminary Cases" class="codesearchnet" style="width: 100%;"/>
+          <figcaption class="has-text-centered">
+            <b>Table 1:</b> Creative reasoning cases in EscapeBench and model's responses versus actual creative uses of tools.
+          </figcaption>
+        </figure>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">🎨 EscapeAgent Design</h2>
+        <div class="content has-text-justified">
+        <p>          
+          To address challenges identified in the preliminary study, we introduce <b>EscapeAgent</b>, a framework addressing two core issues from EscapeBench:<br>
+          • 🔍 <i>Uncertain Goal Pathways</i>:  We introduce a <b>Reflection</b> module, which dynamically maintains a task list by adding, updating, or removing tasks after each trial-and-error action. This approach fosters proactive task discovery and sharpens the agent's focus on specific goals.<br>
+          • 💡 <i>Creative Tool Use</i>:  We design a <b>Foresight</b> module that facilitates explicit reasoning about creative tool applications and their alignment with specific tasks. It enables the agent to hypothesize and evaluate strategies before execution, thus promoting problem-solving.<br>
+          Integrating both modules with a 🤖<b>BaseAgent</b>, EscapeAgent excels in handling <i>Super-long Reasoning Chains</i> and significantly boosts the model's creativity, problem-solving, and strategic thinking.
+        </p>    
+        <figure>
+          <img src="assets/agent_design.png" alt="Agent Design" class="codesearchnet" style="width: 100%;"/>
+          <figcaption class="has-text-centered">
+            <b>Figure 4:</b> Illustration of the EscapeAgent design. Building on the BaseAgent (<i>Action</i>), we integrate the <i>Foresight</i> and <i>Reflection</i> modules to enhance the agent's capabilities in creative reasoning and implicit goal identification.
+          </figcaption>
+        </figure>
+        <p>
+          The 🤖<b>BaseAgent</b> serves as the foundation of EscapeAgent, taking actions based on the scenario context provided by the game engine and updating its working memory with environment feedback after each step. It employs Chain-of-Thought reasoning to determine the next action and acts as a strong baseline for EscapeBench.
+        </p>
+        <p>
+          The 🔍<b>Reflection Module</b> enables the agent to maintain a structured task list, updating it by adding new tasks, recording failed actions, or deleting completed tasks. This organization prevents repeating ineffective actions, enhancing efficiency.
+        </p>
+        <p>
+          The 💡<b>Foresight Module</b> enhances creative reasoning by evaluating tool use and potential strategies. It activates when a new task is identified or a new tool is collected, generating valid action hypotheses. If successful, the agent enters a “Try Action” state to test the proposed actions, otherwise, it remains in a “Free Explore” state.
+        </p>
+        <p>
+          Together, these modules enable the agent to adapt, hypothesize, and efficiently solve tasks in a dynamic environment.
+        </p>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">💻 Experiment</h2>
+        <div class="content has-text-justified">
+        <p>
+          Experiments are conducted on 36 game settings. An agent is considered to be <b>making progress</b> if it either <b>achieves a key step</b> or <b>collects a new tool</b>. Agents will receive help if they fail to make progress for 50 consecutive actions.
+        </p>
+        <p>
+          We benchmark over multiple open- and closed-source models, and apply <b>Total Hints</b> and <b>Total Steps</b> as evaluation metrics. The results show that EscapeAgent always outperform BaseAgent, using less hints and steps to complete the game.
+        </p>  
+        <figure>
+          <img src="assets/results1.jpg" alt="Results BaseAgent" class="codesearchnet" style="width: 100%;"/>
+          <figcaption class="has-text-centered">
+            <b>Table 2:</b> Benchmarking results of BaseAgent with different core models on EscapeBench. An oracle action chain's total step is only 107.83 on average. Both closed- and open-source models rely heavily on hints to complete the escape compared to human performance, with smaller-scale models exhibiting a particularly high dependency.
+          </figcaption>
+        </figure>
+        <figure>
+          <img src="assets/results2.jpg" alt="Results EscapeAgent" class="codesearchnet" style="width: 100%;"/>
+          <figcaption class="has-text-centered">
+            <b>Table 3:</b> Benchmarking Results of EscapeAgent with different core models. Nearly all the performance raises compared to Table 2, showcasing the effectiveness of EscapAgent in promoting the agent's creativity.
+          </figcaption>
+        </figure>
+        <p>
+          <b>Case study:</b> We also present here a case study of agent progress relative to action steps across six game settings. <span style="color:#FF0000;">Red dots</span> indicate steps where hints were provided. We observe the following:
+          <br>• EscapeAgent requires significantly fewer hints and achieves a steeper progress curve.
+          <br>• EscapeAgent demonstrates the ability to make consecutive progress in shorter intervals (e.g., the light blue and pink lines for both GPT-4o and Llama-3.1-70B).
+          <br>• Harder scenarios remain challenging, especially for BaseAgent, which often relies heavily on hints to make progress (e.g., the later part of the yellow line for GPT-4o).
+          <br>• Average human still performs far better than all agents, while both agents still struggle with short memory due to context length and creative tool use strategies.
+        </p>
+        <figure>
+          <img src="assets/analysis_progress_new.png" alt="Progress Analysis" class="codesearchnet" style="width: 100%;"/>
+          <figcaption class="has-text-centered">
+            <b>Figure 5:</b> Case study on Human, BaseAgent, and EscapeAgent's progress map corresponding to six game settings. Although EscapeAgent uses 40% fewer hints and makes significant progress independently, it still falls far short of average human performance, often requiring twice as many total steps to complete a game.
+          </figcaption>
+        </figure>
+</section>
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@article{qian2024escapebench,
+  author    = {Cheng Qian and Peixuan Han and Qinyu Luo and Bingxiang He and Xiusi Chen and Yuji Zhang and Hongyi Du and Jiarui Yao and Xiaocheng Yang and Denghui Zhang and Yunzhu Li and Heng Ji},
+  title     = {EscapeBench: Pushing Language Models to Think Outside the Box},
+  journal   = {ArXiv},
+  year      = {2024},
+}</code></pre>
+  </div>
+</section>
+
+
+<footer class="footer">
+    <div class="container">
+    
+    <div class="content has-text-centered">
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content">
+            <p>
+              This website's template is borrowed from <a
+                href="https://github.com/nerfies/nerfies.github.io">nerfies</a>. We thank the authors for open-sourcing their code.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
