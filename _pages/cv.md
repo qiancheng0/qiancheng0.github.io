@@ -8,8 +8,6 @@ redirect_from:
 
 {% include base_path %}
 
-======
-
 Education
 ======
 * Ph.D. in Computer Science, University of Illinois at Urbana-Champaign, Urbana, IL, USA, 2024-2028 (expected).
