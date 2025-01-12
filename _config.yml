@@ -82,11 +82,11 @@ analytics:
 author: 
   name             : "Cheng Qian"
   avatar           : "profile.jpg"
-  bio              : "Undergrad@Tsinghua, THUNLP\nqianc20@mails.tsinghua.edu.cn"
+  bio              : "PhD@UIUC, BLENDER Lab"
   location         : "Beijing, China"
   employer         :
   pubmed           :
-  googlescholar    : "https://scholar.google.com/citations?user=p2bY7oAAAAAJ&hl=en"
+  googlescholar    : 
   email            : "qianc20@mails.tsinghua.edu.cn"
   researchgate     : 
   publons          :
@@ -97,7 +97,7 @@ author:
   flickr           :
   facebook         :
   foursquare       :
-  github           : "qiancheng0"
+  github           :
   google_plus      :
   keybase          :
   instagram        :
@@ -110,7 +110,7 @@ author:
   stackoverflow    :
   steam            :
   tumblr           :
-  twitter          : "qiancheng1231"
+  twitter          :
   vine             :
   weibo            :
   xing             :
