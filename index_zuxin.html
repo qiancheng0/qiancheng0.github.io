@@ -1,0 +1,2404 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Home - Zuxin Liu Homepage</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Zuxin Liu is a Member of Technical Staff at OpenAI.">
+    <meta name="keywords"
+        content="Zuxin Liu,LLM Agent,Reinforcement Learning,Machine Learning,Robotics,Embodied AI,AI Research">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+        integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="shortcut icon" href="static/img/cmu.png">
+
+
+    <style type="text/css">
+        /* Color Scheme: Orange / Yellow */
+        :root {
+            --background-color: #fefbf5;
+            --highlight-color: #b6274e;
+            --main-color: #684e43;
+            --link-color: #86985c;
+            --link-color-hover: #8e6e29;
+            --secondary-link-color: #6d8436;
+            --secondary-link-border-color: #a5af97;
+            --secondary-content-background-color: #fffefc;
+            --link-button-background-color: #fffdfa;
+        }
+
+        /* Color Scheme: Blue / Summer */
+        :root {
+            --background-color: rgb(245, 254, 252);
+            --highlight-color: #b6274e;
+            --main-color: #183c5c;
+            --link-color: #295fc3;
+            --link-color-hover: #292c1f;
+            --secondary-link-color: #1963ec;
+            --secondary-link-border-color: #7d99b1;
+            --secondary-content-background-color: #feffff;
+            --link-button-background-color: #fafdff;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        a {
+            color: var(--link-color)
+        }
+
+        a:hover {
+            color: var(--link-color-hover);
+            cursor: pointer
+        }
+
+        #background {
+            position: fixed;
+            top: 0;
+            overflow: hidden;
+            height: 0
+        }
+
+        #wave-canvas {
+            display: block;
+            position: relative;
+            top: 0;
+            left: 5%;
+            width: 55%;
+            min-width: 850px;
+            height: 150px;
+            border: 0
+        }
+
+        #main {
+            margin: 0 auto 15px;
+            padding: 45px 30px 15px;
+            width: 100%;
+            min-width: 240px;
+            text-align: center;
+            background-color: var(--background-color)
+        }
+
+        .highlight {
+            color: var(--highlight-color);
+            font-weight: 600
+        }
+
+        .highlight:hover {
+            color: var(--highlight-color);
+            font-weight: 600
+        }
+
+        .profile-pendant {
+            display: none;
+            bottom: 45px;
+            right: -200px;
+            position: absolute
+        }
+
+        @media (min-width: 768px) {
+            .profile-pendant {
+                display: block
+            }
+        }
+
+        .main-content {
+            padding: 0;
+            text-align: center;
+            cursor: default;
+            text-align: center;
+        }
+
+        /*.main-content{background:rgba(238,238,238,0.95);padding:0;text-align:center;cursor:default;text-align:center;}*/
+        /*.main-content{margin-left:6.5104167%;width:86.9791667%;}*/
+        @media (min-width: 768px) {
+            .main-content {
+                width: 66%;
+                min-width: 668px;
+                margin: auto;
+            }
+        }
+
+        @media (min-width: 1200px) {
+            .main-content {
+                width: 66%;
+                max-width: 1080px;
+                margin: auto;
+            }
+        }
+
+        /* Avatar, Name, etc. */
+        #main-content-container {
+            margin: 0 auto;
+            padding: 15px 0 0;
+            max-width: 1080px;
+        }
+
+        @media (min-width: 768px) {
+            #main-content-container {
+                padding: 15px 0 0;
+            }
+        }
+
+        #main-content-container .col-avatar {
+            text-align: center;
+            min-width: 220px;
+        }
+
+        @media (min-width: 768px) {
+            #main-content-container .col-avatar {
+                text-align: center
+            }
+        }
+
+        #main-content-container .col-avatar .avatar {
+            z-index: 100;
+            width: 200px;
+            height: 200px;
+            border-radius: 100%;
+            box-shadow: 0 0 0 0.3em #eee;
+            opacity: 1;
+        }
+
+        @media (min-width: 1200px) {
+            #main-content-container .col-avatar .avatar {
+                margin-bottom: -50px
+            }
+        }
+
+        #main-content-container .col-info {
+            height: 100%;
+            align-items: center;
+        }
+
+        #main-info-container {
+            padding-top: 15px
+        }
+
+        #main-info-container .col-name {
+            text-align: center;
+            margin-top: 30px
+        }
+
+        @media (min-width: 768px) {
+            #main-info-container .col-name {
+                text-align: left;
+                margin-top: 0;
+            }
+        }
+
+        #main-info-container .col-name .text {
+            text-align: left
+        }
+
+        #main-info-container .col-name .name {
+            margin: 0;
+            color: var(--main-color);
+            font-size: 1.85em;
+            font-family: "Source Sans Pro", Helvetica, sans-serif
+        }
+
+        #main-info-container .col-name .email {
+            color: #666;
+            font-size: 14px
+        }
+
+        #main-info-container .col-link {
+            text-align: center;
+            margin: -5px 0 -25px;
+        }
+
+        #main-info-container .col-link ul {
+            margin: 0px auto auto;
+            padding: 0;
+            list-style: none;
+            text-align: center
+        }
+
+        #main-info-container .col-link li {
+            display: inline-block;
+            margin: auto;
+            padding: 0 10px;
+            color: #ccc;
+            line-height: 10px
+        }
+
+        #main-info-container .col-link li a {
+            width: 45px;
+            height: 45px;
+            color: #ccc;
+            padding: 0;
+            font-size: 45px;
+            line-height: 45px
+        }
+
+        #main-info-container .col-link li a:focus,
+        #main-info-container .col-link li a:hover {
+            text-decoration: none;
+            cursor: hand
+        }
+
+        #main-info-container .col-link li a.border {
+            border: 1px solid #ccc;
+            border-radius: 100%;
+        }
+
+        #main-info-container .col-link li a.padding {
+            padding: 0px 0px;
+            font-size: 22px
+        }
+
+        .content-container {
+            width: 100%;
+            padding: 0 30px
+        }
+
+        .main-news-container {
+            margin: auto;
+            padding: 0 0em;
+            max-width: 1080px;
+            text-align: left;
+            padding-top: 30px;
+            max-width: 1080px;
+            font-size: 1rem;
+            line-height: 1.4
+        }
+
+        @media (min-width: 1200px) {
+            .main-news-container {
+                padding-top: 45px;
+            }
+        }
+
+        .main-news-container .subtitle {
+            margin-top: 0px;
+            color: var(--main-color)
+        }
+
+        section.overview ul,
+        section.overview li,
+        section.overview h3,
+        section.overview h1,
+        section.overview p {
+            margin: 0;
+            padding: 0
+        }
+
+        section.overview h1 {
+            font-weight: 700
+        }
+
+        section.overview li {
+            font-weight: 400;
+            list-style: none
+        }
+
+        .join,
+        .up::after,
+        .down::before {
+            background-position: 50% 50%
+        }
+
+        .up::after,
+        .down::before {
+            background-repeat: no-repeat;
+            content: "";
+            display: block;
+            height: 20px
+        }
+
+        .up::after {
+            background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI3IiBoZWlnaHQ9IjQiIHZpZXdCb3g9IjAgMCA3IDQiPjxwYXRoIGZpbGw9IiM1NjZjN2YiIGQ9Ik0xIDRWM2gxVjJoM3YxaDF2MWgxVjJINlYxSDVWMEgydjFIMXYxSDB2MiIvPjwvc3ZnPg==)
+        }
+
+        .down::before {
+            background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiIHdpZHRoPSI3cHgiIGhlaWdodD0iNHB4IiB2aWV3Qm94PSIwIDAgNyA0IiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA3IDQiIHhtbDpzcGFjZT0icHJlc2VydmUiPjxwb2x5Z29uIGZpbGw9IiM1NjZjN2YiIHBvaW50cz0iNiwwIDYsMSA1LDEgNSwyIDIsMiAyLDEgMSwxIDEsMCAwLDAgMCwyIDEsMiAxLDMgMiwzIDIsNCA1LDQgNSwzIDYsMyA2LDIgNywyIDcsMCAiLz48L3N2Zz4=)
+        }
+
+        .join {
+            background-repeat: repeat-y;
+            background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxcHgiIGhlaWdodD0iMXB4IiB2aWV3Qm94PSIwIDAgMSAxIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCAxIDEiIHhtbDpzcGFjZT0icHJlc2VydmUiPjxwYXRoIGZpbGw9IiM1NjZjN2YiIGQ9Ik0wLDBoMXYxSDBWMHoiLz48L3N2Zz4=)
+        }
+
+        .thin,
+        .thick {
+            background: #ffffff
+        }
+
+        .thin {
+            border: 1px solid var(--secondary-link-border-color);
+            padding: .5em
+        }
+
+        .main {
+            text-align: center
+        }
+
+        .main ul {
+            display: block;
+            width: 150px;
+            margin: 1em auto 0
+        }
+
+        ul.row {
+            width: 100%;
+            display: flex;
+            align-items: flex-start
+        }
+
+        ul.row li.page {
+            flex: 1;
+            margin: 0 .5em;
+            min-width: 280px
+        }
+
+        ul.row li.page.stretch {
+            align-self: stretch
+        }
+
+        ul.row li.page:first-child {
+            margin-left: 0
+        }
+
+        ul.row li.page:last-child {
+            margin-right: 0
+        }
+
+        ul.row li.page h3+ul.content {
+            margin-top: 1.5em
+        }
+
+        ul.row li.page ul.content li {
+            border-top: 1px solid var(--secondary-link-border-color);
+            padding: 2px 5px
+        }
+
+        ul.row li.page ul.content li.level-2 {
+            padding: 2px 12px
+        }
+
+        ul.row li.page ul.content li ul.section li {
+            border-top: none;
+            padding: 0
+        }
+
+        ul.row li.page ul.content li ul.section li:before {
+            content: "― "
+        }
+
+        section.overview {
+            background: var(--secondary-content-background-color);
+            transition: max-width 400ms ease-in-out;
+            padding: 20px;
+            margin: auto;
+            z-index: 99
+        }
+
+        section.overview .thin h3 {
+            will-change: auto;
+            transition: transform 400ms ease-in-out;
+            transform-origin: 0 50%
+        }
+
+        section.overview .thin b {
+            display: block;
+            padding: 2px 5px
+        }
+
+        section.overview .thin ul.content {
+            transition: opacity 200ms ease;
+            opacity: 1
+        }
+
+        @media (max-width: 1480px) {
+            ul.row li.page {
+                margin: 0
+            }
+        }
+
+        .toggle-overview {
+            background: var(--background-color);
+            display: block;
+            text-align: center;
+            padding: 5px;
+            color: var(--main-color);
+            font-weight: 500
+        }
+
+        .toggle-overview:hover {
+            text-decoration: none
+        }
+
+        /* @media (max-width: 560px) {section.overview {display:none}} */
+        .thick {
+            border: 3px solid var(--secondary-link-border-color);
+            padding: .5em;
+            font-size: 1.25rem
+        }
+
+        .thick>b {
+            color: var(--main-color)
+        }
+
+        .thick>p {
+            font-size: 1rem
+        }
+
+        .thick>p>a,
+        .think>p>a:hover {
+            background: var(--link-button-background-color);
+            display: block;
+            text-align: center;
+            padding: 5px;
+            color: var(--main-color);
+            font-weight: 500;
+            text-decoration: none
+        }
+
+        #pub-container {
+            margin: auto;
+            padding: 0 0em;
+            max-width: 1080px;
+            text-align: left;
+            padding-top: 30px;
+            max-width: 1080px
+        }
+
+        #pub-container .subtitle {
+            color: var(--main-color);
+        }
+
+        #pub-container .subtitle a {
+            font-size: 18px;
+            color: var(--secondary-link-color);
+            font-weight: 400
+        }
+
+        #pub-container .subtitle a.activated {
+            color: #333333;
+            font-weight: 600
+        }
+
+        #pub-container .subtitle a.activated:focus,
+        #pub-container .subtitle a.activated:hover {
+            text-decoration: none;
+            cursor: initial
+        }
+
+        #pub-container .subtitle-aux {
+            font-size: 1rem
+        }
+
+        #pub-container .subtitle-aux a.activated {
+            color: #333333
+        }
+
+        #pub-container .subtitle-aux a.activated:focus,
+        #pub-container .subtitle-aux a.activated:hover {
+            text-decoration: none;
+            cursor: initial
+        }
+
+        #pub-container .subtitle-aux .note {
+            margin-left: 1em;
+            color: #999999;
+            text-decoration: none;
+            font-size: 14px
+        }
+
+        #pub-card-container {}
+
+        #pub-card-container>h5 {
+            margin-bottom: 5px 0
+        }
+
+        #pub-card-container .pub-card {
+            width: 100%;
+            padding-bottom: 15px;
+            font-size: 1rem
+        }
+
+        #pub-card-container .pub-card .col-l {
+            text-align: center;
+            padding-top: 10px
+        }
+
+        #pub-card-container .pub-card .col-r {
+            padding-top: 10px
+        }
+
+        @media (min-width: 768px) {
+            #pub-card-container .pub-card .col-l {
+                flex: 0 0 30%;
+                max-width: 30%
+            }
+
+            #pub-card-container .pub-card .col-r {
+                flex: 0 0 70%;
+                max-width: 70%
+            }
+        }
+
+        #pub-card-container .pub-card img {
+            width: 100%;
+            margin: 0 auto
+        }
+
+        #pub-card-container .pub-card-body {
+            width: 100%;
+            background: transparent;
+            padding-left: 0px
+        }
+
+        #pub-card-container .pub-card .title {
+            font-weight: 600;
+            font-size: 1rem;
+            margin-bottom: 4px;
+            line-height: 1.4
+        }
+
+        #pub-card-container .pub-card .authors {
+            font-weight: 400;
+            color: #666666;
+            margin-bottom: 4px;
+            line-height: 1.4
+        }
+
+        #pub-card-container .pub-card .authors a {
+            color: #666666
+        }
+
+        #pub-card-container .pub-card .authors u {
+            color: #333333;
+            font-weight: 600;
+            text-decoration: none
+        }
+
+        #pub-card-container .pub-card .conference {
+            color: #333333;
+            font-weight: 600
+        }
+
+        #pub-card-container .pub-card .note {
+            display: block;
+            color: #999999;
+            text-decoration: none;
+            font-size: 14px
+        }
+
+        #pub-card-container .pub-card .info {
+            margin-bottom: 0;
+        }
+
+        #pub-card-container .row {
+            margin: 0
+        }
+
+        #pub-card-container .col-l,
+        #pub-card-container .col-r {
+            vertical-align: top;
+            display: inline-block;
+            margin: 0;
+            padding-left: 0px
+        }
+
+        #footer {
+            padding: 0 0 0.5em;
+            margin-top: 2rem;
+            min-width: 240px;
+            background: #fff;
+            font-size: 14px;
+            line-height: 12px;
+            text-align: left;
+            background: url(static/img/loong/loong-bottom-summer-repeat.png);
+            background-size: 15px 15px;
+            background-repeat: repeat;
+        }
+
+        #footer .container {
+            max-width: 540px;
+            padding: 0 45px;
+            position: relative;
+        }
+
+        #footer .row {
+            align-items: center;
+        }
+
+        #footer .comic {
+            padding-right: 15px;
+            padding-top: 15px;
+        }
+
+        #footer .copyright {
+            flex-grow: 1;
+            margin: 25px auto 5px;
+            text-align: center;
+            display: block;
+            font-size: 1rem;
+            line-height: 1.4;
+            color: var(--main-color);
+        }
+
+        #footer .stat {
+            width: 60px;
+            height: 60px;
+            overflow: hidden;
+            margin: 0 auto 5px;
+            padding: 0;
+        }
+
+        @media (min-width: 420px) {
+            #footer .stat {
+                display: block;
+                width: 60px;
+                height: 60px;
+                overflow: hidden;
+                margin: 5px auto -25px;
+                padding-right: 15px;
+            }
+        }
+
+        #footer a {
+            color: #666666;
+        }
+
+        #footer a:hover {
+            color: #333333;
+        }
+
+        .bold {
+            font-weight: 600
+        }
+
+        .red-highlight {
+            color: red;
+            font-size: 1rem;
+        }
+
+        .hide {
+            display: none
+        }
+
+        .publication-image {
+            display: block;
+            margin: auto;
+            width: 200px;
+            height: 140px;
+            object-fit: cover;
+            background-color: #f0f0f000;
+        }
+
+        .publication-image-scale {
+            display: block;
+            margin: auto;
+            width: 200px;
+            height: 140px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="main">
+
+        <div class="main-content">
+            <div id="main-content-container" class="container">
+                <div class="row">
+                    <div class="col-sm-12 col-md-3 col-avatar">
+                        <img src="images/headshot-3.jpg" class="avatar" />
+                    </div>
+                    <div class="col-sm-12 col-md-8">
+                        <div id="main-info-container">
+                            <div class="col-name">
+                                <h1 class="name"><span>Zuxin Liu</span></h1>
+                                <p class="email">Email: zuxin1997 [at] gmail [dot] com</p>
+                                <p class="text">I am a researcher at OpenAI. Previously I worked for <a
+                                        href="https://www.salesforceairesearch.com/" target="_blank">Salesforce AI
+                                        Research</a> on <a
+                                        href="https://www.salesforce.com/news/stories/agentforce-ai-models-announcement/"
+                                        target="_blank">LLM Agent</a>. I received my PhD and MS degrees from Carnegie
+                                    Mellon University, focusing on machine learning and robotics. During my PhD, I work
+                                    closely with Google DeepMind, AWS AI, and Nuro. Before that, I finished my
+                                    bachelor's degree with honor (President's Award) from Beihang University.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="social-links" style="text-align: center; margin-bottom: -30px; margin-top: -10px;">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/c/c7/Google_Scholar_logo.svg" alt="Google Scholar"
+            style="width:20px; height:20px; margin:5px;">
+        <a href="https://scholar.google.com/citations?user=5ApCTCoAAAAJ" target="_blank">Google Scholar</a>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn"
+            style="width:20px; height:20px; margin:5px;">
+        <a href="https://www.linkedin.com/in/zuxin-liu" target="_blank">LinkedIn</a>
+        <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub"
+            style="width:30px; height:30px; margin:5px;">
+        <a href="https://github.com/liuzuxin" target="_blank">GitHub</a>
+        <img src="static/img/x-logo/logo-black.png" alt="Twitter" style="width:20px; height:20px; margin:5px;">
+        <a href="https://twitter.com/LiuZuxin" target="_blank">Twitter</a>
+    </div>
+
+    <div class="main-content">
+        <div class="content-container">
+            <div class="main-news-container">
+                <h3 class="subtitle">News & Updates</h3>
+                <ul
+                    style="max-height: 300px; overflow-y: auto; list-style-type: disc; padding-left: 20px; margin: 0; font-size: 0.9rem;">
+                    <li>[<strong>2025/05</strong>] Our <a href="https://apigen-mt.github.io/">APIGen-MT</a> pipeline and
+                        <a href="https://huggingface.co/collections/Salesforce/xlam-2-67ef5be12949d8dcdae354c4">xLAM-2
+                            models</a> have been highlighted in major tech media including <a
+                            href="https://venturebeat.com/ai/salesforce-tackles-jagged-intelligence-problem-with-new-ai-benchmarks-and-models/">VentureBeat</a>,
+                        <a
+                            href="https://www.cio.com/article/3975508/salesforce-seeks-to-achieve-enterprise-general-intelligence-for-ai-agents.html">CIO</a>,
+                        and <a
+                            href="https://www.zdnet.com/article/salesforce-research-lays-the-foundations-for-more-reliable-enterprise-ai-agents/">ZDNET</a>!
+                    </li>
+                    <li>[<strong>2025/04</strong>] Our new <a href="https://arxiv.org/abs/2504.03601">paper</a> on the
+                        agentic data synthesis that powers our xLAM-2 models is released! Check out <a
+                            href="https://apigen-mt.github.io/">APIGen-MT</a> for more details.</li>
+                    <li>[<strong>2025/04</strong>] Our <a
+                            href="https://huggingface.co/collections/Salesforce/xlam-2-67ef5be12949d8dcdae354c4">xLAM-2
+                            models</a> just got an upgrade with <strong>multi-turn support</strong>! Our <a
+                            href="https://huggingface.co/Salesforce/Llama-xLAM-2-70b-fc-r">70B</a> model ranks
+                        <strong>#1</strong> and <a href="https://huggingface.co/Salesforce/xLAM-2-32b-fc-r">32B</a>
+                        model ranks <strong>#2</strong> on the <a
+                            href="https://gorilla.cs.berkeley.edu/leaderboard.html">BFCL function-calling
+                            leaderboard</a>—beating GPT-4o, Gemini, Qwen & more. Even our smaller models like <a
+                            href="https://huggingface.co/Salesforce/Llama-xLAM-2-8b-fc-r">xLAM-8B-r</a> lands at
+                        <strong>#4</strong> , ahead of GPT-4o.
+                    </li>
+                    <li>[<strong>2025/01</strong>] Our SWE-agent paper: Diversity Empowers Intelligence (DEI), is
+                        accepted by <strong>ICLR 2025</strong>!</li>
+                    <li>[<strong>2024/10</strong>] Our APIGen paper is accepted by <strong>NeurIPS 2024</strong>!</li>
+                    <li>[<strong>2024/09</strong>] Check out our xLAM <a
+                            href="https://blog.salesforceairesearch.com/xlam-large-action-models/">blog post</a> and <a
+                            href="https://arxiv.org/abs/2409.03215">Technical Report Paper</a> for insights into our
+                        Salesforce's Large Action Models.</li>
+                    <li>[<strong>2024/08</strong>] We are thrilled to announce the release of the entire <a
+                            href="https://blog.salesforceairesearch.com/xlam-large-action-models/">xLAM family</a>, our
+                        suite of Large Action Models! From the "tiny giant" 1B model to industrial powerhouses 8x22B
+                        model. These models have achieved impressive rankings, placing #1 and #6 on the <a
+                            href="https://gorilla.cs.berkeley.edu/leaderboard.html#leaderboard">Berkeley
+                            Function-Calling Leaderboard</a>. Explore our <a
+                            href="https://huggingface.co/collections/Salesforce/xlam-models-65f00e2a0a63bbcd1c2dade4">Hugging
+                            Face collection</a> for more details.</li>
+                    <li>[<strong>2024/07</strong>] We are excited to announce the release of our two function-calling
+                        models: <a href="https://huggingface.co/Salesforce/xLAM-1b-fc-r">xLAM-1b-fc-r</a> and <a
+                            href="https://huggingface.co/Salesforce/xLAM-7b-fc-r">xLAM-7b-fc-r</a>. These models have
+                        achieved impressive rankings, placing #3 and #25 on the <a
+                            href="https://gorilla.cs.berkeley.edu/leaderboard.html#leaderboard">Berkeley
+                            Function-Calling Leaderboard</a>, outperforming many significantly larger models.</li>
+                    <li>[<strong>2024/06</strong>] Check our latest work <a
+                            href="https://apigen-pipeline.github.io/">APIGen</a>, the best open-sourced models for
+                        function calling. Our <a
+                            href="https://huggingface.co/datasets/Salesforce/xlam-function-calling-60k">dataset</a> is
+                        currently among the Top-3 trending datasets on HuggingFace as of July 4, 2024. See also the <a
+                            href="https://x.com/Benioff/status/1808365628551844186">Twitter by Salesforce CEO</a>, <a
+                            href="https://venturebeat.com/ai/salesforce-proves-less-is-more-xlam-1b-tiny-giant-beats-bigger-ai-models/">VentureBeat</a>
+                        and <a href="https://mp.weixin.qq.com/s/B3gyaGwzlQaUXyI8n7Rguw">新智元</a>.</li>
+                    <li>[<strong>2024/05</strong>] Our paper for efficient and safe RL is accepted by <strong>ICML
+                            2024</strong>!</li>
+                    <li>[<strong>2024/04</strong>] Our RL dataset and benchmark paper is accepted by <strong>DMLR
+                            Journal</strong>! Checkout the <a href="https://www.offline-saferl.org">website</a> for
+                        details!</li>
+                    <li>[<strong>2024/02</strong>] We release our multi-LLM-Agent framework <a
+                            href="https://github.com/SalesforceAIResearch/AgentLite">AgentLite</a> library and paper!
+                    </li>
+                    <li>[<strong>2024/01</strong>] I joined Salesforce AI Research as a Research Scientist! Looking
+                        forward to working with the amazing team members on LLM Agent!</li>
+                    <li>[<strong>2024/01</strong>] Our two papers, one about efficient foundation model adaptation, and
+                        one about offline RL, are accepted by <strong>ICLR 2024</strong>!</li>
+                    <li>[<strong>2024/01</strong>] Our <a href="https://arxiv.org/abs/2309.13150">paper</a> about
+                        robustness certification is accepted by <a target="_blank" href="https://aistats.org/"
+                            class="conference">AISTATS 2024</a>!</li>
+                    <li>[2023/09] Our two papers for safe RL, one about versatile policy learning, and one about inverse
+                        constraint learning, are accepted by <strong>NeurIPS 2023</strong>!</li>
+                    <li>[2023/06] Our comprehensive datasets, benchmarks, and algorithms for offline safe learning are
+                        released! Checkout our <a href="https://www.offline-saferl.org">website</a> for details!</li>
+                    <li>[2023/05] A fast safe reinforcement learning framework is released! Checkout our <a
+                            href="https://github.com/liuzuxin/fsrl">GitHub repo</a> for details!</li>
+                    <li>[2023/04] Our two papers for safe RL, one about robustness and one about offline learning, are
+                        accepted by <strong>ICML 2023</strong>!</li>
+                    <li>[2023/01] Our paper about observational robustness in safe RL is accepted by <strong>ICLR
+                            2023</strong>!</li>
+                    <li>[2022/12] Our paper about robustness in safe RL win the <strong>AI Risk Analysis Award</strong>
+                        at the 2022 NeurIPS ML Safety Workshop!</li>
+                    <li>[2022/09] Our work about robustness certification in visual perception is accepted by
+                        <strong>CoRL 2022</strong>.
+                    </li>
+                    <li>[2022/09] Our work about safety evaluation for self-driving vehicles is accepted by
+                        <strong>NeurIPS 2022</strong>.
+                    </li>
+                    <li>[2022/07] Our paper about robustness in safe RL win the <strong>best paper runner-up</strong> in
+                        the <a href="https://learn-to-race.org/workshop-sl4ad-icml2022/papers.html">SL4AD Workshop</a>
+                        at <strong>ICML 2022</strong>!</li>
+                    <li>[2022/07] I am glad to present my work about safe RL at Google DeepMind robotics team.</li>
+                    <li>[2022/05] Our paper about variational inference approach for off-policy safe RL is accepted by
+                        <strong>ICML 2022</strong>!
+                    </li>
+                    <li>[2022/05] I give a talk about recent advances in safe RL at Prof. <a
+                            href="https://feifang.info/">Fei Fang</a>'s lab.</li>
+                    <li>[2022/04] Our work about safe learning for delivery robot is featured on the front page of CMU
+                        <a
+                            href="https://engineering.cmu.edu/news-events/news/2022/04/22-warehouse-robots.html">news</a>!
+                    </li>
+                    <li>[2022/03] Our paper about LiDAR sensing in autonomous vehicle is accepted by <strong>CVPR
+                            2022</strong>!</li>
+                    <li>[2021/11] The autonomous delivery robot that we have built for one year is featured by <a
+                            href="https://engineering.cmu.edu/news-events/news/2022/04/22-warehouse-robots.html">CMU
+                            Engineering</a>.</li>
+                    <li>[2021/07] We win the <a
+                            href="https://www.linkedin.com/posts/nuro-inc%2E_were-proud-to-announce-the-winners-from-activity-6830621209089187840-u9G9?utm_source=share&utm_medium=member_desktop">Hackathon</a>
+                        during my intern at Nuro! Really enjoyed to solve challenging real-world problems for
+                        self-driving.</li>
+                </ul>
+
+                <h4 class="subtitle" style="margin-top:30px">Research Interests</h4>
+                <p>
+
+                    My long-term ambition is to develop AI agents capable of achieving and surpassing human-level
+                    performance in various daily tasks, ultimately freeing humans from repetitive work and enhancing
+                    productivity. Beyond the commonly recognized capabilities like reasoning and planning, I believe
+                    that continual <strong>self-evolution</strong> (in terms of training) and
+                    <strong>self-reflection</strong> (during deployment) are also essential traits of truly intelligent
+                    agents. This aligns with the core principles of <strong>reinforcement learning</strong> (RL), which
+                    I view as a guiding philosophical framework for thinking and studying AI agents.
+
+                    <br><br>
+
+                    My research aims to apply the foundational principles—not just the methods—of RL to large language
+                    model (LLM)-based agents, contributing to the promising future of AI Agent systems that that
+                    <strong>evolve</strong>, <strong>learn</strong>, and <strong>interact</strong> in ways that
+                    complement and enhance human capabilities. Currently, I am developing scalable approaches, such as
+                    utilizing synthetic data, to improve models' agentic abilities, and leveraging environmental
+                    feedback to better enable self-learning and reflection, as exemplified like the Software Engineering
+                    Agent.
+
+                </p>
+
+            </div>
+        </div>
+
+        <div class="content-container">
+            <div id="pub-container">
+                <h4 class="subtitle">Publications
+                    (
+                    <a id="publication-by-selected" href="javascript:;" , onClick="publicationBySelected();">show
+                        selected</a> /
+                    <a id="publication-by-date" href="javascript:;" , onClick="publicationByDate();">show all by
+                        date</a> /
+                    <a id="publication-by-topic" href="javascript:;" , onClick="publicationByTopic();">show all by
+                        topic</a>
+                    )
+                </h4>
+                <span class="note">(* indicates equal contribution.)</span>
+                <p class="subtitle-aux"><span class="bold">Topics:</span>
+                    <a href="#topic-llm-agent" onClick="return publicationByTopicSpecific(this)"
+                        data-topic="llm-agent">LLM Agent</a> /
+                    <a href="#topic-foundation" onClick="return publicationByTopicSpecific(this)"
+                        data-topic="foundation">Foundation Model</a> /
+                    <a href="#topic-reasoning" onClick="return publicationByTopicSpecific(this)"
+                        data-topic="reasoning">Reasoning</a> /
+                    <a href="#topic-rl-algorithms" onClick="return publicationByTopicSpecific(this)"
+                        data-topic="rl-algorithms">RL Algorithms</a>
+                    <br />
+                    Past topics:
+                    <a href="#topic-robotics" onClick="return publicationByTopicSpecific(this)"
+                        data-topic="robotics">Embodied AI & Robotics</a> /
+                    <a href="#topic-self-driving" onClick="return publicationByTopicSpecific(this)"
+                        data-topic="self-driving">Computer Vision & Autonomous Vehicles</a> /
+                    <a href="#topic-undergrads-project" onClick="return publicationByTopicSpecific(this)"
+                        data-topic="undergrads-project">Fun Undergrads Projects</a>
+                </p>
+                <div id="pub-card-container" class="activated hide">
+                    <div class="pub-card" data-topic="llm-agent" data-year="2025" data-selected="true">
+                        <div class="row">
+                            <div class="col-l col-md-12 col-lg-3">
+                                <a>
+                                    <img class="img-responsive img-hover publication-image" src="images/2025-userrl.jpg"
+                                        alt="UserRL paper thumbnail">
+                                </a>
+                            </div>
+                            <div class="col-r col-md-12 col-lg-9">
+                                <div class="pub-card-body">
+                                    <h5 class="title">UserRL: Training Interactive User-Centric Agent via Reinforcement
+                                        Learning</h5>
+                                    <h6 class="authors">
+                                        Cheng Qian, <strong>Zuxin Liu</strong>, Akshara Prabhakar, Jielin Qiu, Zhiwei
+                                        Liu, Haolin Chen,
+                                        Shirley Kokane, Heng Ji, Weiran Yao, Shelby Heinecke, Silvio Savarese, Caiming
+                                        Xiong, Huan Wang
+                                    </h6>
+                                    <p class="info">
+                                        <a target="_blank" href="https://arxiv.org/abs/2509.19736">Paper</a> |
+                                        <a target="_blank"
+                                            href="https://github.com/SalesforceAIResearch/UserRL">Code</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pub-card" data-topic="llm-agent" data-year="2025" data-selected="true">
+                        <div class="row">
+                            <div class="col-l col-md-12 col-lg-3">
+                                <a>
+                                    <img class="img-responsive img-hover publication-image"
+                                        src="images/2025-userbench.jpg" alt="">
+                                </a>
+                            </div>
+                            <div class="col-r col-md-12 col-lg-9">
+                                <div class="pub-card-body">
+                                    <h5 class="title">UserBench: An Interactive Gym Environment for User-Centric Agents
+                                    </h5>
+                                    <h6 class="authors">
+                                        Cheng Qian, <strong>Zuxin Liu</strong>, Akshara Prabhakar, Zhiwei Liu, Jianguo
+                                        Zhang, Haolin Chen, Heng Ji,
+                                        Weiran Yao, Shelby Heinecke, Silvio Savarese, Caiming Xiong, Huan Wang
+                                    </h6>
+                                    <p class="info">
+                                        <a target="_blank" href="https://arxiv.org/pdf/2507.22034">Paper</a> |
+                                        <a target="_blank"
+                                            href="https://github.com/SalesforceAIResearch/UserBench">Code</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pub-card" data-topic="foundation" data-year="2025" data-selected="true">
+                        <div class="row">
+                            <div class="col-l col-md-12 col-lg-3">
+                                <a>
+                                    <img class="img-responsive img-hover publication-image"
+                                        src="https://apigen-mt.github.io/img/pipeline.png" alt="">
+                                </a>
+                            </div>
+                            <div class="col-r col-md-12 col-lg-9">
+                                <div class="pub-card-body">
+                                    <h5 class="title">APIGen-MT: Agentic Pipeline for Multi-Turn Data Generation via
+                                        Simulated Agent-Human Interplay</h5>
+                                    <h6 class="authors">
+                                        Akshara Prabhakar*, <strong>Zuxin Liu</strong>*, Ming Zhu, Jianguo Zhang, Tulika
+                                        Awalgaonkar, Shiyu Wang, Zhiwei Liu, Haolin Chen, Thai Hoang, Juan Carlos
+                                        Niebles, Shelby Heinecke, Weiran Yao, Huan Wang, Silvio Savarese, Caiming Xiong
+                                    </h6>
+                                    <p class="info">
+                                        <a target="_blank" href="https://arxiv.org/abs/2504.03601">Paper</a> |
+                                        <a target="_blank" href="https://apigen-mt.github.io/">Website</a> |
+                                        <a target="_blank"
+                                            href="https://huggingface.co/datasets/Salesforce/APIGen-MT-5k">Dataset</a> |
+                                        <a target="_blank"
+                                            href="https://huggingface.co/collections/Salesforce/xlam-2-67ef5be12949d8dcdae354c4">Models</a>
+                                        <br><span class="highlight">Media coverage:</span>
+                                        <a target="_blank"
+                                            href="https://www.salesforce.com/blog/xlam-large-action-models-v2/">Official
+                                            Blog</a> |
+                                        <a target="_blank"
+                                            href="https://venturebeat.com/ai/salesforce-tackles-jagged-intelligence-problem-with-new-ai-benchmarks-and-models/">VentureBeat</a>
+                                        |
+                                        <a target="_blank"
+                                            href="https://www.cio.com/article/3975508/salesforce-seeks-to-achieve-enterprise-general-intelligence-for-ai-agents.html">CIO</a>
+                                        |
+                                        <a target="_blank"
+                                            href="https://www.zdnet.com/article/salesforce-research-lays-the-foundations-for-more-reliable-enterprise-ai-agents/">ZDNET</a>
+                                        |
+                                        <a target="_blank"
+                                            href="https://finance.yahoo.com/news/salesforce-expands-model-lineup-support-145628285.html?guccounter=1&guce_referrer=aHR0cHM6Ly93d3cuZ29vZ2xlLmNvbS8&guce_referrer_sig=AQAAACBYMN8eDhlpeg4ur5_6tCL3rK5B0HYa_JUJqo0hemITNlGtxxDGGyy2fpEcJzPu_m2OKd1oDRz6SvMiBD78P-pDUp0O32HdJ69bGoa-x2yk3SzDiuhX-EZqs7mrLS3GxjiYNK52J_FgkRSDfEi9Lnydl87TWNepCZbiZbOISPzV">Yahoo
+                                            Finance</a> |
+                                        <a target="_blank"
+                                            href="https://www.marktechpost.com/2025/04/08/salesforce-ai-released-apigen-mt-and-xlam-2-fc-r-model-series-advancing-multi-turn-agent-training-with-verified-data-pipelines-and-scalable-llm-architectures/">Marktechpost</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pub-card" data-topic="foundation" data-year="2024" data-selected="true">
+                        <div class="row">
+                            <div class="col-l col-md-12 col-lg-3">
+                                <a>
+                                    <img class="img-responsive img-hover publication-image" src="images/2024-Apigen.png"
+                                        alt="">
+                                </a>
+                            </div>
+                            <div class="col-r col-md-12 col-lg-9">
+                                <div class="pub-card-body">
+                                    <h5 class="title">APIGen: Automated PIpeline for Generating Verifiable and Diverse
+                                        Function-calling Datasets</h5>
+                                    <h6 class="authors">
+                                        <strong>Zuxin Liu</strong>, Thai Hoang, Jianguo Zhang, Ming Zhu, Tian Lan,
+                                        Shirley Kokane, Juntao Tan, Weiran Yao, Zhiwei Liu, Yihao Feng, Rithesh Murthy,
+                                        Liangwei Yang, Silvio Savarese, Juan Carlos Niebles, Huan Wang, Shelby Heinecke,
+                                        Caiming Xiong
+                                    </h6>
+                                    <p class="info">
+                                        <a target="_blank"
+                                            href="https://neurips.cc/Conferences/2024/CallForDatasetsBenchmarks"
+                                            class="conference">NeurIPS 2024 Dataset and Benchmark Track</a> |
+                                        <a target="_blank" href="https://arxiv.org/abs/2406.18518">Paper</a> |
+                                        <a target="_blank" href="https://apigen-pipeline.github.io/">Website</a> |
+                                        <a target="_blank"
+                                            href="https://huggingface.co/datasets/Salesforce/xlam-function-calling-60k">Dataset</a>
+                                        |
+                                        <a target="_blank"
+                                            href="https://huggingface.co/collections/Salesforce/xlam-models-65f00e2a0a63bbcd1c2dade4">Model</a>
+                                        <br><span class="highlight">Media coverage:</span>
+                                        <a target="_blank"
+                                            href="https://venturebeat.com/ai/salesforce-proves-less-is-more-xlam-1b-tiny-giant-beats-bigger-ai-models/">VentureBeat</a>
+                                        |
+                                        <a target="_blank"
+                                            href="https://www.thestack.technology/salesforce-llm-agentic-ai/">The
+                                            Stack</a> |
+                                        <a target="_blank"
+                                            href="https://www.infoworld.com/article/3507169/salesforce-previews-new-xgen-sales-model-releases-xlam-family-of-llms.html">InfoWorld</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pub-card" data-topic="foundation" data-year="2024" data-selected="true">
+                        <div class="row">
+                            <div class="col-l col-md-12 col-lg-3">
+                                <a>
+                                    <img class="img-responsive img-hover publication-image-scale"
+                                        src="images/2024-xLAM.png" alt="">
+                                </a>
+                            </div>
+                            <div class="col-r col-md-12 col-lg-9">
+                                <div class="pub-card-body">
+                                    <h5 class="title">xLAM: A Family of Large Action Models to Empower AI Agent Systems
+                                    </h5>
+                                    <h6 class="authors">
+                                        Jianguo Zhang*, Tian Lan*, Ming Zhu*, <strong>Zuxin Liu</strong>*, Thai Hoang*,
+                                        Shirley Kokane, Weiran Yao, Juntao Tan, Akshara Prabhakar, Haolin Chen, Zhiwei
+                                        Liu, Yihao Feng, et. al.
+                                    </h6>
+                                    <p class="info">
+                                        <a target="_blank" href="https://2025.naacl.org/" class="conference">NAACL
+                                            2025 <span class="highlight">(Oral and Spotlight)</span> </a> |
+                                        <a target="_blank" href="https://arxiv.org/abs/2409.03215">Paper</a> |
+                                        <a target="_blank"
+                                            href="https://www.salesforceairesearch.com/projects/xlam-large-action-models">Website</a>
+                                        |
+                                        <a target="_blank"
+                                            href="https://huggingface.co/collections/Salesforce/xlam-models-65f00e2a0a63bbcd1c2dade4">Model</a>
+                                        <br><span class="highlight">Media coverage:</span>
+                                        <a target="_blank"
+                                            href="https://www.salesforceairesearch.com/projects/xlam-large-action-models">Official
+                                            Blog</a> |
+                                        <a target="_blank"
+                                            href="https://venturebeat.com/ai/is-ai-the-future-of-sales-salesforces-new-models-could-change-the-game/">VentureBeat</a>
+                                        |
+                                        <a target="_blank"
+                                            href="https://www.infoworld.com/article/3507169/salesforce-previews-new-xgen-sales-model-releases-xlam-family-of-llms.html">InfoWorld</a>
+                                        |
+                                        <a target="_blank"
+                                            href="https://www.investing.com/news/stock-market-news/salesforce-upgraded-to-outperform-by-northland-capital-markets-3644913">Investing.com</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pub-card" data-topic="reasoning" data-year="2024" data-selected="true">
+                        <div class="row">
+                            <div class="col-l col-md-12 col-lg-3">
+                                <a>
+                                    <img class="img-responsive img-hover publication-image" src="images/2024-latro.png"
+                                        alt="">
+                                </a>
+                            </div>
+                            <div class="col-r col-md-12 col-lg-9">
+                                <div class="pub-card-body">
+                                    <h5 class="title">Language Models are Hidden Reasoners (LaTRO): Unlocking Latent
+                                        Reasoning Capabilities via Self-Rewarding</h5>
+                                    <h6 class="authors">
+                                        Haolin Chen, Yihao Feng, <strong>Zuxin Liu</strong>, Weiran Yao, Akshara
+                                        Prabhakar, Shelby Heinecke, Ricky Ho, Phil Mui, Silvio Savarese, Caiming Xiong,
+                                        Huan Wang
+                                    </h6>
+                                    <p class="info">
+                                        <!-- <a target="_blank"
+                                            href="https://neurips.cc/Conferences/2024/CallForDatasetsBenchmarks"
+                                            class="conference">NeurIPS 2024 Dataset and Benchmark Track</a> | -->
+                                        <a target="_blank" href="https://arxiv.org/abs/2411.04282">Paper</a> |
+                                        <a target="_blank" href="https://github.com/SalesforceAIResearch/LaTRO">Code</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pub-card" data-topic="llm-agent" data-year="2024" data-selected="true">
+                        <div class="row">
+                            <div class="col-l col-md-12 col-lg-3">
+                                <a>
+                                    <img class="img-responsive img-hover publication-image-scale"
+                                        src="images/2024-DEI.png" alt="">
+                                </a>
+                            </div>
+                            <div class="col-r col-md-12 col-lg-9">
+                                <div class="pub-card-body">
+                                    <h5 class="title">Diversity Empowers Intelligence: Integrating Expertise of Software
+                                        Engineering Agents</h5>
+                                    <h6 class="authors">
+                                        Kexun Zhang, Weiran Yao, <strong>Zuxin Liu</strong>, Yihao Feng, Zhiwei Liu,
+                                        Rithesh Murthy, Tian Lan, Lei Li, Renze Lou, Jiacheng Xu, Bo Pang, Yingbo Zhou,
+                                        Shelby Heinecke, Silvio Savarese, Huan Wang, Caiming Xiong
+                                    </h6>
+                                    <p class="info">
+                                        <a target="_blank" href="https://iclr.cc/Conferences/2025/CallForPapers"
+                                            class="conference">ICLR 2025</a> |
+                                        <a target="_blank" href="https://arxiv.org/abs/2408.07060">Paper</a> |
+                                        <a target="_blank"
+                                            href="https://salesforce-research-dei-agents.github.io/">Website</a> |
+                                        <a target="_blank"
+                                            href="https://github.com/SalesforceAIResearch/swecomm">Code</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pub-card" data-topic="llm-agent" data-year="2025" data-selected="true">
+                        <div class="row">
+                            <div class="col-l col-md-12 col-lg-3">
+                                <a>
+                                    <img class="img-responsive img-hover publication-image"
+                                        src="images/2025-mcpeval.jpg" alt="">
+                                </a>
+                            </div>
+                            <div class="col-r col-md-12 col-lg-9">
+                                <div class="pub-card-body">
+                                    <h5 class="title">MCPEval: Automatic MCP‑based Deep Evaluation for AI Agent Models
+                                    </h5>
+                                    <h6 class="authors">
+                                        Zhiwei Liu, Jielin Qiu, Shiyu Wang, Jianguo Zhang, <strong>Zuxin Liu</strong>,
+                                        Roshan Ram, Haolin Chen, Weiran Yao,
+                                        Huan Wang, Shelby Heinecke, Silvio Savarese, Caiming Xiong
+                                    </h6>
+                                    <p class="info">
+                                        <a target="_blank" href="https://arxiv.org/abs/2507.12806">Paper</a> |
+                                        <a target="_blank"
+                                            href="https://github.com/SalesforceAIResearch/MCPEval">Code</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pub-card" data-topic="reasoning" data-year="2024" data-selected="true">
+                        <div class="row">
+                            <div class="col-l col-md-12 col-lg-3">
+                                <a>
+                                    <img class="img-responsive img-hover publication-image" src="images/2024-pract.png"
+                                        alt="">
+                                </a>
+                            </div>
+                            <div class="col-r col-md-12 col-lg-9">
+                                <div class="pub-card-body">
+                                    <h5 class="title">PRACT: Optimizing Principled Reasoning and Acting of LLM Agent
+                                    </h5>
+                                    <h6 class="authors">
+                                        Zhiwei Liu, Weiran Yao, Jianguo Zhang, Rithesh Murthy, Liangwei Yang,
+                                        <strong>Zuxin Liu</strong>, Tian Lan, Ming Zhu, Juntao Tan, Shirley Kokane, Thai
+                                        Hoang, Juan Carlos Niebles, Shelby Heinecke, Huan Wang, Silvio Savarese, Caiming
+                                        Xiong
+                                    </h6>
+                                    <p class="info">
+                                        <!-- <a target="_blank"
+                                            href="https://neurips.cc/Conferences/2024/CallForDatasetsBenchmarks"
+                                            class="conference">NeurIPS 2024 Dataset and Benchmark Track</a> | -->
+                                        <a target="_blank" href="https://arxiv.org/abs/2410.18528">Paper</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pub-card" data-topic="foundation" data-year="2024" data-selected="true">
+                        <div class="row">
+                            <div class="col-l col-md-12 col-lg-3">
+                                <a>
+                                    <img class="img-responsive img-hover publication-image"
+                                        src="images/2024-iclr-tail-2.png" alt="">
+                                </a>
+                            </div>
+                            <div class="col-r col-md-12 col-lg-9">
+                                <div class="pub-card-body">
+                                    <h5 class="title">TAIL: Task-specific Adapters for Imitation Learning with Large
+                                        Pretrained Models</h5>
+                                    <h6 class="authors">
+                                        <strong>Zuxin Liu</strong>, Jesse Zhang, Kavosh Asadi, Yao Liu, Ding Zhao,
+                                        Shoham Sabach, Rasool Fakoor.
+                                    </h6>
+                                    <p class="info">
+                                        <a target="_blank" href="https://iclr.cc/Conferences/2024"
+                                            class="conference">ICLR 2024</a> |
+                                        <a target="_blank" href="https://arxiv.org/abs/2310.05905">Paper</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pub-card" data-topic="llm-agent" data-year="2024" data-selected="true">
+                        <div class="row">
+                            <div class="col-l col-md-12 col-lg-3">
+                                <a>
+                                    <img class="img-responsive img-hover publication-image"
+                                        src="images/2024-AgentLite.png" alt="">
+                                </a>
+                            </div>
+                            <div class="col-r col-md-12 col-lg-9">
+                                <div class="pub-card-body">
+                                    <h5 class="title">AgentLite: A Lightweight Library for Building and Advancing
+                                        Task-Oriented LLM Agent System</h5>
+                                    <h6 class="authors">
+                                        Zhiwei Liu, Weiran Yao, Jianguo Zhang, Liangwei Yang, <strong>Zuxin
+                                            Liu</strong>, Juntao Tan, Prafulla K Choubey, Tian Lan, Jason Wu, Huan Wang,
+                                        Shelby Heinecke, Caiming Xiong, Silvio Savarese
+                                    </h6>
+                                    <p class="info">
+                                        <a target="_blank" href="https://arxiv.org/abs/2402.15538">Paper</a> |
+                                        <a target="_blank"
+                                            href="https://github.com/SalesforceAIResearch/AgentLite">Code</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pub-card" data-topic="foundation" data-year="2024" data-selected="false">
+                        <div class="row">
+                            <div class="col-l col-md-12 col-lg-3">
+                                <a>
+                                    <img class="img-responsive img-hover publication-image"
+                                        src="images/2024-AgentOhana.png" alt="">
+                                </a>
+                            </div>
+                            <div class="col-r col-md-12 col-lg-9">
+                                <div class="pub-card-body">
+                                    <h5 class="title">AgentOhana: Design Unified Data and Training Pipeline for
+                                        Effective Agent Learning</h5>
+                                    <h6 class="authors">
+                                        Jianguo Zhang, Tian Lan, Rithesh Murthy, Zhiwei Liu, Weiran Yao, Juntao Tan,
+                                        Thai Hoang, Liangwei Yang, Yihao Feng, <strong>Zuxin Liu</strong>, Tulika
+                                        Awalgaonkar, Juan Carlos Niebles, Silvio Savarese, Shelby Heinecke, Huan Wang,
+                                        Caiming Xiong
+                                    </h6>
+                                    <p class="info">
+                                        <a target="_blank" href="https://arxiv.org/abs/2402.15506">Paper</a> |
+                                        <a target="_blank" href="https://github.com/SalesforceAIResearch/xLAM">Code</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pub-card" data-topic="self-driving" data-year="2024" data-selected="false">
+                        <div class="row">
+                            <div class="col-l col-md-12 col-lg-3">
+                                <a>
+                                    <img class="img-responsive img-hover publication-image"
+                                        src="images/2024-SafetyAware.png" alt="">
+                                </a>
+                            </div>
+                            <div class="col-r col-md-12 col-lg-9">
+                                <div class="pub-card-body">
+                                    <h5 class="title">Safety-aware Causal Representation for Trustworthy Offline
+                                        Reinforcement Learning in Autonomous Driving</h5>
+                                    <h6 class="authors">
+                                        Haohong Lin, Wenhao Ding, <strong>Zuxin Liu</strong>, Yaru Niu, Jiacheng Zhu,
+                                        Yuming Niu, Ding Zhao
+                                    </h6>
+                                    <p class="info">
+                                        <a target="_blank" href="https://arxiv.org/abs/2311.10747"
+                                            class="conference">IEEE Robotics and Automation Letters</a> |
+                                        <a target="_blank" href="https://arxiv.org/abs/2311.10747">Paper</a> |
+                                        <a target="_blank" href="https://sites.google.com/view/safe-fusion/">Website</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pub-card" data-topic="rl-algorithms" data-year="2024" data-selected="false">
+                        <div class="row">
+                            <div class="col-l col-md-12 col-lg-3">
+                                <a>
+                                    <img class="img-responsive img-hover publication-image"
+                                        src="images/2024-GradientShaping.png" alt="">
+                                </a>
+                            </div>
+                            <div class="col-r col-md-12 col-lg-9">
+                                <div class="pub-card-body">
+                                    <h5 class="title">Gradient Shaping for Multi-Constraint Safe Reinforcement Learning
+                                    </h5>
+                                    <h6 class="authors">
+                                        Yihang Yao, <strong>Zuxin Liu</strong>, Zhepeng Cen, Peide Huang, Tingnan Zhang,
+                                        Wenhao Yu, Ding Zhao
+                                    </h6>
+                                    <p class="info">
+                                        <a target="_blank" href="https://proceedings.mlr.press/v242/yao24a.html"
+                                            class="conference">L4DC 2024</a> |
+                                        <a target="_blank"
+                                            href="https://proceedings.mlr.press/v242/yao24a.html">Paper</a>
+
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pub-card" data-topic="rl-algorithms" data-year="2024" data-selected="true">
+                        <div class="row">
+                            <div class="col-l col-md-12 col-lg-3">
+                                <a>
+                                    <img class="img-responsive img-hover publication-image" src="images/2024-FCSRL.png"
+                                        alt="">
+                                </a>
+                            </div>
+                            <div class="col-r col-md-12 col-lg-9">
+                                <div class="pub-card-body">
+                                    <h5 class="title">Feasibility Consistent Representation Learning for Safe
+                                        Reinforcement Learning</h5>
+                                    <h6 class="authors">
+                                        Zhepeng Cen, Yihang Yao, <strong>Zuxin Liu</strong>, Ding Zhao
+                                    </h6>
+                                    <p class="info">
+                                        <a target="_blank" href="https://arxiv.org/abs/2405.11718"
+                                            class="conference">ICML 2024</a> |
+                                        <a target="_blank" href="https://arxiv.org/abs/2405.11718">Paper</a> |
+                                        <a target="_blank" href="https://sites.google.com/view/FCSRL">Website</a> |
+                                        <a target="_blank" href="https://github.com/czp16/FCSRL">Code</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pub-card" data-topic="rl-algorithms" data-year="2024" data-selected="true">
+                        <div class="row">
+                            <div class="col-l col-md-12 col-lg-3">
+                                <a>
+                                    <img class="img-responsive img-hover publication-image"
+                                        src="images/2024-iclr-cde.png" alt="">
+                                </a>
+                            </div>
+                            <div class="col-r col-md-12 col-lg-9">
+                                <div class="pub-card-body">
+                                    <h5 class="title">Learning from Sparse Offline Datasets via Conservative Density
+                                        Estimation</h5>
+                                    <h6 class="authors">
+                                        Zhepeng Cen, <strong>Zuxin Liu</strong>, Zitong Wang, Yihang Yao, Henry Lam,
+                                        Ding Zhao.
+                                    </h6>
+                                    <p class="info">
+                                        <a target="_blank" href="https://iclr.cc/Conferences/2024"
+                                            class="conference">ICLR 2024</a> |
+                                        <a target="_blank" href="https://arxiv.org/abs/2401.08819">Paper</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pub-card" data-topic="robotics" data-year="2024" data-selected="true">
+                        <div class="row">
+                            <div class="col-l col-md-12 col-lg-3">
+                                <a>
+                                    <img class="img-responsive img-hover publication-image"
+                                        src="images/2024-EXTRACT.png" alt="">
+                                </a>
+                            </div>
+                            <div class="col-r col-md-12 col-lg-9">
+                                <div class="pub-card-body">
+                                    <h5 class="title">EXTRACT: Efficient Policy Learning by Extracting Transferrable
+                                        Robot Skills from Offline Data</h5>
+                                    <h6 class="authors">
+                                        Jesse Zhang, Minho Heo, <strong>Zuxin Liu</strong>, Erdem Biyik, Joseph J Lim,
+                                        Yao Liu, Rasool Fakoor
+                                    </h6>
+                                    <p class="info">
+                                        <a target="_blank" href="https://arxiv.org/abs/2406.17768"
+                                            class="conference">CoRL 2024</a> |
+                                        <a target="_blank" href="https://arxiv.org/abs/2406.17768">Paper</a> |
+                                        <a target="_blank"
+                                            href="https://www.jessezhang.net/projects/extract/">Website</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pub-card" data-topic="rl-algorithms" data-year="2024" data-selected="false">
+                        <div class="row">
+                            <div class="col-l col-md-12 col-lg-3">
+                                <a>
+                                    <img class="img-responsive img-hover publication-image"
+                                        src="images/2024-SafetyEmbeddedMDP.png" alt="">
+                                </a>
+                            </div>
+                            <div class="col-r col-md-12 col-lg-9">
+                                <div class="pub-card-body">
+                                    <h5 class="title">Reinforcement Learning in a Safety-Embedded MDP with Trajectory
+                                        Optimization</h5>
+                                    <h6 class="authors">
+                                        Fan Yang, Wenxuan Zhou, <strong>Zuxin Liu</strong>, Ding Zhao, David Held
+                                    </h6>
+                                    <p class="info">
+                                        <a target="_blank" href="https://ieeexplore.ieee.org/abstract/document/10610047"
+                                            class="conference">ICRA 2024</a> |
+                                        <a target="_blank"
+                                            href="https://ieeexplore.ieee.org/abstract/document/10610047">Paper</a> |
+                                        <a target="_blank" href="https://sites.google.com/view/safemdp">Website</a> |
+                                        <a target="_blank"
+                                            href="https://github.com/safetyembedded/SafetyEmbeddedMDP">Code</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!----------------------------------------- 2023 ----------------------------------------->
+
+                    <div class="pub-card" data-topic="rl-algorithms" data-year="2023" data-selected="true">
+                        <div class="row">
+                            <div class="col-l col-md-12 col-lg-3">
+                                <a>
+                                    <img class="img-responsive img-hover publication-image" src="images/2023-DSRL.png"
+                                        alt="">
+                                </a>
+                            </div>
+                            <div class="col-r col-md-12 col-lg-9">
+                                <div class="pub-card-body">
+                                    <h5 class="title">Datasets and Benchmarks for Offline Safe Reinforcement Learning
+                                    </h5>
+                                    <h6 class="authors">
+                                        <strong>Zuxin Liu</strong>*, Zijian Guo*, Haohong Lin, Yihang Yao, Jiacheng Zhu,
+                                        Zhepeng Cen, Hanjiang Hu, Wenhao Yu, Tingnan Zhang, Jie Tan, Ding Zhao.
+                                    </h6>
+                                    <p class="info">
+                                        <a target="_blank" href="https://data.mlr.press/" class="conference">DMLR
+                                            Journal</a> |
+                                        <a target="_blank" href="https://arxiv.org/abs/2306.09303">Paper</a> |
+                                        <a target="_blank" href="https://www.offline-saferl.org/">Website</a> |
+                                        <a target="_blank" href="https://github.com/liuzuxin/fsrl">FSRL Code</a> |
+                                        <a target="_blank" href="https://github.com/liuzuxin/osrl">OSRL Code</a> |
+                                        <a target="_blank" href="https://github.com/liuzuxin/dsrl">DSRL Code</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pub-card" data-topic="rl-algorithms" data-year="2023" data-selected="true">
+                        <div class="row">
+                            <div class="col-l col-md-12 col-lg-3">
+                                <a>
+                                    <img class="img-responsive img-hover publication-image"
+                                        src="images/2023-ICML-CDT.png" alt="">
+                                </a>
+                            </div>
+                            <div class="col-r col-md-12 col-lg-9">
+                                <div class="pub-card-body">
+                                    <h5 class="title">Constrained Decision Transformer for Offline Safe Reinforcement
+                                        Learning</h5>
+                                    <h6 class="authors">
+                                        <strong>Zuxin Liu</strong>*, Zijian Guo*, Yihang Yao, Zhepeng Cen, Wenhao Yu,
+                                        Tingnan Zhang, Ding Zhao.
+                                    </h6>
+                                    <p class="info">
+                                        <a target="_blank" href="https://icml.cc/" class="conference">ICML 2023</a> |
+                                        <a target="_blank" href="http://arxiv.org/abs/2302.07351">Paper</a> |
+                                        <a target="_blank" href="https://github.com/liuzuxin/osrl">Code</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pub-card" data-topic="rl-algorithms" data-year="2023" data-selected="false">
+                        <div class="row">
+                            <div class="col-l col-md-12 col-lg-3">
+                                <a>
+                                    <img class="img-responsive img-hover publication-image"
+                                        src="images/2023-ICML-SAFER.png" alt="">
+                                </a>
+                            </div>
+                            <div class="col-r col-md-12 col-lg-9">
+                                <div class="pub-card-body">
+                                    <h5 class="title">Towards Robust and Safe Reinforcement Learning with Benign
+                                        Off-policy Data</h5>
+                                    <h6 class="authors">
+                                        <strong>Zuxin Liu</strong>*, Zijian Guo*, Zhepeng Cen, Yihang Yao, Hanjiang Hu,
+                                        Ding Zhao.
+                                    </h6>
+                                    <p class="info">
+                                        <a target="_blank" href="https://icml.cc/" class="conference">ICML 2023</a> |
+                                        <a target="_blank"
+                                            href="https://proceedings.mlr.press/v202/liu23l.html">Paper</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pub-card" data-topic="rl-algorithms" data-year="2023" data-selected="true">
+                        <div class="row">
+                            <div class="col-l col-md-12 col-lg-3">
+                                <a>
+                                    <img class="img-responsive img-hover publication-image"
+                                        src="images/2023-Neurips-ccpo.png" alt="">
+                                </a>
+                            </div>
+                            <div class="col-r col-md-12 col-lg-9">
+                                <div class="pub-card-body">
+                                    <h5 class="title">Constraint-Conditioned Policy Optimization for Versatile Safe
+                                        Reinforcement Learning</h5>
+                                    <h6 class="authors">
+                                        Yihang Yao*, <strong>Zuxin Liu</strong>*, Zhepeng Cen, Jiacheng Zhu, Wenhao Yu,
+                                        Tingnan Zhang, Ding Zhao.
+                                    </h6>
+                                    <p class="info">
+                                        <a target="_blank" href="https://nips.cc/" class="conference">NeurIPS 2023</a> |
+                                        <a target="_blank" href="https://arxiv.org/abs/2310.03718">Paper</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pub-card" data-topic="rl-algorithms" data-year="2023" data-selected="false">
+                        <div class="row">
+                            <div class="col-l col-md-12 col-lg-3">
+                                <a>
+                                    <img class="img-responsive img-hover publication-image"
+                                        src="images/2023-Neurips-icl.png" alt="">
+                                </a>
+                            </div>
+                            <div class="col-r col-md-12 col-lg-9">
+                                <div class="pub-card-body">
+                                    <h5 class="title">Learning Shared Safety Constraints from Multi-task Demonstrations
+                                    </h5>
+                                    <h6 class="authors">
+                                        Konwoo Kim, Gokul Swamy, <strong>Zuxin Liu</strong>, Ding Zhao, Sanjiban
+                                        Choudhury, Zhiwei Steven Wu.
+                                    </h6>
+                                    <p class="info">
+                                        <a target="_blank" href="https://arxiv.org/abs/2309.00711"
+                                            class="conference">NeurIPS 2023</a> |
+                                        <a target="_blank" href="https://arxiv.org/abs/2309.00711">Paper</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pub-card" data-topic="self-driving" data-year="2023" data-selected="false">
+                        <div class="row">
+                            <div class="col-l col-md-12 col-lg-3">
+                                <a>
+                                    <img class="img-responsive img-hover publication-image" src="images/2023-IROS.png"
+                                        alt="">
+                                </a>
+                            </div>
+                            <div class="col-r col-md-12 col-lg-9">
+                                <div class="pub-card-body">
+                                    <h5 class="title">Seasondepth: Cross-season Monocular Depth Prediction Dataset and
+                                        Benchmark under Multiple Environments</h5>
+                                    <h6 class="authors">
+                                        Hanjiang Hu, Baoquan Yang, Zhijian Qiao, Shiqi Liu, Jiacheng Zhu, <strong>Zuxin
+                                            Liu</strong>, Wenhao Ding, Ding Zhao, Hesheng Wang
+                                    </h6>
+                                    <p class="info">
+                                        <a target="_blank" href="https://ieeexplore.ieee.org/abstract/document/10341917"
+                                            class="conference">IROS 2023</a> |
+                                        <a target="_blank"
+                                            href="https://ieeexplore.ieee.org/abstract/document/10341917">Paper</a> |
+                                        <a target="_blank" href="https://seasondepth.github.io/">Website</a> |
+                                        <a target="_blank" href="https://github.com/SeasonDepth/SeasonDepth">Code</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pub-card" data-topic="self-driving" data-year="2023" data-selected="false">
+                        <div class="row">
+                            <div class="col-l col-md-12 col-lg-3">
+                                <a>
+                                    <img class="img-responsive img-hover publication-image"
+                                        src="images/2024-PixelWise.png" alt="">
+                                </a>
+                            </div>
+                            <div class="col-r col-md-12 col-lg-9">
+                                <div class="pub-card-body">
+                                    <h5 class="title">Pixel-wise Smoothing for Certified Robustness against Camera
+                                        Motion Perturbations</h5>
+                                    <h6 class="authors">
+                                        Hanjiang Hu, <strong>Zuxin Liu</strong>, Linyi Li, Jiacheng Zhu, Ding Zhao
+                                    </h6>
+                                    <p class="info">
+                                        <a target="_blank" href="https://proceedings.mlr.press/v238/hu24a.html"
+                                            class="conference">AISTATS 2023</a> |
+                                        <a target="_blank"
+                                            href="https://proceedings.mlr.press/v238/hu24a.html">Paper</a> |
+                                        <a target="_blank"
+                                            href="https://github.com/HanjiangHu/pixel-wise-smoothing">Code</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!----------------------------------------- 2022 ----------------------------------------->
+
+                    <div class="pub-card" data-topic="rl-algorithms" data-year="2022" data-selected="true">
+                        <div class="row">
+                            <div class="col-l col-md-12 col-lg-3">
+                                <a>
+                                    <img class="img-responsive img-hover publication-image-scale"
+                                        src="images/2022-NeurIPS.png" alt="">
+                                </a>
+                            </div>
+                            <div class="col-r col-md-12 col-lg-9">
+                                <div class="pub-card-body">
+                                    <h5 class="title">On the Robustness of Safe Reinforcement Learning under
+                                        Observational Perturbations</h5>
+                                    <h6 class="authors">
+                                        <strong>Zuxin Liu</strong>, Zijian Guo, Zhepeng Cen, Huan Zhang, Jie Tan, Bo Li,
+                                        Ding Zhao.
+                                    </h6>
+                                    <p class="info">
+                                        <a target="_blank" href="https://iclr.cc/Conferences/2023"
+                                            class="conference">ICLR 2023</a> |
+                                        <a target="_blank" href="https://iclr.cc/Conferences/2023">Paper</a>
+                                        <br>
+                                        <span class="highlight">2022 ICML SL4AD Workshop (Best Paper Runner-up)</span>
+                                        <br>
+                                        <span class="highlight">2022 NeurIPS ML Safety Workshop (AI Risk Analysis
+                                            Award)</span> <br>
+                                        <a target="_blank" href="https://arxiv.org/abs/2205.14691">Paper</a> |
+                                        <a target="_blank"
+                                            href="https://sites.google.com/view/robustsaferl/home">Website</a> |
+                                        <a target="_blank"
+                                            href="https://github.com/liuzuxin/safe-rl-robustness">Code</a>
+
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pub-card" data-topic="robotics" data-year="2022" data-selected="false">
+                        <div class="row">
+                            <div class="col-l col-md-12 col-lg-3">
+                                <a>
+                                    <img class="img-responsive img-hover publication-image" src="images/2023-ICRA.png"
+                                        alt="">
+                                </a>
+                            </div>
+                            <div class="col-r col-md-12 col-lg-9">
+                                <div class="pub-card-body">
+                                    <h5 class="title">Learning to Explore (L2E): Deep Reinforcement Learning-based
+                                        Autonomous Exploration for Household Robot</h5>
+                                    <h6 class="authors">
+                                        <strong>Zuxin Liu</strong>, Mohit Deshpande, Xuewei Qi, Ding Zhao, Rajasimman
+                                        Madhivanan, Arnie Sen.
+                                    </h6>
+                                    <p class="info">
+                                        <a target="_blank"
+                                            href="https://mit-spark.github.io/robotRepresentations-RSS2023/"
+                                            class="conference">RSS Robot Representations Workshop</a> |
+                                        <a target="_blank"
+                                            href="https://drive.google.com/file/d/1EkJP10QhIAhMydNEcgtYwYtZQljJrW7A/view?usp=sharing">Paper</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pub-card" data-topic="rl-algorithms" data-year="2022" data-selected="false">
+                        <div class="row">
+                            <div class="col-l col-md-12 col-lg-3">
+                                <a>
+                                    <img class="img-responsive img-hover publication-image" src="images/2022-survey.png"
+                                        alt="">
+                                </a>
+                            </div>
+                            <div class="col-r col-md-12 col-lg-9">
+                                <div class="pub-card-body">
+                                    <h5 class="title">Trustworthy Reinforcement Learning Against Intrinsic
+                                        Vulnerabilities: Robustness, Safety, and Generalization</h5>
+                                    <h6 class="authors">
+                                        Mengdi Xu*, <strong>Zuxin Liu*</strong>, Peide Huang*, Wenhao Ding, Zhepeng Cen,
+                                        Bo Li, Ding Zhao.
+                                    </h6>
+                                    <p class="info">
+                                        <a target="_blank" href="https://arxiv.org/abs/2209.08025"
+                                            class="conference">Survey</a> |
+                                        <a target="_blank" href="https://arxiv.org/abs/2209.08025">Paper</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pub-card" data-topic="rl-algorithms" data-year="2022" data-selected="true">
+                        <div class="row">
+                            <div class="col-l col-md-12 col-lg-3">
+                                <a>
+                                    <img class="img-responsive img-hover publication-image" src="images/2022-icml.png"
+                                        alt="">
+                                </a>
+                            </div>
+                            <div class="col-r col-md-12 col-lg-9">
+                                <div class="pub-card-body">
+                                    <h5 class="title">Constrained Variational Policy Optimization for Safe Reinforcement
+                                        Learning</h5>
+                                    <h6 class="authors">
+                                        <strong>Zuxin Liu</strong>, Zhepeng Cen, Vladislav Isenbaev, Wei Liu, Steven Wu,
+                                        Bo Li, Ding Zhao.
+                                    </h6>
+                                    <p class="info">
+                                        <a target="_blank" href="https://icml.cc/Conferences/2022"
+                                            class="conference">ICML 2022</a> |
+                                        <a target="_blank" href="https://icml.cc/Conferences/2022">Paper</a> |
+                                        <a target="_blank" href="https://github.com/liuzuxin/cvpo-safe-rl">Code</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pub-card" data-topic="robotics" data-year="2022" data-selected="false">
+                        <div class="row">
+                            <div class="col-l col-md-12 col-lg-3">
+                                <a>
+                                    <img class="img-responsive img-hover publication-image" src="images/2022-CoRL.png"
+                                        alt="">
+                                </a>
+                            </div>
+                            <div class="col-r col-md-12 col-lg-9">
+                                <div class="pub-card-body">
+                                    <h5 class="title">Robustness Certification of Visual Perception Models via Camera
+                                        Motion Smoothing</h5>
+                                    <h6 class="authors">
+                                        Hanjiang Hu, <strong>Zuxin Liu</strong>, Linyi Li, Jiacheng Zhu, Ding Zhao.
+                                    </h6>
+                                    <p class="info">
+                                        <a target="_blank" href="https://icml.cc/Conferences/2022"
+                                            class="conference">CoRL 2022</a> |
+                                        <a target="_blank" href="https://arxiv.org/abs/2210.04625">Paper</a> |
+                                        <a target="_blank"
+                                            href="https://github.com/HanjiangHu/camera-motion-smoothing">Code</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pub-card" data-topic="self-driving" data-year="2022" data-selected="false">
+                        <div class="row">
+                            <div class="col-l col-md-12 col-lg-3">
+                                <a>
+                                    <img class="img-responsive img-hover publication-image"
+                                        src="images/2022-safebench.png" alt="">
+                                </a>
+                            </div>
+                            <div class="col-r col-md-12 col-lg-9">
+                                <div class="pub-card-body">
+                                    <h5 class="title">SafeBench: A Benchmarking Platform for Safety Evaluation of
+                                        Autonomous Vehicles</h5>
+                                    <h6 class="authors">
+                                        Chejian Xu, Wenhao Ding, Weijie Lyu, <strong>Zuxin Liu</strong>, Shuai Wang,
+                                        Yihan He, Hanjiang Hu, Ding Zhao, Bo Li.
+                                    </h6>
+                                    <p class="info">
+                                        <a target="_blank" href="https://neurips.cc/Conferences/2022"
+                                            class="conference">NeurIPS 2022</a> |
+                                        <a target="_blank" href="https://arxiv.org/abs/2206.09682">Paper</a> |
+                                        <a target="_blank" href="https://safebench.github.io/">Website</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pub-card" data-topic="self-driving" data-year="2021" data-selected="true">
+                        <div class="row">
+                            <div class="col-l col-md-12 col-lg-3">
+                                <a>
+                                    <img class="img-responsive img-hover publication-image" src="images/2021-cvpr.png"
+                                        alt="">
+                                </a>
+                            </div>
+                            <div class="col-r col-md-12 col-lg-9">
+                                <div class="pub-card-body">
+                                    <h5 class="title">Investigating the Impact of Multi-LiDAR Placement on Object
+                                        Detection for Autonomous Driving</h5>
+                                    <h6 class="authors">
+                                        Hanjiang Hu<sup>*</sup>, <strong>Zuxin Liu<sup>*</sup></strong>, Sharad
+                                        Chitlangia, Akhil Agnihotri, Ding Zhao.
+                                    </h6>
+                                    <p class="info">
+                                        <a target="_blank" href="https://cvpr.thecvf.com/" class="conference">CVPR
+                                            2022</a> |
+                                        <a target="_blank" href="https://arxiv.org/abs/2105.00373">Paper</a> |
+                                        <a target="_blank"
+                                            href="https://github.com/HanjiangHu/Multi-LiDAR-Placement-for-3D-Detection">Code</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div class="pub-card" data-topic="robotics" data-year="2020" data-selected="false">
+                    <div class="row">
+                        <div class="col-l col-md-12 col-lg-3">
+                            <img src="images/2020-CORL.png" alt="" style="padding-top:20px;width:249px;height:182px">
+                        </div>
+                        <div class="col-r col-md-12 col-lg-9">
+                            <div class="pub-card-body">
+                                <h5 class="title">Constrained Model-based Reinforcement Learning with Robust Cross-Entropy Method</h5>
+                                <h6 class="authors">
+                                    <strong>Zuxin Liu</strong>, Hongyi Zhou, Baiming Chen, Sicheng Zhong, Martial Hebert, Ding Zhao.
+                                </h6>
+                                <p class="info">
+                                    <a target="_blank" href="https://aisecure-workshop.github.io/aml-iclr2021/papers/8.pdf" class="conference">ICLR ML Security and Safety Workshop 2021</a> |
+                                    <a target="_blank" href="https://arxiv.org/abs/2010.07968">Paper</a> |
+                                    <a target="_blank" href="https://github.com/liuzuxin/safe-mbrl">Code</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+                    <div class="pub-card" data-topic="robotics" data-year="2021" data-selected="false">
+                        <div class="row">
+                            <div class="col-l col-md-12 col-lg-3">
+                                <a>
+                                    <img class="img-responsive img-hover publication-image" src="images/2021-RAL.png"
+                                        alt="">
+                                </a>
+                            </div>
+                            <div class="col-r col-md-12 col-lg-9">
+                                <div class="pub-card-body">
+                                    <h5 class="title">Context-Aware Safe Reinforcement Learning in Non-Stationary
+                                        Environments</h5>
+                                    <h6 class="authors">
+                                        Baiming Chen, <strong>Zuxin Liu</strong>, Jiacheng Zhu, Mengdi Xu, Wenhao Ding,
+                                        Ding Zhao.
+                                    </h6>
+                                    <p class="info">
+                                        <a target="_blank" href="https://www.icra2024.org/" class="conference">ICRA
+                                            2021</a> |
+                                        <a target="_blank" href="https://arxiv.org/abs/2101.00531">Paper</a> |
+                                        <a target="_blank" href="https://github.com/baimingc/casrl">Code</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pub-card" data-topic="robotics" data-year="2020" data-selected="true">
+                        <div class="row">
+                            <div class="col-l col-md-12 col-lg-3">
+                                <a>
+                                    <img class="img-responsive img-hover publication-image" src="images/2020-IROS.png"
+                                        alt="">
+                                </a>
+                            </div>
+                            <div class="col-r col-md-12 col-lg-9">
+                                <div class="pub-card-body">
+                                    <h5 class="title">MAPPER: Multi-Agent Path Planning with Evolutionary Reinforcement
+                                        Learning in Mixed Dynamic Environments</h5>
+                                    <h6 class="authors">
+                                        <strong>Zuxin Liu</strong>, Baiming Chen, Hongyi Zhou, Guru Koushik, Martial
+                                        Hebert, Ding Zhao.
+                                    </h6>
+                                    <p class="info">
+                                        <a target="_blank"
+                                            href="https://www.ieee-ras.org/component/rseventspro/event/1714-iros-2020-international-conference-on-intelligent-robots-and-systems"
+                                            class="conference">IROS 2020</a> |
+                                        <a target="_blank" href="https://arxiv.org/abs/2007.15724">Paper</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pub-card" data-topic="rl-algorithms" data-year="2020" data-selected="false">
+                        <div class="row">
+                            <div class="col-l col-md-12 col-lg-3">
+                                <a>
+                                    <img class="img-responsive img-hover publication-image" src="images/2020-NIPS.png"
+                                        alt="">
+                                </a>
+                            </div>
+                            <div class="col-r col-md-12 col-lg-9">
+                                <div class="pub-card-body">
+                                    <h5 class="title">Task-Agnostic Online Reinforcement Learning with an Infinite
+                                        Mixture of Gaussian Processes</h5>
+                                    <h6 class="authors">
+                                        Mengdi Xu, Wenhao Ding, Jiacheng Zhu, <strong>Zuxin Liu</strong>, Baiming Chen,
+                                        Ding Zhao.
+                                    </h6>
+                                    <p class="info">
+                                        <a target="_blank" href="https://neurips.cc/Conferences/2020"
+                                            class="conference">NeurIPS 2020</a> |
+                                        <a target="_blank" href="https://neurips.cc/Conferences/2020">Paper</a> |
+                                        <a target="_blank" href="https://github.com/mxu34/mbrl-gpmm">Code</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div class="pub-card" data-topic="self-driving" data-year="2020" data-selected="false">
+                    <div class="row">
+                        <div class="col-l col-md-12 col-lg-3">
+                            <img src="images/2020-access.png" alt="" style="padding-top:20px;width:249px;height:182px">
+                        </div>
+                        <div class="col-r col-md-12 col-lg-9">
+                            <div class="pub-card-body">
+                                <h5 class="title">SAnE: Smart Annotation and Evaluation tools for point cloud data</h5>
+                                <h6 class="authors">
+                                    Hasan Arief, Mansur Arief, Guilin Zhang, <strong>Zuxin Liu</strong>, Manoj Bhat, Ding Zhao.
+                                </h6>
+                                <p class="info">
+                                    <a target="_blank" href="https://ieeexplore.ieee.org/document/9143095" class="conference">IEEE Access</a> |
+                                    <a target="_blank" href="https://ieeexplore.ieee.org/document/9143095">Paper</a> |
+                                    <a target="_blank" href="https://github.com/ziliHarvey/smart-annotation-pointrcnn">Code</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+                    <div class="pub-card" data-topic="self-driving" data-year="2019" data-selected="false">
+                        <div class="row">
+                            <div class="col-l col-md-12 col-lg-3">
+                                <a>
+                                    <img class="img-responsive img-hover publication-image" src="images/2019-icra.jpg"
+                                        alt="">
+                                </a>
+                            </div>
+                            <div class="col-r col-md-12 col-lg-9">
+                                <div class="pub-card-body">
+                                    <h5 class="title">Where Should We Place LiDARs on the Autonomous Vehicle? - An
+                                        Optimal Design Approach</h5>
+                                    <h6 class="authors">
+                                        <strong>Zuxin Liu</strong>, Mansur Arief, Ding Zhao.
+                                    </h6>
+                                    <p class="info">
+                                        <a target="_blank" href="https://arxiv.org/abs/1809.05845"
+                                            class="conference">ICRA 2019</a> |
+                                        <a target="_blank" href="https://arxiv.org/abs/1809.05845">Paper</a> |
+                                        <a target="_blank"
+                                            href="https://github.com/liuzuxin/liu_lidar_configuration_vsr_2018">Code</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pub-card" data-topic="robotics" data-year="2018" data-selected="true">
+                        <div class="row">
+                            <div class="col-l col-md-12 col-lg-3">
+                                <a>
+                                    <img class="img-responsive img-hover publication-image" src="images/2018-iros.jpg"
+                                        alt="">
+                                </a>
+                            </div>
+                            <div class="col-r col-md-12 col-lg-9">
+                                <div class="pub-card-body">
+                                    <h5 class="title">DS-SLAM: A Semantic Visual SLAM towards Dynamic Environments</h5>
+                                    <h6 class="authors">
+                                        Chao Yu, <strong>Zuxin Liu</strong>, Fei Qiao, et al.
+                                    </h6>
+                                    <p class="info">
+                                        <a target="_blank" href="https://arxiv.org/abs/1809.08379"
+                                            class="conference">IROS 2018</a>
+                                        <span class="highlight">(ranked as the most popular presentation by
+                                            INFOVAYA)</span>
+                                        <br>
+                                        <a target="_blank" href="https://arxiv.org/abs/1809.08379">Paper</a> |
+                                        <a target="_blank" href="https://github.com/liuzuxin/DS-SLAM">Code</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pub-card" data-topic="undergrads-project" data-year="2018" data-selected="false">
+                        <div class="row">
+                            <div class="col-l col-md-12 col-lg-3">
+                                <a>
+                                    <img class="img-responsive img-hover publication-image"
+                                        src="images/projects/semantic.gif" alt="">
+                                </a>
+                            </div>
+                            <div class="col-r col-md-12 col-lg-9">
+                                <div class="pub-card-body">
+                                    <h5 class="title">Robot's Eyes and Brain: Visual Semantic SLAM System, 2018</h5>
+                                    <p class="info">
+                                        Our visual semantic SLAM system empowers robots to construct detailed semantic
+                                        maps of their surroundings, identifying and remembering the locations of
+                                        objects. With voice command capabilities, the robot can efficiently locate and
+                                        autonomously navigate to specific items. This project secured the top prize at
+                                        the 2018 ICOPEN 3D Sensor Application Design Competition, standing out among 20
+                                        teams worldwide.
+                                        |
+                                        <a href="https://www.bilibili.com/video/BV1CW41157W2">Video</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pub-card" data-topic="undergrads-project" data-year="2017" data-selected="false">
+                        <div class="row">
+                            <div class="col-l col-md-12 col-lg-3">
+                                <a>
+                                    <img class="img-responsive img-hover publication-image" src="images/projects/vr.gif"
+                                        alt="" style="height: 170px;">
+                                </a>
+                            </div>
+                            <div class="col-r col-md-12 col-lg-9">
+                                <div class="pub-card-body">
+                                    <h5 class="title">VR Multicopter System, 2017</h5>
+                                    <p class="info">
+                                        Ever wanted to experience the sensation of flying? Our VR Multicopter system
+                                        offers an immersive flying experience. By using a VR device, users can control
+                                        the orientation of a gimbal mounted on our multicopter. The stereo camera on the
+                                        gimbal streams real-time video back to the VR equipment, allowing you to simply
+                                        move your head and enjoy breathtaking aerial views. This project earned the 1st
+                                        prize at the 2017 International Design and Innovation Competition among 14
+                                        global teams.
+                                        |
+                                        <a href="https://www.bilibili.com/video/BV1Vx411s7HM" target="_blank">Video</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pub-card" data-topic="undergrads-project" data-year="2017" data-selected="false">
+                        <div class="row">
+                            <div class="col-l col-md-12 col-lg-3">
+                                <a>
+                                    <img class="img-responsive img-hover publication-image"
+                                        src="images/projects/slam.gif" alt="">
+                                </a>
+                            </div>
+                            <div class="col-r col-md-12 col-lg-9">
+                                <div class="pub-card-body">
+                                    <h5 class="title">Autonomous Navigation Robot, 2017</h5>
+                                    <p class="info">
+                                        I led a team to build a mobile robot platform which could achieve autonomous
+                                        navigation and obstacle avoidance based on RTAB-Map SLAM and ROS Navigation
+                                        Stack. Just with one-click, the robot can autonomously navigate to wherever you
+                                        want.
+                                        <br>
+                                        <a href="https://www.bilibili.com/video/BV1Lx411e7As" target="_blank">Video</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pub-card" data-topic="undergrads-project" data-year="2017" data-selected="false">
+                        <div class="row">
+                            <div class="col-l col-md-12 col-lg-3">
+                                <a>
+                                    <img class="img-responsive img-hover publication-image"
+                                        src="images/projects/dji.jpg" alt="">
+                                </a>
+                            </div>
+                            <div class="col-r col-md-12 col-lg-9">
+                                <div class="pub-card-body">
+                                    <h5 class="title">Automatic AI Robot System, 2017</h5>
+                                    <p class="info">
+                                        This project is designed for <a href="https://www.robomaster.com/en-US"
+                                            target="_blank">ICRA DJI Robotmaster AI challenge</a>. The robots are
+                                        required to autonomously find enemy robots and hit them (shoot rubber ball).
+                                        More exciting information and videos about this robot platform and the relevant
+                                        robot competition can be found <a
+                                            href="https://www.robomaster.com/en-US">here</a>.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pub-card" data-topic="undergrads-project" data-year="2016" data-selected="false">
+                        <div class="row">
+                            <div class="col-l col-md-12 col-lg-3">
+                                <a>
+                                    <img class="img-responsive img-hover publication-image"
+                                        src="images/projects/biaoqing.gif" alt="" style="width: 180px; height: auto;">
+                                </a>
+                            </div>
+                            <div class="col-r col-md-12 col-lg-9">
+                                <div class="pub-card-body">
+                                    <h5 class="title">Arduino-based Interactive Facial Expression Robot, 2016</h5>
+                                    <p class="info">
+                                        This cute robot could make different expressions according to user's voice
+                                        command. The movements of its eyes, eyebrow, and mouth etc are fully controlled
+                                        by servo motors. Most of the materials are 3D printed.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="comic"><img src="static/img/cmu.png" height="60px" /></div>
+                <!-- <div class="comic"><img src="static/img/aws.png" height="40px" /></div> -->
+                <div class="comic"><img src="static/img/Salesforce-logo.png" height="50px" /></div>
+                <div class="copyright">
+                    &copy; 2019-2024 Zuxin Liu<br />
+                </div>
+                <div class="stat">
+                    <script type="text/javascript" id="clstr_globe"
+                        src="//clustrmaps.com/globe.js?d=Agf5h6w3DGpwhWmUzAM1hqH3jzRA0pIGts5BrPUz7Dc"></script>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- jQuery first, then Tether, then Bootstrap JS. -->
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"
+        integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"
+        integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn"
+        crossorigin="anonymous"></script>
+    <script type="text/javascript" src="static/js/jquery.color.min.js"></script>
+    <!--script type="text/javascript" src="static/js/wave.js"></script-->
+    <script type="text/javascript">
+
+        $.fn.isInViewport = function () {
+            var elementTop = $(this).offset().top;
+            var elementBottom = elementTop + $(this).outerHeight();
+            var viewportTop = $(window).scrollTop();
+            var viewportBottom = viewportTop + $(window).height();
+            return elementBottom > viewportTop && elementTop < viewportBottom;
+        };
+
+        var allPublications = null;
+
+        function playAllVideos() {
+            $("#pub-container video").each(function () {
+                this.play();
+            });
+        }
+
+        function publicationBySelected() {
+            var a = $("#publication-by-selected");
+            // if (a.hasClass("activated")) {
+            //     return;
+            // }
+
+            $("#pub-container .subtitle a").removeClass("activated");
+            $("#pub-container .subtitle-aux a").removeClass("activated");
+            a.addClass("activated");
+
+            $("#pub-card-container").empty();
+            allPublications.each(function () {
+                if ($(this).data("selected")) {
+                    $("#pub-card-container").append($(this));
+                }
+            });
+            // playAllVideos();
+        }
+
+        function publicationByDate() {
+            var a = $("#publication-by-date");
+            // if (a.hasClass("activated")) {
+            //     return;
+            // }
+
+            $("#pub-container .subtitle a").removeClass("activated");
+            $("#pub-container .subtitle-aux a").removeClass("activated");
+            a.addClass("activated");
+
+            $("#pub-card-container").empty();
+            var currentYear = null;
+            allPublications.each(function () {
+                var year = $(this).data("year");
+                if (year !== currentYear) {
+                    currentYear = year;
+                    $("#pub-card-container").append($("<h5 id='year-" + year + "'>" + year + "</h5>"));
+                }
+                $("#pub-card-container").append($(this));
+            });
+            // playAllVideos();
+        }
+
+        function publicationByTopicInner() {
+            var a = $("#publication-by-topic");
+            // if (a.hasClass("activated")) {
+            //     return;
+            // }
+            $("#pub-container .subtitle a").removeClass("activated");
+            a.addClass("activated");
+
+            $("#pub-card-container").empty();
+            allTopics.forEach(function (topic) {
+                $("#pub-card-container").append($("<h5 id='topic-" + topic.name + "'>" + topic.title + "</h5>"));
+                allPublications.each(function () {
+                    if ($(this).data("topic").indexOf(topic.name) !== -1) {
+                        $("#pub-card-container").append($(this));
+                    }
+                });
+            });
+        }
+
+        function publicationByTopicSpecificInner(a) {
+            if ($(a).hasClass("activated")) {
+                return false;
+            }
+
+            $("#pub-container .subtitle-aux a").removeClass("activated");
+            $(a).addClass("activated");
+        }
+
+        function publicationByTopic() {
+            publicationByTopicInner();
+            publicationByTopicSpecificInner($("#pub-container .subtitle-aux a:first"));
+            // playAllVideos();
+            return true;
+        }
+
+        function publicationByTopicSpecific(a) {
+            publicationByTopicInner();
+            publicationByTopicSpecificInner(a);
+
+            var hash = a.hash;
+            $(hash).prop('id', hash.substr(1) + '-noscroll');
+            window.location.hash = hash;
+            $(hash + '-noscroll').prop('id', hash.substr(1));
+
+            if (!$(hash).isInViewport()) {
+                $('html, body').animate({
+                    scrollTop: $(hash).offset().top
+                }, 1000);
+            }
+
+            // playAllVideos();
+            return false;
+        }
+
+        $(function () {
+            getRealSize = function (bgImg) {
+                var img = new Image();
+                img.src = bgImg.attr("src");
+                var width = img.width,
+                    height = img.height;
+                return {
+                    width: width,
+                    height: height
+                }
+            };
+
+            getRealWindowSize = function () {
+                var winWidth = null,
+                    winHeight = null;
+                if (window.innerWidth) winWidth = window.innerWidth;
+                else if ((document.body) && (document.body.clientWidth)) winWidth = document.body.clientWidth;
+                if (window.innerHeight) winHeight = window.innerHeight;
+                else if ((document.body) && (document.body.clientHeight)) winHeight = document.body.clientHeight;
+                if (document.documentElement && document.documentElement.clientHeight && document.documentElement.clientWidth) {
+                    winHeight = document.documentElement.clientHeight;
+                    winWidth = document.documentElement.clientWidth
+                }
+                return {
+                    width: winWidth,
+                    height: winHeight
+                }
+            };
+
+            fullBg = function () {
+                var bgImg = $("#background");
+                var mainContainer = $("#main");
+                var firstFire = null;
+
+                if (bgImg.length == 0) {
+                    return;
+                }
+
+                function resizeImg() {
+                    var realSize = getRealSize(bgImg);
+                    var imgWidth = realSize.width;
+                    var imgHeight = realSize.height;
+
+                    if (imgWidth == 0 || imgHeight == 0) {
+                        setTimeout(function () {
+                            resizeImg();
+                        }, 200);
+                    }
+
+                    console.log(realSize);
+                    var realWinSize = getRealWindowSize();
+                    var winWidth = realWinSize.width;
+                    var winHeight = realWinSize.height;
+                    var widthRatio = winWidth / imgWidth;
+                    var heightRatio = winHeight / imgHeight;
+                    console.log(realWinSize);
+                    if (widthRatio > heightRatio) {
+                        bgImg.width(imgWidth * widthRatio + 'px').height(imgHeight * widthRatio + 'px').css({
+                            'top':
+                                -(imgHeight * widthRatio - winHeight) / 10 * 5 + 'px', 'left': '0'
+                        })
+                    } else {
+                        bgImg.width(imgWidth * heightRatio + 'px').height(imgHeight * heightRatio + 'px').css({
+                            'left':
+                                -(imgWidth * heightRatio - winWidth) / 10 * 3 + 'px', 'top': '0'
+                        })
+                    }
+                    // mainContainer.css({
+                    //     width: winWidth,
+                    //     height: winHeight
+                    // });
+                }
+
+                resizeImg();
+                window.onresize = function () {
+                    if (firstFire === null) {
+                        firstFire = setTimeout(function () {
+                            resizeImg();
+                            firstFire = null
+                        }, 100)
+                    }
+                }
+            };
+
+            targetColor = $("#main-content-container .name").css("color");
+            animatedLink = function (speed) {
+                $("#main-content-container .col-link li").hover(function () {
+                    $(this).find('.icon').animate({
+                        color: targetColor,
+                        borderColor: targetColor
+                    }, speed);
+                    $(this).find('.caption').animate({
+                        color: targetColor
+                    })
+                }, function () {
+                    $(this).find('.icon').animate({
+                        borderColor: '#cccccc',
+                        color: '#cccccc'
+                    }, speed);
+                    $(this).find('.caption').animate({
+                        color: '#cccccc'
+                    })
+                })
+            };
+
+            // fullBg();
+            // animatedLink(400);
+
+            allPublications = $("#pub-card-container .pub-card");
+            allTopicsLink = $("#pub-container .subtitle-aux a");
+            allTopics = [];
+            for (var topicId = 0; topicId < allTopicsLink.length; topicId++) {
+                allTopics.push({ name: $(allTopicsLink[topicId]).data("topic"), title: $(allTopicsLink[topicId]).html() });
+            }
+
+            $("#publication-by-selected").click();
+            // $("#publication-by-date").click();
+            $("#pub-card-container").removeClass("hide");
+        });
+    </script>
+</body>
+
+</html>

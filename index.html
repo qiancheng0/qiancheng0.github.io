@@ -1,0 +1,1516 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Cheng Qian</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Cheng Qian is a PhD student at UIUC.">
+    <meta name="keywords" content="Cheng Qian,LLM Agent,Tool Use,Reinforcement Learning,Alignment,Embodied AI,AI Research">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="shortcut icon" href="static/img/uiuc.png">
+
+    <!--[if lt IE 9]>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <style type="text/css">
+/* Color Scheme: Orange / Yellow */
+:root {
+    --background-color: #fefbf5;
+    --highlight-color: #b6274e;
+    --main-color: #684e43;
+    --link-color: #86985c;
+    --link-color-hover: #8e6e29;
+    --secondary-link-color: #6d8436;
+    --secondary-link-border-color: #a5af97;
+    --secondary-content-background-color: #fffefc;
+    --link-button-background-color: #fffdfa;
+    /* a8826c 324d67 */
+}
+/* Color Scheme: Blue / Summer */
+:root {
+    /* --background-color: #f5fbfe; */
+    --background-color: #f5fbf7;
+    --highlight-color: #b6274e;
+    --main-color: #225573;
+    --link-color: #547b5b;
+    --link-color-hover: #292c1f;
+    --secondary-link-color: #6d8436;
+    --secondary-link-border-color: #7d99b1;
+    --secondary-content-background-color: #feffff;
+    --link-button-background-color: #fafdff;
+    /* a8826c 324d67 */
+}
+/* Color Scheme: NYC Flower */
+:root {
+    /* --background-color: #f5fbfe; */
+    --background-color: #FCFAF1;
+    --highlight-color: #b6274e;
+    --main-color: #3F6139;
+    --link-color: #ad4b73;
+    --link-color-hover: #292c1f;
+    --secondary-link-color: #6d8436;
+    --secondary-link-border-color: #7d99b1;
+    --secondary-content-background-color: #feffff;
+    --link-button-background-color: #fafdff;
+    /* a8826c 324d67 */
+}
+/* Color Scheme: NYC Flower Blue */
+:root {
+    /* --background-color: #f5fbfe; */
+    --background-color: #fefbf5;
+    --highlight-color: #b6274e;
+    --main-color: #394661;
+    --link-color: #427e3e;
+    --link-color-hover: #292c1f;
+    --secondary-link-color: #845836;
+    --secondary-link-border-color: #7d99b1;
+    --secondary-content-background-color: #feffff;
+    --link-button-background-color: #fafdff;
+    /* a8826c 324d67 */
+}
+
+body{margin:0;padding:0;}
+a{color:var(--link-color)}
+a:hover{color:var(--link-color-hover);cursor:pointer}
+#background{position:fixed;top:0;overflow:hidden;height:0}
+#wave-canvas{display:block;position:relative;top:0;left:5%;width:55%;min-width:850px;height:150px;border:0}
+/*#main{z-index:2;margin:0 auto;position:absolute;padding-top:5%;width:100%;min-width:240px;text-align:center;background-color:rgb(254,250,246)}*/
+#main{margin:0 auto 30px;padding:45px 30px 15px;width:100%;min-width:240px;text-align:center;background-color:var(--background-color)}
+.highlight{color:var(--highlight-color);font-weight:600}
+.highlight:hover{color:var(--highlight-color);font-weight:600}
+
+.profile-pendant {display:none;bottom:-15px;right:-200px;position:absolute}
+@media (min-width: 768px) { .profile-pendant {display:block} }
+@media (max-width: 767px) { .profile-pendant {display:none} }
+
+.main-content{padding:0;text-align:center;cursor:default;text-align:center;}
+/*.main-content{background:rgba(238,238,238,0.95);padding:0;text-align:center;cursor:default;text-align:center;}*/
+/*.main-content{margin-left:6.5104167%;width:86.9791667%;}*/
+@media (min-width: 768px) {.main-content{width:66%;min-width:668px;margin:auto;}}
+@media (min-width: 1200px) {.main-content{width:66%;max-width:1080px;margin:auto;}}
+
+/* Avatar, Name, etc. */
+#main-content-container{margin:0 auto;padding:25px 20px;max-width:1080px;background:#ffffff;border-radius:12px;box-shadow:0 2px 8px rgba(0,0,0,0.05);}
+@media (min-width: 768px) { #main-content-container{padding:15px 0 0;} }
+#main-content-container .col-avatar{text-align:center;min-width:220px;}
+@media (min-width: 768px) { #main-content-container .col-avatar{text-align:center} }
+#main-content-container .col-avatar .avatar{z-index:100;width:200px;height:200px;border-radius:100%;box-shadow:0 0 0 0.3em #eee;opacity:1;}
+@media (min-width: 1200px) { #main-content-container .col-avatar .avatar{margin-bottom:-50px} }
+
+#main-content-container .col-info{height:100%;align-items:center;}
+#main-info-container{padding-top:15px}
+#main-info-container .col-name{text-align:center;margin-top:30px}
+@media (min-width: 768px) { #main-info-container .col-name{text-align:left;margin-top:0;}
+}
+#main-info-container .col-name .text{text-align:left;margin-bottom:0.5rem;}
+#main-info-container .col-name .name{color:var(--main-color);font-size:1.85em;font-family:"Source Sans Pro",Helvetica,sans-serif}
+#main-info-container .col-name .email{color:#333;font-size:16px}
+#main-info-container .col-link{text-align:center;margin:-5px 0 -25px;}
+#main-info-container .col-link ul {margin:0px auto auto;padding:0;list-style:none;text-align:center}
+#main-info-container .col-link li {display:inline-block;margin:auto;padding:0 10px;color:#ccc;line-height:10px}
+#main-info-container .col-link li a{width:45px;height:45px;color:#ccc;padding:0;font-size:45px;line-height:45px}
+#main-info-container .col-link li a:focus,
+#main-info-container .col-link li a:hover{text-decoration:none;cursor:hand}
+#main-info-container .col-link li a.border{border:1px solid #ccc;border-radius:100%;}
+#main-info-container .col-link li a.padding{padding:0px 0px;font-size:22px}
+
+/* Other */
+.content-container{width:100%;padding:0 30px}
+.main-news-container{margin:auto;padding: 0 0em;max-width:1080px;text-align:left;padding-top:30px;max-width:1080px;font-size:1rem;line-height:1.4}
+@media (min-width: 1200px) { .main-news-container{padding-top:20px;} }
+.main-news-container .subtitle{margin-top:0px;color:var(--main-color)}
+.main-news-container .news-list{margin-bottom:0rem}
+
+#news-more{margin-top:0rem}
+#news-more-button{margin-left:40px;margin-top:0.5rem;}
+
+section.overview ul,section.overview li,section.overview h3,section.overview h1,section.overview p{margin:0;padding:0}
+section.overview h1{font-weight:700}
+section.overview li{font-weight:400;list-style:none}
+.join,.up::after,.down::before{background-position:50% 50%}
+.up::after,.down::before{background-repeat:no-repeat;content:"";display:block;height:20px}
+.up::after{background-image:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI3IiBoZWlnaHQ9IjQiIHZpZXdCb3g9IjAgMCA3IDQiPjxwYXRoIGZpbGw9IiM1NjZjN2YiIGQ9Ik0xIDRWM2gxVjJoM3YxaDF2MWgxVjJINlYxSDVWMEgydjFIMXYxSDB2MiIvPjwvc3ZnPg==)}
+.down::before{background-image:url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiIHdpZHRoPSI3cHgiIGhlaWdodD0iNHB4IiB2aWV3Qm94PSIwIDAgNyA0IiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA3IDQiIHhtbDpzcGFjZT0icHJlc2VydmUiPjxwb2x5Z29uIGZpbGw9IiM1NjZjN2YiIHBvaW50cz0iNiwwIDYsMSA1LDEgNSwyIDIsMiAyLDEgMSwxIDEsMCAwLDAgMCwyIDEsMiAxLDMgMiwzIDIsNCA1LDQgNSwzIDYsMyA2LDIgNywyIDcsMCAiLz48L3N2Zz4=)}
+.join{background-repeat:repeat-y;background-image:url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxcHgiIGhlaWdodD0iMXB4IiB2aWV3Qm94PSIwIDAgMSAxIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCAxIDEiIHhtbDpzcGFjZT0icHJlc2VydmUiPjxwYXRoIGZpbGw9IiM1NjZjN2YiIGQ9Ik0wLDBoMXYxSDBWMHoiLz48L3N2Zz4=)}
+.thin,.thick{background:#ffffff}
+.thin{border:1px solid var(--secondary-link-border-color);padding:.5em}
+.main{text-align:center}
+.main ul{display:block;width:150px;margin:1em auto 0}
+ul.row{width:100%;display:flex;align-items:flex-start}
+ul.row li.page{flex:1;margin:0 .5em;min-width:280px}
+ul.row li.page.stretch{align-self:stretch}
+ul.row li.page:first-child{margin-left:0}
+ul.row li.page:last-child{margin-right:0}
+ul.row li.page h3 + ul.content{margin-top:1.5em}
+ul.row li.page ul.content li{border-top:1px solid var(--secondary-link-border-color);padding:2px 5px}
+ul.row li.page ul.content li.level-2{padding:2px 12px}
+ul.row li.page ul.content li ul.section li{border-top:none;padding:0}
+ul.row li.page ul.content li ul.section li:before{content:"― "}
+section.overview{background:var(--secondary-content-background-color);transition:max-width 400ms ease-in-out;padding:20px;margin:auto;z-index:99}
+section.overview .thin h3{will-change:auto;transition:transform 400ms ease-in-out;transform-origin:0 50%}
+section.overview .thin b{display:block;padding:2px 5px}
+section.overview .thin ul.content{transition:opacity 200ms ease;opacity:1}
+@media (max-width: 1480px) { ul.row li.page{margin:0} }
+
+.toggle-overview {background:var(--background-color);display:block;text-align:center;padding:5px;color:var(--main-color);font-weight:500}
+.toggle-overview:hover {text-decoration:none}
+/* @media (max-width: 560px) {section.overview {display:none}} */
+.thick{border:3px solid var(--secondary-link-border-color);padding:.5em;font-size:1.25rem}
+.thick>b{color:var(--main-color)}
+.thick>p{font-size: 1rem}
+.thick>p>a, .think>p>a:hover {background:var(--link-button-background-color);display:block;text-align:center;padding:5px;color:var(--main-color);font-weight:500;text-decoration:none}
+
+#pub-container{margin:auto;padding: 0 0em;max-width:1080px;text-align:left;padding-top:30px;max-width:1080px}
+#pub-container .subtitle{color:var(--main-color);}
+#pub-container .subtitle a {font-size:18px; color: var(--secondary-link-color); font-weight:400}
+#pub-container .subtitle a.activated {color:#333333; font-weight:600}
+#pub-container .subtitle a.activated:focus,
+#pub-container .subtitle a.activated:hover {text-decoration:none;cursor:initial}
+
+#pub-container .subtitle-aux {font-size:1rem}
+#pub-container .subtitle-aux a.activated {color:#333333}
+#pub-container .subtitle-aux a.activated:focus,
+#pub-container .subtitle-aux a.activated:hover {text-decoration:none;cursor:initial}
+#pub-container .subtitle-aux .note{margin-left:1em;color:#999999;text-decoration:none;font-size:14px}
+
+#pub-card-container>h5{margin-bottom: 5px 0}
+#pub-card-container .pub-card{width: 100%;padding-bottom:15px;font-size:1rem}
+#pub-card-container .pub-card .col-l{text-align:center;padding-top:10px}
+#pub-card-container .pub-card .col-r{padding-top:10px}
+@media (min-width: 768px) {
+  #pub-card-container .pub-card .col-l{flex:0 0 30%;max-width:30%}
+  #pub-card-container .pub-card .col-r{flex:0 0 70%;max-width:70%}
+}
+#pub-card-container .pub-card img{width:100%;margin:0 auto}
+#pub-card-container .pub-card-body{width:100%;background:transparent;padding-left:0px}
+#pub-card-container .pub-card .title{font-weight:600;font-size:1rem;margin-bottom:4px;line-height:1.4}
+#pub-card-container .pub-card .authors{font-weight:400;color:#666666;margin-bottom:4px;line-height:1.4}
+#pub-card-container .pub-card .authors a{color:#666666}
+#pub-card-container .pub-card .authors u{color:#333333;font-weight:600;text-decoration:none}
+#pub-card-container .pub-card .conference{color:#333333;font-weight:600}
+#pub-card-container .pub-card .note{display:block;color:#999999;text-decoration:none;font-size:14px}
+#pub-card-container .pub-card .info{margin-bottom:0;}
+#pub-card-container .row{margin:0}
+#pub-card-container .col-l,
+#pub-card-container .col-r{vertical-align:top;display:inline-block;margin:0;padding-left:0px}
+
+#footer{padding:1.5em 0;margin-top:2rem;min-width:240px;font-size:14px;line-height:12px;text-align:left;background:#ffffff;box-shadow:0 -2px 8px rgba(0,0,0,0.05);}
+/* #footer{padding:0 0 0.5em;margin-top:2rem;min-width:240px;background:#fff;font-size:14px;line-height:12px;text-align:left;min-height:80px;} */
+/* #footer{background:url(static/img/loong/loong-bottom-summer-repeat.png); background-size: 15px 15px; background-repeat: repeat;} */
+#footer .container{max-width:540px;padding:0 45px;position:relative}
+#footer .row{align-items:center}
+#footer .comic{padding-right:15px;padding-top:15px;}
+#footer .copyright{flex-grow:1;margin:25px auto 5px;text-align:center;display:block;font-size:1rem;line-height:1.4;color:var(--main-color)}
+#footer .stat{width:60px;height:60px;overflow:hidden;margin:0 auto 5px;padding:0;}
+@media (min-width: 420px){ #footer .stat{display:block;width:60px;height:60px;overflow:hidden;margin:5px auto -25px;padding-right:15px;} }
+#footer a{color:#666666}
+#footer a:hover{color:#333333}
+
+.bold{font-weight:600}
+.hide{display:none}
+    </style>
+</head>
+
+<body>
+
+<!--img src="static/img/hal-gatewood.jpg" id="background" class="" /-->
+
+<div id="main">
+    <!--canvas id="wave-canvas"></canvas-->
+
+    <div class="main-content">
+        <div id="main-content-container" class="container">
+            <div class="row">
+                <div class="col-sm-12 col-md-3 col-avatar">
+                    <img src="static/img/avatar24.jpg" class="avatar" />
+                </div>
+                <div class="col-sm-12 col-md-8">
+                    <div id="main-info-container">
+                        <!--div class="profile-pendant" style="bottom:-100px;right:-200px;position:absolute"><img src="static/img/rabbit.png" width=200px; height="200px" /></div-->
+                        <!--div class="profile-pendant"><img src="static/img/loong/loong-summer.png" height=200px; /></div-->
+                        <div class="col-name">
+                            <h1 class="name"><span>Cheng Qian</span></h1>
+                            <p class="email"><span style="margin-right:1em">Email: chengq9 [at] illinois [dot] edu</span></p>
+                            <p class="text">Cheng Qian is a PhD student at UIUC, advised by <a target="_blank" href="https://blender.cs.illinois.edu/hengji/research.html">Prof. Heng Ji</a>.
+                            His current research focuses on LLM agent its tool use, reasoning, alignment, and creativity.
+                            Before joining UIUC, he has also worked with <a target="_blank" href="https://www.cs.cmu.edu/~sherryw/">Prof. Sherry Wu</a> 
+                            and <a target="_blank" href="https://www.cs.cmu.edu/~cx/">Prof. Chenyan Xiong</a> from CMU on LLM knowledge and tool use.
+                            He finished his Bachelor's degree at <a target="_blank" href="https://www.tsinghua.edu.cn/">Tsinghua University</a>,
+                            advised by <a target="_blank" href="https://nlp.csai.tsinghua.edu.cn/~lzy/">Prof. Zhiyuan Liu</a>.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="social-links" style="text-align: center; margin-bottom: -0px; margin-top: -40px;">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/c/c7/Google_Scholar_logo.svg" alt="Google Scholar"
+        style="width:20px; height:20px; margin:5px;">
+    <a href="https://scholar.google.com/citations?user=p2bY7oAAAAAJ&hl" target="_blank">Google Scholar</a>
+    <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub"
+        style="width:30px; height:30px; margin:5px;">
+    <a href="https://github.com/qiancheng0" target="_blank">GitHub</a>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn"
+        style="width:20px; height:20px; margin:5px;">
+    <a href="https://www.linkedin.com/in/cheng-qian-3b3199256/" target="_blank">LinkedIn</a>
+    <img src="static/img/xlogo.png" alt="Twitter" style="width:20px; height:20px; margin:5px;">
+    <a href="https://x.com/qiancheng1231" target="_blank">Twitter</a>
+    <img src="static/img/cvlogo.jpg" alt="CV" style="width:20px; height:20px; margin:5px;">
+    <a href="static/files/Resume.pdf" target="_blank">CV</a>
+</div>
+
+<div class="main-content">
+    <div class="content-container">
+        <div class="main-news-container">
+            <h3 class="subtitle">News & Updates</h3>
+            <ul
+                style="max-height: 300px; overflow-y: auto; list-style-type: disc; padding-left: 20px; margin: 0; font-size: 0.9rem;">
+                <li>[<strong>2025/10</strong>] We have released the <a href="https://arxiv.org/pdf/2510.08439">technical report</a> on <strong>xRouter</strong>, 
+                    a LLM orchestration framework for effective and efficient query routing.
+                </li>
+                <li>[<strong>2025/10</strong>] See our <strong>UserRL</strong> work featured on social media including <a href="https://x.com/qiancheng1231/status/1971722309397631100">Twitter</a> 
+                    and <a href="https://mp.weixin.qq.com/s/HpFIFebKAabgvPLC8jeMLA">WeChat</a>!
+                    I am also going to give several talks on user-centric agent design and evaluation. See you online!
+                </li>
+                <li>[<strong>2025/09</strong>] My series of works at Salesforce AI Research on <strong>LLM agent for user alignment</strong> is coming! 
+                    Check out the <a href="https://arxiv.org/pdf/2509.19736">UserRL paper</a> which builds upon and expands our previous
+                    <a href="https://arxiv.org/pdf/2507.22034">UserBench paper</a>. We also released our code for all gym environments and training
+                    <a href="https://github.com/SalesforceAIResearch/UserRL">here</a>.
+                </li>
+                <li>[<strong>2025/09</strong>] Our ToolRL paper is accepted by <strong>NeurIPS 2025</strong>! 
+                    Thanks to all the collaborators! Hope to see you all at San Diego this December!
+                </li>
+                <li>[<strong>2025/08</strong>] I have five first-suthor and co-author works accepted by <strong>EMNLP 2025</strong>, 
+                    including the ModelingAgent paper. Congratulations to all the authors! Hope to see you all at Su Zhou this November!
+                </li>
+                <li>[<strong>2025/05</strong>] Glad to announce that I am joining <strong>Salesforce AI Research</strong> for my 2025 summer internship!
+                </li>
+                <li>[<strong>2025/05</strong>] My newest paper on how to design agent for math modeling is released! Check the <a href="https://arxiv.org/pdf/2505.15068">ModelingAgent paper</a>
+                    to see how to ground math in real world problem solving.
+                </li>
+                <li>[<strong>2025/05</strong>] Glad to announce that I have six first-author and co-author works accepted by <strong>ACL 2025</strong>. 
+                    My work EscapeAgent is accepted in the main track. Congratulations to all the authors!
+                </li>
+                <li>[<strong>2025/04</strong>] We released our <a href="https://arxiv.org/pdf/2405.13958"></a>ToolRL paper</a>, which focuses on the reward shaping for 
+                    <strong>LLM tool use tasks</strong>. We also released our code <a href="https://github.com/qiancheng0/ToolRL">here</a>. Check it out for more details!
+                </li>
+                <li>[<strong>2025/04</strong>] I am at <strong>NAACL 2025</strong> this year at New Mexico! Hope to chat with you there!
+                </li>
+                <li>[<strong>2025/03</strong>] We released the <a href="https://arxiv.org/pdf/2502.11435">SMART paper</a> which for the first time systematically evaluates the <strong>tool overuse</strong> 
+                    problem in LLM and LLM-driven agent.
+                </li>
+                <li>[<strong>2024/12</strong>] My first paper in PhD is out! Check the <a href="https://arxiv.org/pdf/2412.13549">EscapeBench paper</a> to see if your
+                    LLM is <strong>creative</strong> enough to escape from the sandbox environment!
+                </li>
+                <li>[<strong>2024/12</strong>] I am participating in <strong>EMNLP 2024</strong> at Miami this year! Hope to see everyone!
+                </li>
+                <li>[<strong>2024/12</strong>] Graduated from <strong>Tsinghua</strong>, I am now starting my PhD at <strong>UIUC</strong>! Looking forward to working with you all!
+                </li>
+                
+            </ul>
+
+            <h4 class="subtitle" style="margin-top:30px">Research Focus</h4>
+            <p>
+
+                <p> My research focuses on transforming large language models (LLMs) into truly autonomous <strong>agents</strong> that operate reliably in dynamic, ambiguous real-world settings. While today's LLMs excel at analytical reasoning when problems are well-formed and knowledge is encoded in their parameters, they struggle when tasks demand up-to-date information, adaptive behavior, or nuanced understanding of human intent. I envision agents that combine <em>internal reasoning</em> with <em>external tool use</em> (e.g., search, calculators, APIs) to pursue goals, incorporate feedback, and improve over time—moving beyond static models toward systems that learn continuously. </p> 
+                <p> To guide this evolution, I propose the <strong>Lifelong Agent</strong> framework, which characterizes agentic intelligence as an iterative cycle of <strong>Learn</strong>, <strong>Align</strong>, and <strong>Evolve</strong>. <strong>Learn</strong> equips agents to acquire, organize, and apply knowledge for creativity and efficiency; <strong>Align</strong> adapts behavior to environment- and user-specific preferences, goals, and constraints; and <strong>Evolve</strong> drives sustained self-improvement via memory, reflection, and feedback across tasks and environments. My work integrates three tightly coupled threads at each phase—<strong>analysis</strong> (diagnosing agent behavior), <strong>training</strong> (designing methods that enhance capabilities), and <strong>application</strong> (deploying agents to solve real-world problems). This agenda aims to produce scalable, tool-using agents that continually adapt, remain aligned with human values, and deliver robust, practical impact. </p>
+
+            </p>
+        </div>
+    </div>
+
+    <!-- Responsive image section -->
+    <div style="text-align:center; margin-top:20px;">
+        <img src="static/img/lifelong_agent_research.png" alt="Research Framework: Illustration of Lifelong Agent" style="max-width:80%; height:auto; border-radius:10px;">
+        <p style="font-size:1rem; margin-top:10px;"><strong>Research Framework:</strong> Illustration of Lifelong Agent and corresponding research efforts.</p>
+    </div>
+
+
+    <div class="content-container">
+        <div id="pub-container">
+            <h5 class="subtitle">Publications
+            (
+                <a id="publication-by-selected" href="javascript:;", onClick="publicationBySelected();">show selected</a> /
+                <a id="publication-by-date" href="javascript:;", onClick="publicationByDate();">show all by date</a> /
+                <a id="publication-by-topic" href="javascript:;", onClick="publicationByTopic();">show all by topic</a>
+            )
+            </h5>
+            <p class="subtitle-aux"><span class="bold">Topics:</span>
+                <a href="#topic-concept-learning" onClick="return publicationByTopicSpecific(this)" data-topic="Agent Learning">Agent Learning</a> /
+                <a href="#topic-reasoning-planning" onClick="return publicationByTopicSpecific(this)" data-topic="Agent Alignment">Agent Alignment</a> /
+                <a href="#topic-scene-understanding" onClick="return publicationByTopicSpecific(this)" data-topic="Agent Evolution">Agent Evolution</a> /
+                <a href="#topic-scene-understanding" onClick="return publicationByTopicSpecific(this)" data-topic="Agent Evaluation">Agent Evaluation</a>
+                <br />
+                Past topics: <a href="#topic-vision" onClick="return publicationByTopicSpecific(this)" data-topic="LLM Pretraining">LLM Pre-training</a> /
+                <a href="#topic-nlp" onClick="return publicationByTopicSpecific(this)" data-topic="LLM Knowledge">LLM Knowledge</a> /
+                <a href="#topic-nlp" onClick="return publicationByTopicSpecific(this)" data-topic="LLM Analysis">LLM Analysis</a> /
+                <a href="#topic-nlp" onClick="return publicationByTopicSpecific(this)" data-topic="LLM Posttraining">LLM Post-training</a>
+                <span class="note">(*/†: indicates equal contribution.)</span>
+            </p>
+            <div id="pub-card-container" class="activated hide">
+                <!-- Generated publication cards for Cheng Qian. Each entry verified via web sources and includes paper/code links when available. -->
+
+                <div class="pub-card" data-topic="LLM Pretraining" data-year="2022" data-selected="false">
+                    <div class="row">
+                    <div class="col-l col-xs-12 col-lg-3">
+                        <img src="projects/mode_connectivity_plm.png" />
+                    </div>
+                    <div class="col-r col-xs-12 col-lg-9">
+                        <div class="pub-card-body">
+                        <h5 class="title">Exploring Mode Connectivity for Pre-trained Language Models</h5>
+                        <h6 class="authors">
+                            Yujia Qin<sup>*</sup>, <u>Cheng Qian</u><sup>*</sup>, Jing Yi<sup>*</sup>, Weize Chen, Yankai Lin, Xu Han, Zhiyuan Liu, Maosong Sun, Jie Zhou
+                        </h6>
+                        <p class="info">
+                            <a href="javascript:;" class="conference">EMNLP 2022</a> <span class="highlight">(Main Track)</span>
+                            <a target="_blank" href="https://aclanthology.org/2022.emnlp-main.451.pdf">Paper</a> /
+                            <a target="_blank" href="https://github.com/thunlp/Mode-Connectivity-PLM">Code</a>
+                        </p>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                <!-- sources: :contentReference[oaicite:0]{index=0} -->
+                
+                <div class="pub-card" data-topic="Agent Learning" data-year="2023" data-selected="true">
+                    <div class="row">
+                    <div class="col-l col-xs-12 col-lg-3">
+                        <img src="projects/tool_learning_survey.png" />
+                    </div>
+                    <div class="col-r col-xs-12 col-lg-9">
+                        <div class="pub-card-body">
+                        <h5 class="title">Tool Learning with Foundation Models</h5>
+                        <h6 class="authors">
+                            Yujia Qin, Shengding Hu, Yankai Lin, Weize Chen, Ning Ding, Ganqu Cui, Zheni Zeng, Yufei Huang, Chaojun Xiao, Chi Han, Yi Ren Fung, Yusheng Su, Huadong Wang, <u>Cheng Qian</u>, Runchu Tian, Kunlun Zhu, Shihao Liang, Xingyu Shen, Bokai Xu, Zhen Zhang, Yining Ye, Bowen Li, Ziwei Tang, Jing Yi, Yuzhang Zhu, Zhenning Dai, Lan Yan, Xin Cong, Yaxi Lu, Weilin Zhao, Yuxiang Huang, Junxi Yan, Xu Han, Xian Sun, Dahai Li, Jason Phang, Cheng Yang, Tongshuang Wu, Heng Ji, Zhiyuan Liu, Maosong Sun
+                        </h6>
+                        <p class="info">
+                            <a href="javascript:;" class="conference">ACM Computing Surveys</a> /
+                            <a target="_blank" href="https://arxiv.org/pdf/2304.08354">Paper</a> /
+                            <a target="_blank" href="https://dl.acm.org/doi/10.1145/3704435">ACM</a>
+                        </p>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                <!-- sources: :contentReference[oaicite:1]{index=1} -->
+                
+                <div class="pub-card" data-topic="LLM Pretraining" data-year="2023" data-selected="false">
+                    <div class="row">
+                    <div class="col-l col-xs-12 col-lg-3">
+                        <img src="projects/recyclable_tuning.png" />
+                    </div>
+                    <div class="col-r col-xs-12 col-lg-9">
+                        <div class="pub-card-body">
+                        <h5 class="title">Recyclable Tuning for Continual Pre-training</h5>
+                        <h6 class="authors">
+                            Yujia Qin<sup>*</sup>, <u>Cheng Qian</u><sup>*</sup>, Xu Han, Yankai Lin, Huadong Wang, Ruobing Xie, Zhiyuan Liu, Maosong Sun, Jie Zhou
+                        </h6>
+                        <p class="info">
+                            <a href="javascript:;" class="conference">ACL 2023 Findings</a> /
+                            <a target="_blank" href="https://aclanthology.org/2023.findings-acl.723.pdf">Paper</a> /
+                            <a target="_blank" href="https://github.com/thunlp/RecyclableTuning">Code</a>
+                        </p>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                <!-- sources: :contentReference[oaicite:2]{index=2} -->
+                
+                <div class="pub-card" data-topic="Agent Evolution" data-year="2023" data-selected="true">
+                    <div class="row">
+                    <div class="col-l col-xs-12 col-lg-3">
+                        <img src="projects/creator_llm_tools.png" />
+                    </div>
+                    <div class="col-r col-xs-12 col-lg-9">
+                        <div class="pub-card-body">
+                        <h5 class="title">CREATOR: Tool Creation for Disentangling Abstract and Concrete Reasoning of Large Language Models</h5>
+                        <h6 class="authors">
+                            <u>Cheng Qian</u>, Chi Han, Yi Fung, Yujia Qin, Zhiyuan Liu, Heng Ji
+                        </h6>
+                        <p class="info">
+                            <a href="javascript:;" class="conference">EMNLP 2023 Findings</a> /
+                            <a target="_blank" href="https://aclanthology.org/2023.findings-emnlp.462.pdf">Paper</a> /
+                            <a target="_blank" href="https://github.com/qiancheng0/CREATOR">Code</a>
+                        </p>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                <!-- sources: :contentReference[oaicite:3]{index=3} -->
+                
+                <div class="pub-card" data-topic="Agent Evolution" data-year="2024" data-selected="false">
+                    <div class="row">
+                    <div class="col-l col-xs-12 col-lg-3">
+                        <img src="projects/toolink_cos.png" />
+                    </div>
+                    <div class="col-r col-xs-12 col-lg-9">
+                        <div class="pub-card-body">
+                        <h5 class="title">Toolink: Linking Toolkit Creation and Using through Chain-of-Solving on Open-Source Model</h5>
+                        <h6 class="authors">
+                            <u>Cheng Qian</u>, Chenyan Xiong, Zhenghao Liu, Zhiyuan Liu
+                        </h6>
+                        <p class="info">
+                            <a href="javascript:;" class="conference">NAACL 2024</a> <span class="highlight">(Main Track)</span>
+                            <a target="_blank" href="https://aclanthology.org/2024.naacl-long.48.pdf">Paper</a> /
+                            <a target="_blank" href="https://github.com/qiancheng0/Toolink">Code</a>
+                        </p>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                <!-- sources: :contentReference[oaicite:4]{index=4} -->
+                
+                <div class="pub-card" data-topic="Agent Alignment" data-year="2024" data-selected="true">
+                    <div class="row">
+                    <div class="col-l col-xs-12 col-lg-3">
+                        <img src="projects/tell_me_more_in3.png" />
+                    </div>
+                    <div class="col-r col-xs-12 col-lg-9">
+                        <div class="pub-card-body">
+                        <h5 class="title">Tell Me More! Towards Implicit User Intention Understanding of Language Model Driven Agents</h5>
+                        <h6 class="authors">
+                            <u>Cheng Qian</u><sup>*</sup>, Bingxiang He<sup>*</sup>, Zhong Zhuang, Jia Deng, Yujia Qin, Xin Cong, Zhong Zhang, Jie Zhou, Yankai Lin, Zhiyuan Liu, Maosong Sun
+                        </h6>
+                        <p class="info">
+                            <a href="javascript:;" class="conference">ACL 2024</a> <span class="highlight">(Main Track)</span>
+                            <a target="_blank" href="https://aclanthology.org/2024.acl-long.61.pdf">Paper</a> /
+                            <a target="_blank" href="https://github.com/OpenBMB/Tell_Me_More">Code</a> /
+                            <a target="_blank" href="https://huggingface.co/datasets/hbx/IN3-interaction">Dataset</a> /
+                            <a target="_blank" href="https://huggingface.co/hbx/Mistral-Interact">Model</a> /
+                        </p>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                <!-- sources: :contentReference[oaicite:5]{index=5} -->
+                
+                <div class="pub-card" data-topic="Agent Evolution" data-year="2024" data-selected="false">
+                    <div class="row">
+                    <div class="col-l col-xs-12 col-lg-3">
+                        <img src="projects/ice_self_evolution.png" />
+                    </div>
+                    <div class="col-r col-xs-12 col-lg-9">
+                        <div class="pub-card-body">
+                        <h5 class="title">Investigate-Consolidate-Exploit: A General Strategy for Inter-Task Agent Self-Evolution</h5>
+                        <h6 class="authors">
+                            <u>Cheng Qian</u><sup>*</sup>, Shihao Liang<sup>*</sup>, Yujia Qin, Yining Ye, Xin Cong, Yankai Lin, Yesai Wu, Zhiyuan Liu, Maosong Sun
+                        </h6>
+                        <p class="info">
+                            <a href="javascript:;" class="conference">ArXiv Preprint</a> /
+                            <a target="_blank" href="https://arxiv.org/pdf/2401.13996">Paper</a>
+                        </p>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                <!-- sources: :contentReference[oaicite:6]{index=6} -->
+                
+                <div class="pub-card" data-topic="LLM Knowledge" data-year="2024" data-selected="false">
+                    <div class="row">
+                    <div class="col-l col-xs-12 col-lg-3">
+                        <img src="projects/merge_conflicts_pkg.png" />
+                    </div>
+                    <div class="col-r col-xs-12 col-lg-9">
+                        <div class="pub-card-body">
+                        <h5 class="title">"Merge Conflicts!" Exploring the Impacts of External Distractors to Parametric Knowledge Graphs</h5>
+                        <h6 class="authors">
+                            <u>Cheng Qian</u>, Xinran Zhao, Sherry Tongshuang Wu
+                        </h6>
+                        <p class="info">
+                            <a href="javascript:;" class="conference">COLM 2024</a> /
+                            <a target="_blank" href="https://openreview.net/forum?id=Pvn1dKreZW">Paper</a> /
+                            <a target="_blank" href="https://github.com/qiancheng0/EKD_Impacts_PKG">Code</a>
+                        </p>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                <!-- sources: :contentReference[oaicite:7]{index=7} -->
+                
+                <!-- Notes:
+                - Equal-contribution is indicated with superscript * next to the respective authors as provided in your bib.
+                - Your name is underlined in every author list.
+                - Topics were mapped conservatively to {agent learning, agent alignment, agent evolution, other}.
+                - Image paths are placeholders you can swap later.
+                - I focused on papers with verifiable public links. If you'd like, I can expand to the remaining entries in a follow-up batch. -->
+
+                <!-- Batch 2: all remaining publications converted to pub-cards. 
+                Notes: sources for each card are cited in HTML comments per your requirement to fact-check links. -->
+
+                <div class="pub-card" data-topic="LLM Posttraining" data-year="2025" data-selected="false">
+                    <div class="row">
+                    <div class="col-l col-xs-12 col-lg-3">
+                        <img src="projects/aloe-preference-alignment.png" />
+                    </div>
+                    <div class="col-r col-xs-12 col-lg-9">
+                        <div class="pub-card-body">
+                        <h5 class="title">Aligning LLMs with Individual Preferences via Interaction</h5>
+                        <h6 class="authors">
+                            Shujin Wu, May Fung, <u>Cheng Qian</u>, Jeonghwan Kim, Dilek Hakkani-Tür, Heng Ji
+                        </h6>
+                        <p class="info">
+                            <a href="javascript:;" class="conference">COLING 2025</a> /
+                            <a target="_blank" href="https://arxiv.org/pdf/2410.03642">Paper</a> /
+                            <a target="_blank" href="https://github.com/ShujinWu-0814/ALOE">Code</a>
+                        </p>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                <!-- sources: :contentReference[oaicite:0]{index=0} -->
+                
+                <div class="pub-card" data-topic="Agent Alignment" data-year="2025" data-selected="false">
+                    <div class="row">
+                    <div class="col-l col-xs-12 col-lg-3">
+                        <img src="projects/proactive-agent.png" />
+                    </div>
+                    <div class="col-r col-xs-12 col-lg-9">
+                        <div class="pub-card-body">
+                        <h5 class="title">Proactive Agent: Shifting LLM Agents from Reactive Responses to Active Assistance</h5>
+                        <h6 class="authors">
+                            Yaxi Lu, Shenzhi Yang, <u>Cheng Qian</u>, Guirong Chen, Qinyu Luo, Yesai Wu, Huadong Wang, Xin Cong, Zhong Zhang, Yankai Lin,
+                            Weiwen Liu, Yasheng Wang, Zhiyuan Liu, Fangming Liu, Maosong Sun
+                        </h6>
+                        <p class="info">
+                            <a href="javascript:;" class="conference">ICLR 2025</a> /
+                            <a target="_blank" href="https://arxiv.org/pdf/2410.12361">Paper</a> /
+                            <a target="_blank" href="https://github.com/YaxiLu/Proactive-Agent">Code</a>
+                        </p>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                <!-- sources: :contentReference[oaicite:1]{index=1} -->
+                
+                <div class="pub-card" data-topic="LLM Analysis" data-year="2025" data-selected="false">
+                    <div class="row">
+                    <div class="col-l col-xs-12 col-lg-3">
+                        <img src="projects/long-context-bias.png" />
+                    </div>
+                    <div class="col-r col-xs-12 col-lg-9">
+                        <div class="pub-card-body">
+                        <h5 class="title">Distance between Relevant Information Pieces Causes Bias in Long-Context LLMs</h5>
+                        <h6 class="authors">
+                            Runchu Tian, Yanghao Li, Yuepeng Fu, Siyang Deng, Qinyu Luo, <u>Cheng Qian</u>, Shuo Wang, Xin Cong, Zhong Zhang, Yesai Wu, Yankai Lin, Huadong Wang, Xiaojiang Liu
+                        </h6>
+                        <p class="info">
+                            <a href="javascript:;" class="conference">ACL 2025 Findings</a> /
+                            <a target="_blank" href="https://arxiv.org/pdf/2410.14641">Paper</a>
+                        </p>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                <!-- sources: :contentReference[oaicite:2]{index=2} -->
+                
+                <div class="pub-card" data-topic="Agent Evaluation" data-year="2025" data-selected="false">
+                    <div class="row">
+                    <div class="col-l col-xs-12 col-lg-3">
+                        <img src="projects/embodiedbench.png" />
+                    </div>
+                    <div class="col-r col-xs-12 col-lg-9">
+                        <div class="pub-card-body">
+                        <h5 class="title">EmbodiedBench: Comprehensive Benchmarking Multi-modal Large Language Models for Vision-Driven Embodied Agents</h5>
+                        <h6 class="authors">
+                            Rui Yang<sup>*</sup>, Hanyang Chen<sup>*</sup>, Junyu Zhang<sup>*</sup>, Mark Zhao<sup>*</sup>, <u>Cheng Qian</u>, Kangrui Wang, Qineng Wang, Teja Venkat Koripella, Marziyeh Movahedi, Manling Li, Huan Zhang, Tong Zhang
+                        </h6>
+                        <p class="info">
+                            <a href="javascript:;" class="conference">ICML 2025</a> /
+                            <a target="_blank" href="https://arxiv.org/pdf/2502.09560">Paper</a> /
+                            <a target="_blank" href="https://embodiedbench.github.io/">Website and Code</a>
+                        </p>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                <!-- sources: :contentReference[oaicite:3]{index=3} -->
+                
+                <div class="pub-card" data-topic="Agent Learning" data-year="2025" data-selected="false">
+                    <div class="row">
+                    <div class="col-l col-xs-12 col-lg-3">
+                        <img src="projects/smart-tool-overuse.png" />
+                    </div>
+                    <div class="col-r col-xs-12 col-lg-9">
+                        <div class="pub-card-body">
+                        <h5 class="title">SMART: Self-Aware Agent for Tool Overuse Mitigation</h5>
+                        <h6 class="authors">
+                            <u>Cheng Qian</u><sup>*</sup>, Emre Can Acikgoz<sup>*</sup>, Hongru Wang, Xiusi Chen, Avirup Sil, Dilek Hakkani-Tür, Gokhan Tur, Heng Ji
+                        </h6>
+                        <p class="info">
+                            <a href="javascript:;" class="conference">ACL 2025 Findings</a> /
+                            <a target="_blank" href="https://arxiv.org/pdf/2502.11435">Paper</a> /
+                            <a target="_blank" href="https://github.com/qiancheng0/Open-SMARTAgent">Code</a>
+                        </p>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                <!-- sources: :contentReference[oaicite:4]{index=4} -->
+                
+                <div class="pub-card" data-topic="LLM Knowledge" data-year="2025" data-selected="false">
+                    <div class="row">
+                    <div class="col-l col-xs-12 col-lg-3">
+                        <img src="projects/knowledge-overshadowing.png" />
+                    </div>
+                    <div class="col-r col-xs-12 col-lg-9">
+                        <div class="pub-card-body">
+                        <h5 class="title">The Law of Knowledge Overshadowing: Towards Understanding, Predicting, and Preventing LLM Hallucination</h5>
+                        <h6 class="authors">
+                            Yuji Zhang, Sha Li, <u>Cheng Qian</u>, Jiateng Liu, Pengfei Yu, Chi Han, Yi R. Fung, Kathleen McKeown, Chengxiang Zhai, Manling Li, Heng Ji
+                        </h6>
+                        <p class="info">
+                            <a href="javascript:;" class="conference">ACL 2025 Findings</a> /
+                            <a target="_blank" href="https://aclanthology.org/2025.findings-acl.1199.pdf">Paper</a>
+                        </p>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                <!-- sources: :contentReference[oaicite:5]{index=5} -->
+                
+                <div class="pub-card" data-topic="Agent Evaluation" data-year="2025" data-selected="false">
+                    <div class="row">
+                    <div class="col-l col-xs-12 col-lg-3">
+                        <img src="projects/multiagentbench.png" />
+                    </div>
+                    <div class="col-r col-xs-12 col-lg-9">
+                        <div class="pub-card-body">
+                        <h5 class="title">MultiAgentBench: Evaluating the Collaboration and Competition of LLM Agents</h5>
+                        <h6 class="authors">
+                            Kunlun Zhu<sup>*</sup>, Hongyi Du<sup>*</sup>, Zhaochen Hong<sup>*</sup>, Xiaocheng Yang<sup>*</sup>, Shuyi Guo<sup>*</sup>, Zhe Wang<sup>*</sup>, Zhenhailong Wang, <u>Cheng Qian</u>, Xiangru Tang, Heng Ji, Jiaxuan You
+                        </h6>
+                        <p class="info">
+                            <a href="javascript:;" class="conference">ACL 2025 <span class="highlight">(Main Track)</span></a>
+                            <a target="_blank" href="https://aclanthology.org/2025.acl-long.421.pdf">Paper</a> /
+                            <a target="_blank" href="https://github.com/ulab-uiuc/MARBLE">Code</a>
+                        </p>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                <!-- sources: :contentReference[oaicite:6]{index=6} -->
+                
+                <div class="pub-card" data-topic="LLM Analysis" data-year="2025" data-selected="false">
+                    <div class="row">
+                    <div class="col-l col-xs-12 col-lg-3">
+                        <img src="projects/air-preference-data.png" />
+                    </div>
+                    <div class="col-r col-xs-12 col-lg-9">
+                        <div class="pub-card-body">
+                        <h5 class="title">AIR: A Systematic Analysis of Annotations, Instructions, and Response Pairs in Preference Dataset</h5>
+                        <h6 class="authors">
+                            Bingxiang He<sup>*</sup>, Wenbin Zhang<sup>*</sup>, Jiaxi Song, <u>Cheng Qian</u>, Zixuan Fu, Bowen Sun, Ning Ding, Haiwen Hong, Longtao Huang, Hui Xue, Ganqu Cui, Wanxiang Che, Zhiyuan Liu, Maosong Sun
+                        </h6>
+                        <p class="info">
+                            <a href="javascript:;" class="conference">COLM 2025</a> /
+                            <a target="_blank" href="https://openreview.net/forum?id=Sz3ZU6oeVJ">Paper</a>
+                        </p>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                <!-- sources: :contentReference[oaicite:7]{index=7} -->
+                
+                <div class="pub-card" data-topic="LLM Posttraining" data-year="2025" data-selected="true">
+                    <div class="row">
+                    <div class="col-l col-xs-12 col-lg-3">
+                        <img src="projects/rm-r1.png" />
+                    </div>
+                    <div class="col-r col-xs-12 col-lg-9">
+                        <div class="pub-card-body">
+                        <h5 class="title">RM-R1: Reward Modeling as Reasoning</h5>
+                        <h6 class="authors">
+                            Xiusi Chen<sup>*</sup>, Gaotang Li<sup>*</sup>, Ziqi Wang<sup>*</sup>, Bowen Jin, <u>Cheng Qian</u>, Yu Wang, Hongru Wang, Yu Zhang, Denghui Zhang, Tong Zhang, Hanghang Tong, Heng Ji
+                        </h6>
+                        <p class="info">
+                            <a href="javascript:;" class="conference">ArXiv Preprint</a> /
+                            <a target="_blank" href="https://arxiv.org/pdf/2505.02387">Paper</a> /
+                            <a target="_blank" href="https://github.com/RM-R1-UIUC/RM-R1">Code</a>
+                        </p>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                <!-- sources: :contentReference[oaicite:8]{index=8} -->
+                
+                <div class="pub-card" data-topic="Agent Learning" data-year="2025" data-selected="true">
+                    <div class="row">
+                    <div class="col-l col-xs-12 col-lg-3">
+                        <img src="projects/toolrl.png" />
+                    </div>
+                    <div class="col-r col-xs-12 col-lg-9">
+                        <div class="pub-card-body">
+                        <h5 class="title">ToolRL: Reward is All Tool Learning Needs</h5>
+                        <h6 class="authors">
+                            <u>Cheng Qian</u>, Emre Can Acikgoz, Qi He, Hongru Wang, Xiusi Chen, Dilek Hakkani-Tür, Gokhan Tur, Heng Ji
+                        </h6>
+                        <p class="info">
+                            <a href="javascript:;" class="conference">NeurIPS 2025</a> /
+                            <a target="_blank" href="https://arxiv.org/pdf/2504.13958">Paper</a> /
+                            <a target="_blank" href="https://github.com/qiancheng0/ToolRL">Code</a>
+                        </p>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                <!-- sources: :contentReference[oaicite:9]{index=9} -->
+                
+                <div class="pub-card" data-topic="LLM Analysis" data-year="2025" data-selected="false">
+                    <div class="row">
+                    <div class="col-l col-xs-12 col-lg-3">
+                        <img src="projects/decisionflow.png" />
+                    </div>
+                    <div class="col-r col-xs-12 col-lg-9">
+                        <div class="pub-card-body">
+                        <h5 class="title">DecisionFlow: Advancing Large Language Model as Principled Decision Maker</h5>
+                        <h6 class="authors">
+                            Xiusi Chen, Shanyong Wang, <u>Cheng Qian</u>, Hongru Wang, Peixuan Han, Heng Ji
+                        </h6>
+                        <p class="info">
+                            <a href="javascript:;" class="conference">Findings of EMNLP 2025 <span class="highlight">(Findings)</span></a> /
+                            <a target="_blank" href="https://arxiv.org/pdf/2505.21397">Paper</a>
+                            <a target="_blank" href="https://github.com/xiusic/DecisionFlow">Code</a>
+                        </p>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                <!-- sources: :contentReference[oaicite:10]{index=10} -->
+                
+                <div class="pub-card" data-topic="LLM Analysis" data-year="2025" data-selected="false">
+                    <div class="row">
+                    <div class="col-l col-xs-12 col-lg-3">
+                        <img src="projects/safeswitch.png" />
+                    </div>
+                    <div class="col-r col-xs-12 col-lg-9">
+                        <div class="pub-card-body">
+                        <h5 class="title">SafeSwitch: Steering Unsafe LLM Behavior via Internal Activation Signals</h5>
+                        <h6 class="authors">
+                            Peixuan Han<sup>*</sup>, <u>Cheng Qian</u><sup>*</sup>, Xiusi Chen, Yuji Zhang, Denghui Zhang, Heng Ji
+                        </h6>
+                        <p class="info">
+                            <a href="javascript:;" class="conference">EMNLP 2025 Findings</a> /
+                            <a target="_blank" href="https://arxiv.org/pdf/2502.01042">Paper</a> /
+                            <a target="_blank" href="https://github.com/Hanpx20/SafeSwitch">Code</a>
+                        </p>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                <!-- sources: :contentReference[oaicite:11]{index=11} -->
+                
+                <div class="pub-card" data-topic="LLM Analysis" data-year="2024" data-selected="false">
+                    <div class="row">
+                    <div class="col-l col-xs-12 col-lg-3">
+                        <img src="projects/right-time-matters.png" />
+                    </div>
+                    <div class="col-r col-xs-12 col-lg-9">
+                        <div class="pub-card-body">
+                        <h5 class="title">The Right Time Matters: Data Arrangement Affects Zero-Shot Generalization in Instruction Tuning</h5>
+                        <h6 class="authors">
+                            Bingxiang He<sup>*</sup>, Ning Ding<sup>*</sup>, <u>Cheng Qian</u><sup>*</sup>, Jia Deng, Ganqu Cui, Lifan Yuan, Haiwen Hong, Huan-ang Gao, Longtao Huang, Hui Xue, and others
+                        </h6>
+                        <p class="info">
+                            <a href="javascript:;" class="conference">ACL 2025 Findings</a> /
+                            <a target="_blank" href="https://aclanthology.org/2025.findings-acl.13.pdf">Paper</a> /
+                            <a target="_blank" href="https://github.com/thunlp/Dynamics-of-Zero-Shot-Generalization">Code</a>
+                        </p>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                <!-- sources: :contentReference[oaicite:12]{index=12} -->
+                
+                <div class="pub-card" data-topic="Agent Evaluation" data-year="2025" data-selected="true">
+                    <div class="row">
+                    <div class="col-l col-xs-12 col-lg-3">
+                        <img src="projects/escapebench.png" />
+                    </div>
+                    <div class="col-r col-xs-12 col-lg-9">
+                        <div class="pub-card-body">
+                        <h5 class="title">EscapeBench: Towards Advancing Creative Intelligence of Language Model Agents</h5>
+                        <h6 class="authors">
+                            <u>Cheng Qian</u>, Peixuan Han, Qinyu Luo, Bingxiang He, Xiusi Chen, Yuji Zhang, Hongyi Du, Jiarui Yao, Xiaocheng Yang, Denghui Zhang, Yunzhu Li, Heng Ji
+                        </h6>
+                        <p class="info">
+                            <a href="javascript:;" class="conference">ACL 2025 <span class="highlight">(Main Track)</span></a> /
+                            <a target="_blank" href="https://aclanthology.org/2025.acl-long.39.pdf">Paper</a> /
+                            <a target="_blank" href="https://github.com/qiancheng0/EscapeBench">Code</a>
+                        </p>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                <!-- sources: :contentReference[oaicite:13]{index=13} -->
+                
+                <div class="pub-card" data-topic="Agent Learning" data-year="2025" data-selected="false">
+                    <div class="row">
+                    <div class="col-l col-xs-12 col-lg-3">
+                        <img src="projects/github-tool-integration.png" />
+                    </div>
+                    <div class="col-r col-xs-12 col-lg-9">
+                        <div class="pub-card-body">
+                        <h5 class="title">Enhancing Open-Domain Task-Solving Capability of LLMs via Autonomous Tool Integration from GitHub</h5>
+                        <h6 class="authors">
+                            Bohan Lyu, Xin Cong, Heyang Yu, Pan Yang, <u>Cheng Qian</u>, Zihe Wang, Yining Ye, Yaxi Lu, Chen Qian, Yujia Qin, Zhong Zhang, Yukun Yan, Yankai Lin, Zhiyuan Liu, Maosong Sun
+                        </h6>
+                        <p class="info">
+                            <a href="javascript:;" class="conference">ACL 2025 <span class="highlight">(Main Track)</span></a> /
+                            <a target="_blank" href="https://aclanthology.org/2025.acl-long.845.pdf">Paper</a> /
+                            <a target="_blank" href="https://github.com/OpenBMB/OpenAct">Code</a>
+                        </p>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                <!-- sources: :contentReference[oaicite:14]{index=14} -->
+                
+                <div class="pub-card" data-topic="Agent Evolution" data-year="2025" data-selected="false">
+                    <div class="row">
+                    <div class="col-l col-xs-12 col-lg-3">
+                        <img src="projects/self-evolving-agents-survey.png" />
+                    </div>
+                    <div class="col-r col-xs-12 col-lg-9">
+                        <div class="pub-card-body">
+                        <h5 class="title">A Survey of Self-Evolving Agents: On Path to Artificial Super Intelligence</h5>
+                        <h6 class="authors">
+                            Huan-ang Gao, Jiayi Geng, Wenyue Hua, Mengkang Hu, Xinzhe Juan, Hongzhang Liu, Shilong Liu, Jiahao Qiu, Xuan Qi, Yiran Wu, Hongru Wang, Han Xiao, Yuhang Zhou, Shaokun Zhang, Jiayi Zhang, Jinyu Xiang, Yixiong Fang, Qiwen Zhao, Dongrui Liu, Qihan Ren, <u>Cheng Qian</u>, Zhenghailong Wang, Minda Hu, Huazheng Wang, Qingyun Wu, Heng Ji, Mengdi Wang
+                        </h6>
+                        <p class="info">
+                            <a href="javascript:;" class="conference">ArXiv Preprint</a> /
+                            <a target="_blank" href="https://arxiv.org/pdf/2507.21046">Paper</a> /
+                            <a target="_blank" href="https://github.com/CharlesQ9/Self-Evolving-Agents">Project Repo (Paper List)</a>
+                        </p>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                <!-- sources: :contentReference[oaicite:15]{index=15} -->
+                
+                <div class="pub-card" data-topic="Agent Alignment" data-year="2025" data-selected="true">
+                    <div class="row">
+                    <div class="col-l col-xs-12 col-lg-3">
+                        <img src="projects/userbench.png" />
+                    </div>
+                    <div class="col-r col-xs-12 col-lg-9">
+                        <div class="pub-card-body">
+                        <h5 class="title">UserBench: An Interactive Gym Environment for User-Centric Agents</h5>
+                        <h6 class="authors">
+                            <u>Cheng Qian</u>, Zuxin Liu, Akshara Prabhakar, Zhiwei Liu, Jianguo Zhang, Haolin Chen, Heng Ji, Weiran Yao, Shelby Heinecke, Silvio Savarese, Caiming Xiong, Huan Wang
+                        </h6>
+                        <p class="info">
+                            <a href="javascript:;" class="conference">ArXiv Preprint</a> /
+                            <a target="_blank" href="https://arxiv.org/pdf/2507.22034">Paper</a> /
+                            <a target="_blank" href="https://github.com/SalesforceAIResearch/UserBench">Code</a>
+                        </p>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                <!-- sources: :contentReference[oaicite:16]{index=16} -->
+                
+                <div class="pub-card" data-topic="Agent Alignment" data-year="2025" data-selected="true">
+                    <div class="row">
+                    <div class="col-l col-xs-12 col-lg-3">
+                        <img src="projects/userrl.png" />
+                    </div>
+                    <div class="col-r col-xs-12 col-lg-9">
+                        <div class="pub-card-body">
+                        <h5 class="title">UserRL: Training Interactive User-Centric Agent via Reinforcement Learning</h5>
+                        <h6 class="authors">
+                            <u>Cheng Qian</u>, Zuxin Liu, Akshara Prabhakar, Jielin Qiu, Zhiwei Liu, Haolin Chen, Shirley Kokane, Heng Ji, Weiran Yao, Shelby Heinecke, Silvio Savarese, Caiming Xiong, Huan Wang
+                        </h6>
+                        <p class="info">
+                            <a href="javascript:;" class="conference">ArXiv Preprint</a> /
+                            <a target="_blank" href="https://arxiv.org/pdf/2509.19736">Paper</a> /
+                            <a target="_blank" href="https://github.com/SalesforceAIResearch/UserRL">Code</a>
+                        </p>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                <!-- sources: :contentReference[oaicite:17]{index=17} -->
+                
+                <div class="pub-card" data-topic="Agent Evolution" data-year="2025" data-selected="false">
+                    <div class="row">
+                    <div class="col-l col-xs-12 col-lg-3">
+                        <img src="projects/winell.png" />
+                    </div>
+                    <div class="col-r col-xs-12 col-lg-9">
+                        <div class="pub-card-body">
+                        <h5 class="title">WINELL: Wikipedia Never-Ending Updating with LLM Agents</h5>
+                        <h6 class="authors">
+                            Revanth Gangi Reddy, Tanay Dixit, Jiaxin Qin, <u>Cheng Qian</u>, Daniel Lee, Jiawei Han, Kevin Small, Xing Fan, Ruhi Sarikaya, Heng Ji
+                        </h6>
+                        <p class="info">
+                            <a href="javascript:;" class="conference">ArXiv Preprint</a> /
+                            <a target="_blank" href="https://arxiv.org/pdf/2508.03728">Paper</a> /
+                            <a target="_blank" href="https://github.com/gangiswag/AutoWikiUpdate">Code</a>
+                        </p>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                <!-- sources: :contentReference[oaicite:18]{index=18} -->
+                
+                <div class="pub-card" data-topic="LLM Analysis" data-year="2025" data-selected="false">
+                    <div class="row">
+                    <div class="col-l col-xs-12 col-lg-3">
+                        <img src="projects/isacl.png" />
+                    </div>
+                    <div class="col-r col-xs-12 col-lg-9">
+                        <div class="pub-card-body">
+                        <h5 class="title">ISACL: Internal State Analyzer for Copyrighted Training Data Leakage</h5>
+                        <h6 class="authors">
+                            Guangwei Zhang, Qisheng Su, Jiateng Liu, <u>Cheng Qian</u>, Yanzhou Pan, Yanjie Fu, Denghui Zhang
+                        </h6>
+                        <p class="info">
+                            <a href="javascript:;" class="conference">arXiv Preprint</a> /
+                            <a target="_blank" href="https://arxiv.org/pdf/2508.17767">Paper</a> /
+                            <a target="_blank" href="https://github.com/changhu73/Internal_states_leakage">Code</a>
+                        </p>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                <!-- sources: :contentReference[oaicite:19]{index=19} -->
+                
+                <div class="pub-card" data-topic="Agent Learning" data-year="2025" data-selected="true">
+                    <div class="row">
+                    <div class="col-l col-xs-12 col-lg-3">
+                        <img src="projects/theory-tool-use.png" />
+                    </div>
+                    <div class="col-r col-xs-12 col-lg-9">
+                        <div class="pub-card-body">
+                        <h5 class="title">Toward a Theory of Agents as Tool-Use Decision-Makers</h5>
+                        <h6 class="authors">
+                            Hongru Wang<sup>*</sup>, <u>Cheng Qian</u><sup>*</sup>, Manling Li, Jiahao Qiu, Boyang Xue, Mengdi Wang, Heng Ji, Kam-Fai Wong
+                        </h6>
+                        <p class="info">
+                            <a href="javascript:;" class="conference">ArXiv Preprint</a> /
+                            <a target="_blank" href="https://arxiv.org/pdf/2506.00886">Paper</a>
+                        </p>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                <!-- sources: :contentReference[oaicite:20]{index=20} -->
+                
+                <div class="pub-card" data-topic="Agent Learning" data-year="2025" data-selected="false">
+                    <div class="row">
+                    <div class="col-l col-xs-12 col-lg-3">
+                        <img src="projects/acting-less-reasoning-more.png" />
+                    </div>
+                    <div class="col-r col-xs-12 col-lg-9">
+                        <div class="pub-card-body">
+                        <h5 class="title">Acting Less is Reasoning More! Teaching Model to Act Efficiently</h5>
+                        <h6 class="authors">
+                            Hongru Wang, <u>Cheng Qian</u>, Wanjun Zhong, Xiusi Chen, Jiahao Qiu, Shijue Huang, Bowen Jin, Mengdi Wang, Kam-Fai Wong, Heng Ji
+                        </h6>
+                        <p class="info">
+                            <a href="javascript:;" class="conference">ArXiv Preprint</a> /
+                            <a target="_blank" href="https://arxiv.org/pdf/2504.14870">Paper</a>
+                        </p>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                <!-- sources: :contentReference[oaicite:21]{index=21} -->
+                
+                <div class="pub-card" data-topic="LLM Posttraining" data-year="2025" data-selected="false">
+                    <div class="row">
+                    <div class="col-l col-xs-12 col-lg-3">
+                        <img src="projects/atomic-reasoning-sci-tables.png" />
+                    </div>
+                    <div class="col-r col-xs-12 col-lg-9">
+                        <div class="pub-card-body">
+                        <h5 class="title">Atomic Reasoning for Scientific Table Claim Verification</h5>
+                        <h6 class="authors">
+                            Yuji Zhang, Qingyun Wang, <u>Cheng Qian</u>, Jiateng Liu, Chenkai Sun, Denghui Zhang, Tarek Abdelzaher, Chengxiang Zhai, Preslav Nakov, Heng Ji
+                        </h6>
+                        <p class="info">
+                            <a href="javascript:;" class="conference">ArXiv Preprint</a> /
+                            <a target="_blank" href="https://arxiv.org/pdf/2506.06972">Paper</a> /
+                            <a target="_blank" href="https://github.com/CelestineZYJ/SciAtomicBench">Code</a>
+                        </p>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                <!-- sources: :contentReference[oaicite:22]{index=22} -->
+                
+                <div class="pub-card" data-topic="LLM Posttraining" data-year="2025" data-selected="false">
+                    <div class="row">
+                    <div class="col-l col-xs-12 col-lg-3">
+                        <img src="projects/alice-w2sg.png" />
+                    </div>
+                    <div class="col-r col-xs-12 col-lg-9">
+                        <div class="pub-card-body">
+                        <h5 class="title">Alice: Proactive Learning with Teacher's Demonstrations for Weak-to-Strong Generalization</h5>
+                        <h6 class="authors">
+                            Shujin Wu, <u>Cheng Qian</u>, Yi R. Fung, Paul Pu Liang, Heng Ji
+                        </h6>
+                        <p class="info">
+                            <a href="javascript:;" class="conference">ArXiv Preprint</a> /
+                            <a target="_blank" href="https://arxiv.org/pdf/2504.07316">Paper</a> /
+                            <a target="_blank" href="https://github.com/ShujinWu-0814/Alice">Code</a>
+                        </p>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                <!-- sources: :contentReference[oaicite:23]{index=23} -->
+                
+                <div class="pub-card" data-topic="Agent Learning" data-year="2025" data-selected="true">
+                    <div class="row">
+                    <div class="col-l col-xs-12 col-lg-3">
+                        <img src="projects/modelingagent.png" />
+                    </div>
+                    <div class="col-r col-xs-12 col-lg-9">
+                        <div class="pub-card-body">
+                        <h5 class="title">ModelingAgent: Bridging LLMs and Mathematical Modeling for Real-World Challenges</h5>
+                        <h6 class="authors">
+                            <u>Cheng Qian</u>, Hongyi Du, Hongru Wang, Xiusi Chen, Yuji Zhang, Avirup Sil, Chengxiang Zhai, Kathleen McKeown, Heng Ji
+                        </h6>
+                        <p class="info">
+                            <a href="javascript:;" class="conference">EMNLP 2025 Findings</a> /
+                            <a target="_blank" href="https://arxiv.org/pdf/2505.15068">Paper</a> /
+                            <a target="_blank" href="https://github.com/qiancheng0/ModelingAgent">Code</a>
+                        </p>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                <!-- sources: :contentReference[oaicite:24]{index=24} -->
+                
+                <div class="pub-card" data-topic="LLM Posttraining" data-year="2025" data-selected="false">
+                    <div class="row">
+                    <div class="col-l col-xs-12 col-lg-3">
+                        <img src="projects/veri-r1.png" />
+                    </div>
+                    <div class="col-r col-xs-12 col-lg-9">
+                        <div class="pub-card-body">
+                        <h5 class="title">Veri-R1: Toward Precise and Faithful Claim Verification via Online Reinforcement Learning</h5>
+                        <h6 class="authors">
+                            Qi He, <u>Cheng Qian</u>, Xiusi Chen, Bingxiang He, Yi R. Fung, Heng Ji
+                        </h6>
+                        <p class="info">
+                            <a href="javascript:;" class="conference">ArXiv Preprint</a> /
+                            <a target="_blank" href="https://arxiv.org/pdf/2510.01932">Paper</a> /
+                            <a target="_blank" href="https://github.com/H0key-22/Veri-R1">Code</a>
+                        </p>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                <!-- sources: :contentReference[oaicite:25]{index=25} -->
+                
+                <div class="pub-card" data-topic="LLM Posttraining" data-year="2025" data-selected="false">
+                    <div class="row">
+                    <div class="col-l col-xs-12 col-lg-3">
+                        <img src="projects/shortagesim.png" />
+                    </div>
+                    <div class="col-r col-xs-12 col-lg-9">
+                        <div class="pub-card-body">
+                        <h5 class="title">ShortageSim: Simulating Drug Shortages under Information Asymmetry</h5>
+                        <h6 class="authors">
+                            Mingxuan Cui<sup>*</sup>, Yilan Jiang<sup>*</sup>, Duo Zhou<sup>*</sup>, <u>Cheng Qian</u>, Yuji Zhang, Qiong Wang
+                        </h6>
+                        <p class="info">
+                            <a href="javascript:;" class="conference">ArXiv Preprint</a> /
+                            <a target="_blank" href="https://arxiv.org/pdf/2509.01813">Paper</a> /
+                            <a target="_blank" href="https://github.com/Lemutisme/Sortage Management">Code</a>
+                        </p>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                <!-- sources: :contentReference[oaicite:26]{index=26} -->
+                
+                <div class="pub-card" data-topic="Agent Learning" data-year="2025" data-selected="false">
+                    <div class="row">
+                    <div class="col-l col-xs-12 col-lg-3">
+                        <img src="projects/desideratum-conversational-agents.png" />
+                    </div>
+                    <div class="col-r col-xs-12 col-lg-9">
+                        <div class="pub-card-body">
+                        <h5 class="title">A Desideratum for Conversational Agents: Capabilities, Challenges, and Future Directions</h5>
+                        <h6 class="authors">
+                            Emre Can Acikgoz, <u>Cheng Qian</u>, Hongru Wang, Vardhan Dongre, Xiusi Chen, Heng Ji, Dilek Hakkani-Tür, Gokhan Tur
+                        </h6>
+                        <p class="info">
+                            <a href="javascript:;" class="conference">ArXiv Preprint</a> /
+                            <a target="_blank" href="https://arxiv.org/pdf/2504.16939">Paper</a> /
+                            <a target="_blank" href="https://github.com/emrecanacikgoz/awesome-conversational-agents">Project Repo (Paper List)</a>
+                        </p>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                <!-- sources: :contentReference[oaicite:28]{index=28} -->
+                
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="footer">
+    <div class="container">
+        <div class="row">
+            <div class="comic"><img src="static/img/thu.png" height="60px" /></div>
+            <div class="comic"><img src="static/img/uiuc.png" height="60px" /></div>
+            <div class="copyright">
+                &copy; 2025 Cheng Qian<br />
+            </div>
+            <div class="stat">
+                <a href="https://mapmyvisitors.com/web/1bzxz" title="Visit tracker"><img src="static/img/globe.png" height="60px"></a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- jQuery first, then Tether, then Bootstrap JS. -->
+<script src="https://code.jquery.com/jquery-3.1.1.min.js" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"
+        integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"
+        integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+<script type="text/javascript" src="static/js/jquery.color.min.js"></script>
+<!--script type="text/javascript" src="static/js/wave.js"></script-->
+<script type="text/javascript">
+
+$.fn.isInViewport = function() {
+    var elementTop = $(this).offset().top;
+    var elementBottom = elementTop + $(this).outerHeight();
+    var viewportTop = $(window).scrollTop();
+    var viewportBottom = viewportTop + $(window).height();
+    return elementBottom > viewportTop && elementTop < viewportBottom;
+};
+
+var allPublications = null;
+
+function playAllVideos() {
+  $("#pub-container video").each(function() {
+    this.play();
+  });
+}
+
+function publicationBySelected() {
+    var a = $("#publication-by-selected")
+    if (a.hasClass("activated")) {
+        return ;
+    }
+
+    $("#pub-container .subtitle a").removeClass("activated");
+    $("#pub-container .subtitle-aux a").removeClass("activated");
+    a.addClass("activated");
+
+    // Filter selected publications and sort by year descending
+    var selectedPubs = [];
+    for (var pubId = 0; pubId < allPublications.length; pubId++) {
+        var pub = $(allPublications[pubId]);
+        if (pub.data("selected") == true) {
+            selectedPubs.push(allPublications[pubId]);
+        }
+    }
+    selectedPubs.sort(function(a, b) {
+        return $(b).data("year") - $(a).data("year");
+    });
+
+    $("#pub-card-container").html("");
+    for (var i = 0; i < selectedPubs.length; i++) {
+        $("#pub-card-container").append(selectedPubs[i]);
+    }
+    playAllVideos();
+}
+
+function publicationByDate() {
+    var a = $("#publication-by-date")
+    if (a.hasClass("activated")) {
+        return ;
+    }
+
+    $("#pub-container .subtitle a").removeClass("activated");
+    $("#pub-container .subtitle-aux a").removeClass("activated");
+    a.addClass("activated");
+
+    // Sort publications: first by year (descending), then by selected status (selected first)
+    var sortedPubs = Array.from(allPublications).sort(function(a, b) {
+        var yearDiff = $(b).data("year") - $(a).data("year");
+        if (yearDiff !== 0) return yearDiff;
+        // Within same year, selected papers come first
+        var aSelected = $(a).data("selected") ? 1 : 0;
+        var bSelected = $(b).data("selected") ? 1 : 0;
+        return bSelected - aSelected;
+    });
+
+    $("#pub-card-container").html("");
+    for (var pubId = 0; pubId < sortedPubs.length; pubId++) {
+        if (pubId == 0 || $(sortedPubs[pubId-1]).data("year") != $(sortedPubs[pubId]).data("year")) {
+            var year = $(sortedPubs[pubId]).data("year");
+            $("#pub-card-container").append($("<h5 id='year-" + year.toString() + "'>" + year.toString() + "</h5>"));
+        }
+        $("#pub-card-container").append(sortedPubs[pubId]);
+    }
+    playAllVideos();
+}
+
+function publicationByTopicInner(specificTopic) {
+    var a = $("#publication-by-topic")
+    if (a.hasClass("activated")) {
+        return ;
+    }
+    $("#pub-container .subtitle a").removeClass("activated");
+    a.addClass("activated");
+
+    $("#pub-card-container").html("");
+    
+    // If specificTopic is provided, only show that topic; otherwise show all topics
+    var topicsToShow = specificTopic ? [{name: specificTopic, title: specificTopic}] : allTopics;
+    
+    for (var topicId in topicsToShow) {
+        var topic = topicsToShow[topicId].name;
+        var topicTitle = topicsToShow[topicId].title;
+        
+        // Collect publications for this topic
+        var topicPubs = [];
+        for (var pubId = 0; pubId < allPublications.length; pubId++) {
+            var pub = $(allPublications[pubId]);
+            if (pub.data("topic").indexOf(topic) != -1) {
+                topicPubs.push(allPublications[pubId]);
+            }
+        }
+        
+        // Skip empty topics when showing specific topic
+        if (specificTopic && topicPubs.length === 0) continue;
+        
+        // Only show topic header if we have publications
+        if (topicPubs.length > 0) {
+            $("#pub-card-container").append($("<h5 id='topic-" + topic + "'>" + topicTitle + "</h5>"));
+        }
+        
+        // Sort: first by selected status (selected first), then by year descending
+        topicPubs.sort(function(a, b) {
+            var aSelected = $(a).data("selected") ? 1 : 0;
+            var bSelected = $(b).data("selected") ? 1 : 0;
+            var selectedDiff = bSelected - aSelected;
+            if (selectedDiff !== 0) return selectedDiff;
+            // Within same selected status, sort by year descending
+            return $(b).data("year") - $(a).data("year");
+        });
+        
+        // Append sorted publications
+        for (var i = 0; i < topicPubs.length; i++) {
+            $("#pub-card-container").append(topicPubs[i]);
+        }
+    }
+}
+
+function publicationByTopicSpecificInner(a) {
+    if ($(a).hasClass("activated")) {
+        return false;
+    }
+
+    $("#pub-container .subtitle-aux a").removeClass("activated");
+    $(a).addClass("activated");
+}
+
+function publicationByTopic() {
+    publicationByTopicInner();
+    publicationByTopicSpecificInner($("#pub-container .subtitle-aux a:first"));
+    playAllVideos();
+    return true;
+}
+
+function publicationByTopicSpecific(a) {
+    // Get the specific topic from the link's data attribute
+    var specificTopic = $(a).data("topic");
+    
+    // Show only publications for this specific topic
+    $("#pub-container .subtitle a").removeClass("activated");
+    $("#publication-by-topic").addClass("activated");
+    
+    publicationByTopicSpecificInner(a);
+    
+    $("#pub-card-container").html("");
+    
+    // Add topic header
+    $("#pub-card-container").append($("<h5 id='topic-" + specificTopic + "'>" + specificTopic + "</h5>"));
+    
+    // Collect publications for this specific topic
+    var topicPubs = [];
+    for (var pubId = 0; pubId < allPublications.length; pubId++) {
+        var pub = $(allPublications[pubId]);
+        if (pub.data("topic").indexOf(specificTopic) != -1) {
+            topicPubs.push(allPublications[pubId]);
+        }
+    }
+    
+    // Sort: first by selected status (selected first), then by year descending
+    topicPubs.sort(function(a, b) {
+        var aSelected = $(a).data("selected") ? 1 : 0;
+        var bSelected = $(b).data("selected") ? 1 : 0;
+        var selectedDiff = bSelected - aSelected;
+        if (selectedDiff !== 0) return selectedDiff;
+        // Within same selected status, sort by year descending
+        return $(b).data("year") - $(a).data("year");
+    });
+    
+    // Append sorted publications
+    for (var i = 0; i < topicPubs.length; i++) {
+        $("#pub-card-container").append(topicPubs[i]);
+    }
+
+    var hash = a.hash;
+    $(hash).prop('id', hash.substr(1) + '-noscroll');
+    window.location.hash = hash;
+    $(hash + '-noscroll').prop('id', hash.substr(1));
+
+    if (!$(hash).isInViewport()) {
+        $('html, body').animate({
+            scrollTop: $(hash).offset().top
+        }, 1000, function(){
+        });
+    }
+
+    playAllVideos();
+    return false;
+}
+
+function toggleNews(linkElement) {
+    $("#news-more").slideToggle();
+    var e = $("#news-more-button");
+    if (e.data("expanded")) {
+        e.html("Click to hide old news ...");
+        e.data("expanded", false);
+    } else {
+        e.html("Click to show older news ...");
+        e.data("expanded", true);
+    }
+}
+
+$(function() {
+    getRealSize = function(bgImg) {
+        var img = new Image();
+        img.src = bgImg.attr("src");
+        var width = img.width,
+            height = img.height;
+        return {
+            width: width,
+            height: height
+        }
+    };
+
+    getRealWindowSize = function() {
+        var winWidth = null,
+            winHeight = null;
+        if (window.innerWidth) winWidth = window.innerWidth;
+        else if ((document.body) && (document.body.clientWidth)) winWidth = document.body.clientWidth;
+        if (window.innerHeight) winHeight = window.innerHeight;
+        else if ((document.body) && (document.body.clientHeight)) winHeight = document.body.clientHeight;
+        if (document.documentElement && document.documentElement.clientHeight && document.documentElement.clientWidth) {
+            winHeight = document.documentElement.clientHeight;
+            winWidth = document.documentElement.clientWidth
+        }
+        return {
+            width: winWidth,
+            height: winHeight
+        }
+    };
+
+    fullBg = function() {
+        var bgImg = $("#background");
+        var mainContainer = $("#main");
+        var firstFire = null;
+
+        if (bgImg.length == 0) {
+            return ;
+        }
+
+        function resizeImg() {
+            var realSize = getRealSize(bgImg);
+            var imgWidth = realSize.width;
+            var imgHeight = realSize.height;
+
+            if (imgWidth == 0 || imgHeight == 0) {
+                setTimeout(function() {
+                    resizeImg();
+                }, 200);
+            }
+
+            console.log(realSize);
+            var realWinSize = getRealWindowSize();
+            var winWidth = realWinSize.width;
+            var winHeight = realWinSize.height;
+            var widthRatio = winWidth / imgWidth;
+            var heightRatio = winHeight / imgHeight;
+            console.log(realWinSize);
+            if (widthRatio > heightRatio) {
+                bgImg.width(imgWidth * widthRatio + 'px').height(imgHeight * widthRatio + 'px').css({'top':
+                    -(imgHeight * widthRatio - winHeight) / 10 * 5 + 'px', 'left': '0'})
+            } else {
+                bgImg.width(imgWidth * heightRatio + 'px').height(imgHeight * heightRatio + 'px').css({'left':
+                    -(imgWidth * heightRatio - winWidth) / 10 * 3 + 'px', 'top': '0'})
+            }
+            // mainContainer.css({
+            //     width: winWidth,
+            //     height: winHeight
+            // });
+        }
+
+        resizeImg();
+        window.onresize = function() {
+            if (firstFire === null) {
+                firstFire = setTimeout(function() {
+                    resizeImg();
+                    firstFire = null
+                }, 100)
+            }
+        }
+    };
+
+    targetColor = $("#main-content-container .name").css("color");
+    animatedLink = function(speed) {
+        $("#main-content-container .col-link li").hover(function() {
+            $(this).find('.icon').animate({
+                color: targetColor,
+                borderColor: targetColor
+            }, speed);
+            $(this).find('.caption').animate({
+                color: targetColor
+            })
+        }, function() {
+            $(this).find('.icon').animate({
+                borderColor: '#cccccc',
+                color: '#cccccc'
+            }, speed);
+            $(this).find('.caption').animate({
+                color: '#cccccc'
+            })
+        })
+    };
+
+    // fullBg();
+    // animatedLink(400);
+
+    allPublications = $("#pub-card-container .pub-card");
+    allTopicsLink = $("#pub-container .subtitle-aux a");
+    allTopics = [];
+    for (var topicId = 0; topicId < allTopicsLink.length; topicId++) {
+        allTopics.push({name: $(allTopicsLink[topicId]).data("topic"), title: $(allTopicsLink[topicId]).html()});
+    }
+
+    $("#publication-by-selected").click();
+    // $("#publication-by-date").click();
+    $("#pub-card-container").removeClass("hide");
+});
+</script>
+</body>
+</html>
